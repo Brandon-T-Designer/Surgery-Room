@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    public float moveSpeed;
 
     float vertical, horizontal;
 
