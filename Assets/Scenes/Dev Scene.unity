@@ -1073,7 +1073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647510630}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1663,7 +1663,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -24939,6 +24939,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2188424008671918511, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4161558668273334748, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
       propertyPath: m_Name
       value: Doctor
@@ -25311,15 +25315,15 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 916721464}
-  - {fileID: 6971441412349891843}
-  - {fileID: 1254143360}
-  - {fileID: 7505560728091719529}
-  - {fileID: 1715986204}
-  - {fileID: 467327882}
-  - {fileID: 647510633}
-  - {fileID: 1328707209}
-  - {fileID: 1772414407}
-  - {fileID: 464859548}
+  - {fileID: 2080178859}
   - {fileID: 1302478524}
   - {fileID: 932417549}
-  - {fileID: 2080178859}
+  - {fileID: 6971441412349891843}
+  - {fileID: 464859548}
+  - {fileID: 7505560728091719529}
+  - {fileID: 1772414407}
+  - {fileID: 1328707209}
+  - {fileID: 467327882}
+  - {fileID: 1715986204}
+  - {fileID: 1254143360}
+  - {fileID: 647510633}
