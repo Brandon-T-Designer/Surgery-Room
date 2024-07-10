@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c2fb336e9a86ec44ca994e1e0142ca85
+guid: f4e624466115f574ead43776912c8840
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4076975092559171610
-    second: Temp copy_0
+      213: -2083995961350248262
+    second: upperwall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Temp copy_0
+      name: upperwall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 123
-        height: 185
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a10da16fe33549830800000000000000
-      internalID: 4076975092559171610
+      spriteID: ab8ae52f6b82413e0800000000000000
+      internalID: -2083995961350248262
       vertices: []
       indices: 
       edges: []
@@ -132,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< Updated upstream
-    spriteCustomMetadata:
-      entries: []
-=======
->>>>>>> Stashed changes
-    nameFileIdTable:
-      Temp copy_0: 4076975092559171610
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
