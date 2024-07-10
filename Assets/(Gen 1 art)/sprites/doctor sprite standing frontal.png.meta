@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      doctor sprite standing frontal_0: -67744219922070906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

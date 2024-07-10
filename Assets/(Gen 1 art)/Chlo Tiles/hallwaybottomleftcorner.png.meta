@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hallwaybottomleftcorner_0: -5073789314692036477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

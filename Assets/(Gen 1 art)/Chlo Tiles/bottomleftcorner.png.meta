@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bottomleftcorner_0: 5954818198495585324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

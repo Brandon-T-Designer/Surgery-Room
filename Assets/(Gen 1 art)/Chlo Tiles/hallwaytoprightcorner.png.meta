@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hallwaytoprightcorner_0: 2201117511867747759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
