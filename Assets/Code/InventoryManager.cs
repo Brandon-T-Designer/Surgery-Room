@@ -38,7 +38,7 @@ public class InventoryManager : MonoBehaviour
         
         Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
 
-        for (int i = 0; i< itemSlot.Length; i++)
+        for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFull == false)
             {
@@ -48,5 +48,14 @@ public class InventoryManager : MonoBehaviour
         
         }
         return false;
+    }
+
+    public void DeselectAllSlots() 
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false); 
+            itemSlot[i].thisItemSelected = false;
+        }
     }
 }
