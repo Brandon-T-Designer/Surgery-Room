@@ -12,10 +12,6 @@ public class ItemSlot : MonoBehaviour
     public Sprite itemSprite;
     public bool isFull;
 
-    //======ITEM SLOT======//
-    [SerializeField]
-    private TMP_Text quantityText;
-
     [SerializeField]
     private Image itemImage;
 
@@ -24,10 +20,7 @@ public class ItemSlot : MonoBehaviour
         this.itemName = itemName;
         this.quantity = quantity;
         this.itemSprite = itemSprite;
-        isFull = true;
-
-        quantityText.text = quantity.ToString();
-        quantityText.enabled = true;
+        isFull = true;       
         itemImage.sprite = itemSprite;
     }
 }
