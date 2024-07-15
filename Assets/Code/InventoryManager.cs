@@ -42,6 +42,7 @@ public class InventoryManager : MonoBehaviour
             if (itemSlot[i].isFull == false)
             {
                 itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                //Debug.Log("THIS IS itemSlot "+ itemSlot);
                 return true;
             }
         
@@ -57,13 +58,4 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
     }
-
-    /*
-    string ItemName = GameObject.Find("ItemTracker").GetComponent<ItemName>();
-    public void Find_Item()
-    {
-    
-    }
-    */
-
 }

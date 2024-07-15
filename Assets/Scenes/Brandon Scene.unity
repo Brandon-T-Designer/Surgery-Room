@@ -130,8 +130,9 @@ GameObject:
   - component: {fileID: 702954}
   - component: {fileID: 702953}
   - component: {fileID: 702952}
+  - component: {fileID: 702956}
   m_Layer: 0
-  m_Name: surgerytable_0
+  m_Name: SurgeryTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +281,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &702956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e690de1eacff46245a539d0891023afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlotScript: {fileID: 0}
+  itemSlotLength: 0
+  InventoryManagerScript: {fileID: 0}
 --- !u!1 &220244144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2639,7 @@ Transform:
   m_GameObject: {fileID: 1325607799}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2999997, y: -1.8000002, z: -0.039903782}
+  m_LocalPosition: {x: -4.53, y: 0.31, z: -0.039903782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25877,6 +25893,7 @@ SceneRoots:
   - {fileID: 932417549}
   - {fileID: 6971441412349891843}
   - {fileID: 464859548}
+  - {fileID: 702955}
   - {fileID: 7505560728091719529}
   - {fileID: 1772414407}
   - {fileID: 1328707209}
@@ -25885,4 +25902,3 @@ SceneRoots:
   - {fileID: 1715986204}
   - {fileID: 1254143360}
   - {fileID: 647510633}
-  - {fileID: 702955}
