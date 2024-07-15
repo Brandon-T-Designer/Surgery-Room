@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 292dfddb3cf22ae419964e1b1ba29632
+guid: b804ac2b0900e8b45804c344c65e50c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8452357495373299345
-    second: stations_0
-  - first:
-      213: 6636660820124354239
-    second: stations_1
+      213: -3120111821918886831
+    second: surgerytable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stations_0
+      name: surgerytable_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 0
-        width: 326
-        height: 325
+        x: 18
+        y: 37
+        width: 348
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19ef55a0c5ecc4570800000000000000
-      internalID: 8452357495373299345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stations_1
-      rect:
-        serializedVersion: 2
-        x: 391
-        y: 0
-        width: 370
-        height: 241
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb6c3467ad72a1c50800000000000000
-      internalID: 6636660820124354239
+      spriteID: 154270b34d223b4d0800000000000000
+      internalID: -3120111821918886831
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      stations_0: 8452357495373299345
-      stations_1: 6636660820124354239
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
