@@ -14,7 +14,7 @@ public class Body_Spawner : MonoBehaviour
     public bool Game_Over = false;
     public double Body_Spanwer_Location_x;
     public int Body_Count = 0;
-    public int Max_Body_Count = 5;
+    public int Max_Body_Count = 1;
 
     private GameObject Clone;
     public Transform All_Bodies;
@@ -48,9 +48,9 @@ public class Body_Spawner : MonoBehaviour
             if (Body_Count < Max_Body_Count)
             {
                 SpawnBody();
-                Debug.Log("Body Spawned");
+                //Debug.Log("Body Spawned");
                 Body_Count = Body_Count + 1;
-                Debug.Log("Body Count: "+Body_Count);
+                //Debug.Log("Body Count: "+ Body_Count);
             }
             timer = 0;
         }

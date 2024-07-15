@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 55e983328329e2544a8bbf929e6f5e4a
+guid: e9752d4f19ffaba4e8eb312591b6d50c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2781038369464186334
-    second: RED BOTTLE (1)_0
+      213: 685706242063955603
+    second: BLUE BOTTLE_0
   - first:
-      213: 5012485455034155626
-    second: RED BOTTLE (1)_1
+      213: -3601279134725540674
+    second: BLUE BOTTLE_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RED BOTTLE (1)_0
+      name: BLUE BOTTLE_0
       rect:
         serializedVersion: 2
-        x: 5073
-        y: 1846
-        width: 10
+        x: 3823
+        y: 1832
+        width: 11
         height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,18 +118,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22a0b596654c769d0800000000000000
-      internalID: -2781038369464186334
+      spriteID: 3967d72b13e148900800000000000000
+      internalID: 685706242063955603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RED BOTTLE (1)_1
+      name: BLUE BOTTLE_1
       rect:
         serializedVersion: 2
-        x: 5351
-        y: 267
+        x: 4102
+        y: 252
         width: 1044
         height: 2442
       alignment: 0
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a628f1dc6fcef8540800000000000000
-      internalID: 5012485455034155626
+      spriteID: eb478a515bfa50ec0800000000000000
+      internalID: -3601279134725540674
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RED BOTTLE (1)_0: -2781038369464186334
-      RED BOTTLE (1)_1: 5012485455034155626
+      BLUE BOTTLE_0: 685706242063955603
+      BLUE BOTTLE_1: -3601279134725540674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

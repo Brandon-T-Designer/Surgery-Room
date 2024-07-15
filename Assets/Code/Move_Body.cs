@@ -7,13 +7,13 @@ public class Move_Body : MonoBehaviour
 
     public int Body_Count;
     public int Max_Body_Count;
-    //public double Final_Body_Pos;
+    public double Final_Body_Pos;
     public double Body_Spanwer_Location_x; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Final_Body_Pos = 8;
+        Final_Body_Pos = 8;
 
     }
 
@@ -33,12 +33,18 @@ public class Move_Body : MonoBehaviour
 
 
 
-
+        /*
         if (Body_Count < Max_Body_Count) 
         {
             transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
         }
+        */
 
+
+        if (transform.position.x < Final_Body_Pos)
+        {
+            transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
+        }
 
         if (transform.position.x > deadZone)
         {
