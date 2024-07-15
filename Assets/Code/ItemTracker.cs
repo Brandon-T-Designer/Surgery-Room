@@ -22,8 +22,8 @@ public class ItemTracker : MonoBehaviour
     void Update()
     {
 
-        //Debug.Log(Have_Red);
-        //Debug.Log(Have_Blue);
+        Debug.Log(Have_Red);
+        Debug.Log(Have_Blue);
         if ( (Have_Red && Have_Blue) == true)
         {
             Debug.Log("Success!");
@@ -40,7 +40,7 @@ public class ItemTracker : MonoBehaviour
     }
     private bool CheckForItems(string TargetItem)
     {
-        ItemSlot[] itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlot;
+     ItemSlot[] itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlot;
         for (int i = 0; i < itemSlots.Length; i++)
             {
                 if (itemSlots[i].itemName == TargetItem)
