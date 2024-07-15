@@ -30,10 +30,9 @@ public class InventoryManager : MonoBehaviour
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
-       
     }
 
-    public bool AddItem(string itemName, int quantity, Sprite itemSprite)
+    public bool AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         
         Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
@@ -42,7 +41,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (itemSlot[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite);
+                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
                 return true;
             }
         
@@ -58,4 +57,13 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
     }
+
+    /*
+    string ItemName = GameObject.Find("ItemTracker").GetComponent<ItemName>();
+    public void Find_Item()
+    {
+    
+    }
+    */
+
 }
