@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
 {
+    //"Global" Variables
+    public bool AnyPopUPsOpen = false;
+
+    public GameObject popupWindow;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     //Inventory Item Status    
@@ -12,18 +17,22 @@ public class ItemTracker : MonoBehaviour
     bool Have_Blue = false;
 
     //Start Function Not Necessary 
-    //void Start(){ }
+    void Start()
+    {
+        popupWindow.SetActive(false);
+        AnyPopUPsOpen = false;
+    }
 
     // Update is called once per frame
 
-    public ItemSlot itemSlotScript;
-    public int itemSlotLength;
-    public InventoryManager InventoryManagerScript;
+    //public ItemSlot itemSlotScript;
+    //public int itemSlotLength;
+    //public InventoryManager InventoryManagerScript;
     void Update()
     {
 
-        Debug.Log(Have_Red);
-        Debug.Log(Have_Blue);
+        //Debug.Log(Have_Red);
+        //Debug.Log(Have_Blue);
         if ( (Have_Red && Have_Blue) == true)
         {
             Debug.Log("Success!");
@@ -32,10 +41,28 @@ public class ItemTracker : MonoBehaviour
     
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        //Procedure A
         if (collision.gameObject.tag == "Player")
         {
             Have_Red = CheckForItems("Red Pills");
-            Have_Blue = CheckForItems("Blue Pills");
+            Have_Blue = CheckForItems("Blue Pills"); 
+        }
+        bool Procedure_A_Materials = Have_Red && Have_Blue;
+
+        //Ckeck your 
+        if (collision.gameObject.tag == "Player" && (Procedure_A_Materials == true))
+        {
+            popupWindow.SetActive(true);
+            AnyPopUPsOpen = true;
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            popupWindow.SetActive(false);
+            AnyPopUPsOpen = false;
         }
     }
     private bool CheckForItems(string TargetItem)
@@ -50,5 +77,4 @@ public class ItemTracker : MonoBehaviour
             }  
             return false;
     }
-    
 }

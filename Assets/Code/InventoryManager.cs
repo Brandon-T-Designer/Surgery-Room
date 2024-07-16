@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    //"Global" variables
+    public bool AnyPopUPsOpen;
+
     public GameObject InventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlot;
@@ -11,20 +15,27 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        menuActivated = false;
+        //Debug.Log("MenuActivated = "+ menuActivated);    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetButtonDown("Inventory") && menuActivated) 
+        //Temporary Fix
+        AnyPopUPsOpen = true;
+
+        //Why Doesn't this work?!?!?!
+        //AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
+
+        if ( Input.GetButtonDown("Inventory") && menuActivated && AnyPopUPsOpen) 
         {
             //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
         
-        else if (Input.GetButtonDown("Inventory") && !menuActivated) 
+        else if (Input.GetButtonDown("Inventory") && !menuActivated && AnyPopUPsOpen) 
         {
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);
@@ -35,7 +46,7 @@ public class InventoryManager : MonoBehaviour
     public bool AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         
-        Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
+        //Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
 
         for (int i = 0; i < itemSlot.Length; i++)
         {
