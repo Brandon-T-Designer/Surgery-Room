@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9621007558dca574280870a67da372af
+guid: b7b1939ed4803c845802225d0ea32f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1411441472448576869
-    second: EmptyInventory_0
+      213: -7946649357088757371
+    second: Blood Cart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmptyInventory_0
+      name: Blood Cart_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 3
+        y: 108
+        width: 378
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56d3d828a82769310800000000000000
-      internalID: 1411441472448576869
+      spriteID: 589632c4384d7b190800000000000000
+      internalID: -7946649357088757371
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      EmptyInventory_0: 1411441472448576869
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
