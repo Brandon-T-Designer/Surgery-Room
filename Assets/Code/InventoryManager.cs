@@ -22,20 +22,24 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Temporary Fix
-        AnyPopUPsOpen = true;
 
-        //Why Doesn't this work?!?!?!
-        //AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
+        AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
 
-        if ( Input.GetButtonDown("Inventory") && menuActivated && AnyPopUPsOpen) 
+        if (AnyPopUPsOpen)
+        {
+            //Time.timeScale = 1;
+            InventoryMenu.SetActive(false);
+            menuActivated = false;
+        }
+
+        if ( Input.GetButtonDown("Inventory") && menuActivated && !AnyPopUPsOpen) 
         {
             //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
         
-        else if (Input.GetButtonDown("Inventory") && !menuActivated && AnyPopUPsOpen) 
+        else if (Input.GetButtonDown("Inventory") && !menuActivated && !AnyPopUPsOpen) 
         {
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);

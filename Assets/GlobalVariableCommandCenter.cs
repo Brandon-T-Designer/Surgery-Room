@@ -3,7 +3,7 @@ using UnityEngine;
 public class GlobalVariableCommandCenter : MonoBehaviour
 {
     //"Global" Variables 
-    bool AnyPopUPsOpen;
+    public bool AnyPopUPsOpen;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
