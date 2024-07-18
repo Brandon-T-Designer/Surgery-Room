@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Medication_Bench : MonoBehaviour
+public class OpenPopup : MonoBehaviour
 {
     //"Global" Variables
     public bool AnyPopUPsOpen = false;
@@ -30,5 +30,5 @@ public class Medication_Bench : MonoBehaviour
             popupWindow.SetActive(false);
             AnyPopUPsOpen = false;
         }
-    }   
+    }
 }

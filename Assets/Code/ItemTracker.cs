@@ -23,25 +23,21 @@ public class ItemTracker : MonoBehaviour
         AnyPopUPsOpen = false;
     }
 
-    // Update is called once per frame
-
-    //public ItemSlot itemSlotScript;
-    //public int itemSlotLength;
-    //public InventoryManager InventoryManagerScript;
+    //Yeah we know it works already
+    /* // Update is called once per frame
     void Update()
-    {
-
+    {       
         //Debug.Log(Have_Red);
         //Debug.Log(Have_Blue);
         if ( (Have_Red && Have_Blue) == true)
         {
-            Debug.Log("Success!");
-        }
-    }
-    
+            //Debug.Log("Success!");
+        }     
+    }*/
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Procedure A
+        //Checks if Player has necessary items for Procedure A
         if (collision.gameObject.tag == "Player")
         {
             Have_Red = CheckForItems("Red Pills");
@@ -49,7 +45,7 @@ public class ItemTracker : MonoBehaviour
         }
         bool Procedure_A_Materials = Have_Red && Have_Blue;
 
-        //Ckeck your 
+        //Opens Popup if Player has necessary items for Procedure A
         if (collision.gameObject.tag == "Player" && (Procedure_A_Materials == true))
         {
             popupWindow.SetActive(true);

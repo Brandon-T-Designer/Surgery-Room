@@ -15,10 +15,15 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool AnyPopUPsOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<ItemTracker>().AnyPopUPsOpen;
-        bool AnyPopUPsOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<Medication_Bench>().AnyPopUPsOpen;
+        
+        bool AnyPopUPsOpen_OrganFridge = GameObject.Find("OrganFridge").GetComponent<OpenPopup>().AnyPopUPsOpen;
+        bool AnyPopUPsOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<OpenPopup>().AnyPopUPsOpen;
+        bool AnyPopUPsOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().AnyPopUPsOpen;
 
-        AnyPopUPsOpen = (AnyPopUPsOpen_SurgeryTable || AnyPopUPsOpen_DrugCabinet);
+        bool AnyPopUPsOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<ItemTracker>().AnyPopUPsOpen;
+
+        //Logicz
+        AnyPopUPsOpen = (AnyPopUPsOpen_OrganFridge || AnyPopUPsOpen_DrugCabinet || AnyPopUPsOpen_BloodStation || AnyPopUPsOpen_SurgeryTable);
 
         //bool AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
     }
