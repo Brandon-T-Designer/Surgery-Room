@@ -2354,8 +2354,8 @@ Tilemap:
   - first: {x: 0, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 55
-      m_TileSpriteIndex: 55
+      m_TileIndex: 56
+      m_TileSpriteIndex: 56
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2374,8 +2374,8 @@ Tilemap:
   - first: {x: 0, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 55
-      m_TileSpriteIndex: 55
+      m_TileIndex: 56
+      m_TileSpriteIndex: 56
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2493,10 +2493,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 6e11d62abdbabab48b93fdce94c574d5, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 30dc3bd8610f48e4b9743011c45a6424, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: 076ac455c5d1c2b4e824753f9eb417ce, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -2608,10 +2608,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: -1922816637, guid: eb9d3cfef177eb241bdbefbc6f26a2ca, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1244480730, guid: eb9d3cfef177eb241bdbefbc6f26a2ca, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 3
+    m_Data: {fileID: 1764007995, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3
     m_Data:
@@ -25348,12 +25348,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 15.524256, y: -4.98585}
-      - {x: 18.421259, y: -4.986021}
-      - {x: 18.393923, y: -9.804232}
-      - {x: 38.382065, y: -9.849985}
-      - {x: 38.514626, y: -4.8560214}
-      - {x: 41.432083, y: -4.90222}
+    - - {x: 15.484827, y: -4.880707}
+      - {x: 18.469896, y: -4.884691}
+      - {x: 18.48744, y: -9.873139}
+      - {x: 38.50425, y: -9.88053}
+      - {x: 38.506126, y: -4.907015}
+      - {x: 41.45758, y: -4.90222}
       - {x: 41.44702, y: -9.916954}
       - {x: 61.586292, y: -9.949401}
       - {x: 61.509438, y: 3.1239705}
@@ -25370,19 +25370,9 @@ PolygonCollider2D:
       - {x: -11.419692, y: -19.787266}
       - {x: -11.86387, y: 11.663718}
       - {x: 15.358513, y: 11.123006}
-      - {x: 15.394455, y: 3.182599}
-      - {x: -6.463166, y: 3.1266525}
-      - {x: -6.541535, y: -7.081089}
-      - {x: -3.362773, y: -7.0830593}
-      - {x: -3.417575, y: -9.873602}
-      - {x: 0.596405, y: -9.863924}
-      - {x: 0.6839323, y: -7.7174487}
-      - {x: 3.2793632, y: -7.860173}
-      - {x: 3.2940054, y: -9.921575}
-      - {x: 8.303387, y: -9.876454}
-      - {x: 8.502705, y: -7.6823444}
-      - {x: 12.082528, y: -7.8282185}
-      - {x: 12.128628, y: -9.825968}
+      - {x: 15.47962, y: 3.136901}
+      - {x: -6.4958515, y: 3.121205}
+      - {x: -6.5574937, y: -9.873893}
       - {x: 15.498865, y: -9.871638}
   m_UseDelaunayMesh: 0
 --- !u!4 &1911233414
