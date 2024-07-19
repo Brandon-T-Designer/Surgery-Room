@@ -13,7 +13,7 @@ public class Move_Body : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Final_Body_Pos = 8;
+        Final_Body_Pos = 5;
 
     }
 

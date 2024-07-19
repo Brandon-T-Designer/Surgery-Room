@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &138653866506429818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -244,6 +244,11 @@ MonoBehaviour:
   quantity: 0
   itemSprite: {fileID: 0}
   isFull: 0
+  itemDescription: 
+  emptySprite: {fileID: 1411441472448576869, guid: 9621007558dca574280870a67da372af, type: 3}
   itemImage: {fileID: 2698526605935346695}
+  itemDescriptionImage: {fileID: 0}
+  ItemDescriptionNameText: {fileID: 0}
+  ItemDescriptionText: {fileID: 0}
   selectedShader: {fileID: 775933338667962275}
   thisItemSelected: 0

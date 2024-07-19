@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blood Cart_0: -7946649357088757371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

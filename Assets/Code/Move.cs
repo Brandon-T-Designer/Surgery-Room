@@ -5,9 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float moveSpeed;
-
     float vertical, horizontal;
-
     Rigidbody2D myRigidbody2D;
 
     // Start is called before the first frame update

@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      organ fridge_0: -7976043804861880311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

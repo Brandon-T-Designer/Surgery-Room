@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    //"Global" variables
+    public bool AnyPopUPsOpen;
+
     public GameObject InventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlot;
@@ -11,38 +15,49 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        menuActivated = false;
+        //Debug.Log("MenuActivated = "+ menuActivated);    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetButtonDown("Inventory") && menuActivated) 
+
+        AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
+
+        if (AnyPopUPsOpen)
+        {
+            //Time.timeScale = 1;
+            InventoryMenu.SetActive(false);
+            menuActivated = false;
+        }
+
+        if ( Input.GetButtonDown("Inventory") && menuActivated && !AnyPopUPsOpen) 
         {
             //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
         
-        else if (Input.GetButtonDown("Inventory") && !menuActivated) 
+        else if (Input.GetButtonDown("Inventory") && !menuActivated && !AnyPopUPsOpen) 
         {
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
-       
     }
 
-    public bool AddItem(string itemName, int quantity, Sprite itemSprite)
+    public bool AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         
-        Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
+        //Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
 
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite);
+                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                //Debug.Log("THIS IS itemSlot "+ itemSlot);
                 return true;
             }
         
