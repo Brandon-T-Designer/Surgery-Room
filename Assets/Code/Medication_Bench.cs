@@ -2,26 +2,33 @@ using UnityEngine;
 
 public class Medication_Bench : MonoBehaviour
 {
+    //"Global" Variables
+    public bool AnyPopUPsOpen = false;
+
+    //Game Objects
     public GameObject popupWindow;
 
     void Start()
     {
         popupWindow.SetActive(false);
+        AnyPopUPsOpen = false;
     }
 
-    void OnTriggerEnter2D(Collider2D coll)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (coll.gameObject.name == "Doctor")
+        if (collision.gameObject.tag == "Player")
         {
             popupWindow.SetActive(true);
+            AnyPopUPsOpen = true;
         }
     }
 
-    void OnTriggerExit2D(Collider2D coll)
+    public void OnCollisionExit2D(Collision2D collision)
     {
-        if (coll.gameObject.name == "Doctor")
+        if (collision.gameObject.tag == "Player")
         {
             popupWindow.SetActive(false);
+            AnyPopUPsOpen = false;
         }
-    }
+    }   
 }
