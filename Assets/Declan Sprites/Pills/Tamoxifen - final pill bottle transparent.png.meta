@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 29015e61e2c541947a0ed4956535f546
+guid: 4510adf100caee74b8438fee5929ab8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 683347156983832043
-    second: Mycophenolate - final pill bottle-01_0
+      213: 1535269739453665271
+    second: Tamoxifen - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mycophenolate - final pill bottle-01_0
+      name: Tamoxifen - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3334
-        height: 3334
+        x: 710
+        y: 20
+        width: 1749
+        height: 3314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bed5b466e9cbb7900800000000000000
-      internalID: 683347156983832043
+      spriteID: 7ffca8e91bf5e4510800000000000000
+      internalID: 1535269739453665271
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 427346b8e414ee845b6354d033eeb85b
+guid: 63f50dfcd6e780b4baf2ce1474837911
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5028690449544494862
-    second: Cyclosporine - final pill bottle_0
+      213: 6969827850418615223
+    second: Mycophenolate - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cyclosporine - final pill bottle_0
+      name: Mycophenolate - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3352
-        height: 3352
+        x: 705
+        y: 23
+        width: 1726
+        height: 3311
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f04085eda0863ab0800000000000000
-      internalID: -5028690449544494862
+      spriteID: 7b373d1908dc9b060800000000000000
+      internalID: 6969827850418615223
       vertices: []
       indices: 
       edges: []

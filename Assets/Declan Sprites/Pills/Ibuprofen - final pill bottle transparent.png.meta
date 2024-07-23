@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d6d3fc4a2631de4aafb4ec45ecdf014
+guid: 7d11beb8fb3e8e342ab0bd2f2442c33f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4851545118617407249
-    second: Tamoxifen - final pill bottle_0
+      213: 2178062936290423242
+    second: Ibuprofen - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tamoxifen - final pill bottle_0
+      name: Ibuprofen - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3334
-        height: 3334
+        x: 722
+        y: 63
+        width: 1727
+        height: 3262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11f88fea496245340800000000000000
-      internalID: 4851545118617407249
+      spriteID: ac1f80063b80a3e10800000000000000
+      internalID: 2178062936290423242
       vertices: []
       indices: 
       edges: []

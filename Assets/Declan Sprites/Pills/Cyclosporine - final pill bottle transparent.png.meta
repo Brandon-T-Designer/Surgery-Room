@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 75cdc5424a58a7c4db986e93ed9c6fa2
+guid: 3c627510c84811a43b424c23c970aa96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1349371898924775938
-    second: Naproxen - final pill bottle-01_0
+      213: 2094217577882993436
+    second: Cyclosporine - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Naproxen - final pill bottle-01_0
+      name: Cyclosporine - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3334
-        height: 3334
+        x: 711
+        y: 42
+        width: 1748
+        height: 3299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef5c1be3861164de0800000000000000
-      internalID: -1349371898924775938
+      spriteID: c13481c9ac7201d10800000000000000
+      internalID: 2094217577882993436
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 34707b5c78542a84ebe9d281d50f1d3e
+guid: 5833bbb15c8534b48a28cbb58985236d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4715794151819290186
-    second: Ibuprofen - final pill bottle_0
+      213: 6899779394958333945
+    second: Naproxen - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ibuprofen - final pill bottle_0
+      name: Naproxen - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 710
         y: 0
-        width: 3352
-        height: 3352
+        width: 1749
+        height: 3334
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b952fa44322e8eb0800000000000000
-      internalID: -4715794151819290186
+      spriteID: 9f71d099dc0f0cf50800000000000000
+      internalID: 6899779394958333945
       vertices: []
       indices: 
       edges: []
