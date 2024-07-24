@@ -18,6 +18,7 @@ public class OpenPopup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Time.timeScale = 0;
             popupWindow.SetActive(true);
             AnyPopUPsOpen = true;
         }
@@ -30,5 +31,12 @@ public class OpenPopup : MonoBehaviour
             popupWindow.SetActive(false);
             AnyPopUPsOpen = false;
         }
+    }
+
+    public void IfClicked() 
+    {
+            popupWindow.SetActive(false);
+            AnyPopUPsOpen = false;
+            Time.timeScale = 1;
     }
 }
