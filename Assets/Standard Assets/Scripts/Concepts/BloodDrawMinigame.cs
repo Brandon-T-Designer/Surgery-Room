@@ -21,9 +21,10 @@ public class BloodDrawMinigame : MonoBehaviour
 	void OnEnable ()
 	{
 		Time.timeScale = 0;
-		needleXDistanceToTarget = Mathf.Abs(needleTrs.localPosition.x - targetTrs.localPosition.x);
-		initNeedleXLocalPosition = needleTrs.localPosition.x;
+		if (initNeedleXLocalPosition == 0)
+			initNeedleXLocalPosition = needleTrs.localPosition.x;
 		needleTrs.localPosition = new Vector2(initNeedleXLocalPosition, Random.Range(needleMinYPositionTrs.localPosition.y, needleMaxYPositionTrs.localPosition.y));
+		needleXDistanceToTarget = Mathf.Abs(needleTrs.localPosition.x - targetTrs.localPosition.x);
 		needleMoveDirection = Vector2Int.up;
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;

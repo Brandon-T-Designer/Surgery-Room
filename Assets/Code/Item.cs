@@ -29,11 +29,15 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (inventoryManager.AddItem(itemName, quantity, sprite, itemDescription)) 
+
+            //Debug.Log("Collided");
+            //Debug.Log("Inventory Checker 1000" + inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription));
+            
+            if (inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription)) 
             {
+                //Debug.Log("Destoryed");
                 Destroy(gameObject);
-            }
-                
+            }    
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEditor.SceneManagement;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
@@ -20,12 +21,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     private Image itemImage;
 
     //======ITEM DESCRIPTION SLOT======//
-    public Image itemDescriptionImage;
+    public Image ItemDescriptionImage;
     public TMP_Text ItemDescriptionNameText;
     public TMP_Text ItemDescriptionText;
 
     public GameObject selectedShader;
-    public bool thisItemSelected; 
+    public bool thisItemSelected = false; 
 
     private InventoryManager inventoryManager;
 
@@ -34,8 +35,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription) 
+    public void AddItemToSlot(string itemName, int quantity, Sprite itemSprite, string itemDescription) 
     {
+        //Debug.Log("Item Added");
         this.itemName = itemName;
         this.quantity = quantity;
         this.itemSprite = itemSprite;
@@ -43,7 +45,25 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         isFull = true;     
         
         itemImage.sprite = itemSprite;
+
+        if (thisItemSelected == true)
+        {
+            FillSlot();
+        }
     }
+
+    //Added Stuff
+    public void RemoveItemFromSlot(string itemName, int quantity, Sprite itemSprite, string itemDescription)
+    {
+        this.itemName = "";
+        this.quantity = 0;
+        this.itemSprite = emptySprite;
+        this.itemDescription = "";
+        isFull = false;
+
+        itemImage.sprite = emptySprite;
+    }
+    //Added Stuff End
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -60,23 +80,53 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnLeftClick()
     {
+
         inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
         thisItemSelected = true;
+
         ItemDescriptionNameText.text = itemName;
         ItemDescriptionText.text = itemDescription;
-        itemDescriptionImage.sprite = itemSprite;
+        ItemDescriptionImage.sprite = itemSprite;
 
-        if (itemDescriptionImage.sprite == null)
+        if (ItemDescriptionImage.sprite == null)
         {
-            itemDescriptionImage.sprite = emptySprite;
+            ItemDescriptionImage.sprite = emptySprite;
         }
 
     }
 
+   
     public void OnRightClick()
     {
-       
+        if (thisItemSelected) 
+        {
+            this.quantity -= 1;
+            if (this.quantity <= 0) 
+            {
+                EmptySlot();
+                RemoveItemFromSlot(itemName, quantity, itemSprite, itemDescription);
+            }
+        }     
     }
+
+   private void EmptySlot()
+   {
+       itemImage.sprite = emptySprite;
+       ItemDescriptionNameText.text = "";
+       ItemDescriptionText.text = "";
+       ItemDescriptionImage.sprite = emptySprite;
+   }
+
+    private void FillSlot()
+    {
+        itemImage.sprite = itemSprite;
+        ItemDescriptionNameText.text = itemName;
+        ItemDescriptionText.text = itemDescription;
+        ItemDescriptionImage.sprite = itemSprite;
+
+    }
+
+
 
 }

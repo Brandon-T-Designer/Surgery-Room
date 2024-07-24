@@ -23,7 +23,12 @@ public class Move : MonoBehaviour
     void MoveBall()
     {
         horizontal = Input.GetAxis("Horizontal");
+        //Insert Animation Code
+
         vertical = Input.GetAxis("Vertical");
+        //Insert Animation Code
+
+        //Debug.Log(horizontal);
         myRigidbody2D.velocity = new Vector2(horizontal*moveSpeed, vertical * moveSpeed);
     }
 }

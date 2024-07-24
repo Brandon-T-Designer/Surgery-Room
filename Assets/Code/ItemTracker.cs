@@ -4,7 +4,9 @@ public class ItemTracker : MonoBehaviour
 {
     //"Global" Variables
     public bool AnyPopUPsOpen = false;
+    public ItemSlot[] itemSlots;
 
+    public bool SurgeryTableWasOpened = false;
     public GameObject popupWindow;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,10 +48,12 @@ public class ItemTracker : MonoBehaviour
         bool Procedure_A_Materials = Have_Red && Have_Blue;
 
         //Opens Popup if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player" && (Procedure_A_Materials == true))
+        if ( collision.gameObject.tag == "Player" && ( (Procedure_A_Materials == true)||(SurgeryTableWasOpened) ) )
         {
             popupWindow.SetActive(true);
             AnyPopUPsOpen = true;
+            SurgeryTableWasOpened = true;
+
         }
     }
 
@@ -63,7 +67,7 @@ public class ItemTracker : MonoBehaviour
     }
     private bool CheckForItems(string TargetItem)
     {
-     ItemSlot[] itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlot;
+        itemSlots = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().itemSlots;
         for (int i = 0; i < itemSlots.Length; i++)
             {
                 if (itemSlots[i].itemName == TargetItem)

@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aaf73ab3dea644dbc15e88d5b535dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnyPopUPsOpen: 0
   InventoryMenu: {fileID: 768590739}
   itemSlot: []
 --- !u!1 &467327878
@@ -815,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3a92566245e8746a01989ac1d58edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnyPopUPsOpen: 0
   popupWindow: {fileID: 6598228471550984650}
 --- !u!61 &467327886
 BoxCollider2D:
@@ -2496,7 +2498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1256584861
 MonoBehaviour:
   m_ObjectHideFlags: 0

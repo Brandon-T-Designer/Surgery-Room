@@ -8,9 +8,11 @@ public class InventoryManager : MonoBehaviour
     //"Global" variables
     public bool AnyPopUPsOpen;
 
+
+    //Other Variables
     public GameObject InventoryMenu;
     private bool menuActivated;
-    public ItemSlot[] itemSlot;
+    public ItemSlot[] itemSlots;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,28 +40,35 @@ public class InventoryManager : MonoBehaviour
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
-        
         else if (Input.GetButtonDown("Inventory") && !menuActivated && !AnyPopUPsOpen) 
         {
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
+
     }
 
-    public bool AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
+    public bool AddItemToInventory(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        
+
+        //Debug.Log("Activated");
+        //Debug.Log(itemSlots.Length);
         //Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
 
-        for (int i = 0; i < itemSlot.Length; i++)
+
+        for (int i = 0; i < itemSlots.Length; i++)
         {
-            if (itemSlot[i].isFull == false)
+            //Debug.Log("Start Logic");
+            if (itemSlots[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                itemSlots[i].AddItemToSlot(itemName, quantity, itemSprite, itemDescription);
+
+                //Debug.Log("This Slot is Empty");
                 //Debug.Log("THIS IS itemSlot "+ itemSlot);
                 return true;
             }
+            
         
         }
         return false;
@@ -67,10 +76,11 @@ public class InventoryManager : MonoBehaviour
 
     public void DeselectAllSlots() 
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        //Debug.Log("Deslecting");
+        for (int i = 0; i < itemSlots.Length; i++)
         {
-            itemSlot[i].selectedShader.SetActive(false); 
-            itemSlot[i].thisItemSelected = false;
+            itemSlots[i].selectedShader.SetActive(false); 
+            itemSlots[i].thisItemSelected = false;
         }
     }
 }
