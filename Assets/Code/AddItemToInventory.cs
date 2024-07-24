@@ -18,7 +18,7 @@ public class AddItemtoInventory : MonoBehaviour
     private string itemDescription;
 
     private InventoryManager inventoryManager;
-    public GameObject InventoryIsFull;
+    public GameObject InventoryIsFullPopup;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,7 +31,7 @@ public class AddItemtoInventory : MonoBehaviour
     {
         if (!inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription))
         {
-            InventoryIsFull.SetActive(true);
+            InventoryIsFullPopup.SetActive(true);
 
         }
     }
