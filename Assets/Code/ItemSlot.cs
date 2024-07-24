@@ -22,6 +22,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     //======ITEM DESCRIPTION SLOT======//
     public Image ItemDescriptionImage;
+    //public Image Background;
     public TMP_Text ItemDescriptionNameText;
     public TMP_Text ItemDescriptionText;
 
@@ -92,6 +93,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         if (ItemDescriptionImage.sprite == null)
         {
             ItemDescriptionImage.sprite = emptySprite;
+            //ItemDescriptionImage.sprite = Background.sprite;
         }
 
     }
@@ -116,7 +118,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
        ItemDescriptionNameText.text = "";
        ItemDescriptionText.text = "";
        ItemDescriptionImage.sprite = emptySprite;
-   }
+       //ItemDescriptionImage.sprite = Background.sprite;
+    }
 
     private void FillSlot()
     {

@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Naproxen - final pill bottle transparent_0: 6899779394958333945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

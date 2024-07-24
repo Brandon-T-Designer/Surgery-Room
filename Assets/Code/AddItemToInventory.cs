@@ -1,9 +1,8 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class AddItemtoInventory : MonoBehaviour
 {
     [SerializeField]
     private string itemName;
@@ -18,14 +17,14 @@ public class Item : MonoBehaviour
     [SerializeField]
     private string itemDescription;
 
-    private InventoryManager inventoryManager;
-    public GameObject InventoryIsFull;
+    private InventoryManager inventoryManager2;
+    public GameObject InventoryIsFull2;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager2 = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,22 +33,20 @@ public class Item : MonoBehaviour
 
             //Debug.Log("Collided");
             //Debug.Log("Inventory Checker 1000" + inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription));
-            
-            if (inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription)) 
+
+            if (inventoryManager2.AddItemToInventory(itemName, quantity, sprite, itemDescription))
             {
                 //Debug.Log("Destoryed");
                 Destroy(gameObject);
-            }    
-        }
-    }
-        
-    private void ItemClicked()
-        {  
-            if (!inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription))
-            {
-            InventoryIsFull.SetActive(true);
             }
         }
-        
-    } 
+    }
+    private void ItemClicked2()
+    {
+        if (!inventoryManager2.AddItemToInventory(itemName, quantity, sprite, itemDescription))
+        {
+            InventoryIsFull2.SetActive(true);
+        }
+    }
+}
 

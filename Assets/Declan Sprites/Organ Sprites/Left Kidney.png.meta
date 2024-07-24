@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Left Kidney_0: 4638623239011866397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

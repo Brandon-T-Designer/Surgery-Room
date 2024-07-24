@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mycophenolate - final pill bottle transparent_0: 6969827850418615223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

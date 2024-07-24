@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Metronidazole - final pill bottle transparent_0: -9141162310546740470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

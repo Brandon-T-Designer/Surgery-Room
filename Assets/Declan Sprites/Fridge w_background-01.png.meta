@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fridge w_background-01_0: 3679670554339553396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

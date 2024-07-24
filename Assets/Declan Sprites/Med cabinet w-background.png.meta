@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Med cabinet w-background_0: 3492499130576729289
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

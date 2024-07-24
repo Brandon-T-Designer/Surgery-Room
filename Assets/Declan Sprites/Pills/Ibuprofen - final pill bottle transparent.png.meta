@@ -132,7 +132,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ibuprofen - final pill bottle transparent_0: 2178062936290423242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
