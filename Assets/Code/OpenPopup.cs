@@ -24,6 +24,7 @@ public class OpenPopup : MonoBehaviour
         }
     }
 
+    /*
     public void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -32,6 +33,7 @@ public class OpenPopup : MonoBehaviour
             AnyPopUPsOpen = false;
         }
     }
+    */
 
     public void IfClicked() 
     {

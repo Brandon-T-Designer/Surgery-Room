@@ -112,7 +112,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         }     
     }
 
-   private void EmptySlot()
+   public void EmptySlot()
    {
        itemImage.sprite = emptySprite;
        ItemDescriptionNameText.text = "";

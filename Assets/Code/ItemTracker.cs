@@ -5,6 +5,7 @@ public class ItemTracker : MonoBehaviour
     //"Global" Variables
     public bool AnyPopUPsOpen = false;
     public ItemSlot[] itemSlots;
+    //public InventoryManager inventoryManager;
 
     public bool SurgeryTableWasOpened = false;
     public GameObject popupWindow;
@@ -53,10 +54,11 @@ public class ItemTracker : MonoBehaviour
             popupWindow.SetActive(true);
             AnyPopUPsOpen = true;
             SurgeryTableWasOpened = true;
-
+            Time.timeScale = 0;
         }
     }
 
+    /*
     public void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -65,16 +67,38 @@ public class ItemTracker : MonoBehaviour
             AnyPopUPsOpen = false;
         }
     }
+    */
+
+
     private bool CheckForItems(string TargetItem)
     {
         itemSlots = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().itemSlots;
         for (int i = 0; i < itemSlots.Length; i++)
             {
                 if (itemSlots[i].itemName == TargetItem)
-                {                   
+                {
+                    //Removes Necessary Items from Inventory.
+                    RemoveItem(TargetItem);                   
                     return true;
                 }
             }  
             return false;
+    }
+
+    private void RemoveItem(string TargetItem)
+    { 
+        bool StopLoop = false;
+        itemSlots = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().itemSlots;
+        for (int i = 0; (i < itemSlots.Length && !StopLoop) ; i++)
+        {
+            if (itemSlots[i].itemName == TargetItem)
+            {
+                itemSlots[i].EmptySlot();
+                itemSlots[i].RemoveItemFromSlot(itemSlots[i].itemName, itemSlots[i].quantity, itemSlots[i].itemSprite, itemSlots[i].itemDescription);
+                
+                StopLoop = true;
+            }
+        }
+        
     }
 }
