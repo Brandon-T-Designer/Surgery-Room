@@ -294,8 +294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  itemSlots: []
-  SurgeryTableWasOpened: 0
   popupWindow: {fileID: 482027905}
 --- !u!1 &117251994
 GameObject:
@@ -23612,8 +23610,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1780270757
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &220244144
 GameObject:
@@ -23665,7 +23663,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: This Medicine is Blue
-  InventoryIsFull: {fileID: 0}
 --- !u!61 &220244147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23805,6 +23802,17 @@ RectTransform:
   m_AnchoredPosition: {x: -209.99997, y: 85.59999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &281822707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+  m_PrefabInstance: {fileID: 1974207670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5041a9db592d49b498e5941028372f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &281822708 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
@@ -24183,8 +24191,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1780270757
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &434904648
 GameObject:
@@ -24435,7 +24443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
   InventoryMenu: {fileID: 768590739}
-  itemSlots: []
+  itemSlot:
+  - {fileID: 641577865}
+  - {fileID: 1220209194}
+  - {fileID: 1602303035}
+  - {fileID: 906709559}
+  - {fileID: 281822707}
 --- !u!1 &467327878
 GameObject:
   m_ObjectHideFlags: 0
@@ -24713,8 +24726,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1780270757
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &489187829
 GameObject:
@@ -25097,6 +25110,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
   m_PrefabInstance: {fileID: 4479365314653942753}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &641577865 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+  m_PrefabInstance: {fileID: 4479365314653942753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5041a9db592d49b498e5941028372f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647510630
 GameObject:
   m_ObjectHideFlags: 0
@@ -25451,7 +25475,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: 2411923963962560826, guid: 583640405941a244abdf3856aee9e73e, type: 3}
   itemDescription: This Medicine is Red
-  InventoryIsFull: {fileID: 0}
 --- !u!212 &713218541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25722,67 +25745,6 @@ Transform:
   - {fileID: 220244145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &754283128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Name
-      value: Blood Draw Minigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
 --- !u!1 &768590739
 GameObject:
   m_ObjectHideFlags: 0
@@ -25937,7 +25899,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: This Medicine is Blue
-  InventoryIsFull: {fileID: 0}
 --- !u!61 &818776655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26176,6 +26137,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
   m_PrefabInstance: {fileID: 1702205780}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &906709559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+  m_PrefabInstance: {fileID: 1702205780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5041a9db592d49b498e5941028372f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916721461
 GameObject:
   m_ObjectHideFlags: 0
@@ -27033,6 +27005,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
   m_PrefabInstance: {fileID: 1842870450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1220209194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+  m_PrefabInstance: {fileID: 1842870450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5041a9db592d49b498e5941028372f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227942896
 GameObject:
   m_ObjectHideFlags: 0
@@ -27833,8 +27816,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1780270757
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1298749464
 GameObject:
@@ -28258,7 +28241,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: This Medicine is Blue
-  InventoryIsFull: {fileID: 0}
 --- !u!61 &1325607802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29115,7 +29097,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: This Medicine is Blue
-  InventoryIsFull: {fileID: 0}
 --- !u!61 &1578933396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29373,6 +29354,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
   m_PrefabInstance: {fileID: 2000752369}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1602303035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+  m_PrefabInstance: {fileID: 2000752369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5041a9db592d49b498e5941028372f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1611328015
 GameObject:
   m_ObjectHideFlags: 0
@@ -30817,7 +30809,6 @@ MonoBehaviour:
   quantity: 1
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: This Medicine is Blue
-  InventoryIsFull: {fileID: 0}
 --- !u!61 &1863009356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31051,7 +31042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  itemSlots: []
 --- !u!224 &1949966613 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4687017966808671694, guid: b9396af600c4516f185090307b81a832, type: 3}
@@ -32550,4 +32540,3 @@ SceneRoots:
   - {fileID: 1546135113}
   - {fileID: 1715986204}
   - {fileID: 647510633}
-  - {fileID: 754283128}
