@@ -7,6 +7,8 @@ public class Move : MonoBehaviour
     public float moveSpeed;
     float vertical, horizontal;
     Rigidbody2D myRigidbody2D;
+    public Animator PlayerAnimator;
+    public bool movingRight;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +24,19 @@ public class Move : MonoBehaviour
 
     void MoveBall()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        //Insert Animation Code
-
-        vertical = Input.GetAxis("Vertical");
-        //Insert Animation Code
-
-        //Debug.Log(horizontal);
+        horizontal = Input.GetAxisRaw("Horizontal")*moveSpeed;
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.localScale = new Vector2(-.85f, .85f);
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            transform.localScale = new Vector2(.85f, .85f);
+        }
+        PlayerAnimator.SetFloat("Horizontal", Mathf.Abs(horizontal));
+              
+        vertical = Input.GetAxisRaw("Vertical")*moveSpeed;
+        PlayerAnimator.SetFloat("Vertical", Mathf.Abs(vertical));
         myRigidbody2D.velocity = new Vector2(horizontal*moveSpeed, vertical * moveSpeed);
     }
 }
