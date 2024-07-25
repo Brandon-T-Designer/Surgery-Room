@@ -31588,7 +31588,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1292212102}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -31655,7 +31655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  OrganFridge: {fileID: 2139827008}
+  Station: {fileID: 2139827008}
 --- !u!1 &1302478522
 GameObject:
   m_ObjectHideFlags: 0
@@ -33022,7 +33022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  OrganFridge: {fileID: 227706598}
+  Station: {fileID: 227706598}
 --- !u!1 &1632734215
 GameObject:
   m_ObjectHideFlags: 0
@@ -33532,7 +33532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  OrganFridge: {fileID: 1930978656}
+  Station: {fileID: 1930978656}
 --- !u!1 &1668620180
 GameObject:
   m_ObjectHideFlags: 0
@@ -35708,7 +35708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  OrganFridge: {fileID: 1040099123}
+  Station: {fileID: 1040099123}
 --- !u!1 &2139827008
 GameObject:
   m_ObjectHideFlags: 0
