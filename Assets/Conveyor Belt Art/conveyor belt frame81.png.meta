@@ -132,6 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
       conveyor belt frame81_0: -3812344808660498195
   mipmapLimitGroupName: 

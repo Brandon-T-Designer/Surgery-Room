@@ -31588,7 +31588,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1292212102}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -31655,7 +31655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  Station: {fileID: 2139827008}
+  OrganFridge: {fileID: 2139827008}
 --- !u!1 &1302478522
 GameObject:
   m_ObjectHideFlags: 0
@@ -33022,7 +33022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  Station: {fileID: 227706598}
+  OrganFridge: {fileID: 227706598}
 --- !u!1 &1632734215
 GameObject:
   m_ObjectHideFlags: 0
@@ -33532,7 +33532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  Station: {fileID: 1930978656}
+  OrganFridge: {fileID: 1930978656}
 --- !u!1 &1668620180
 GameObject:
   m_ObjectHideFlags: 0
@@ -35708,7 +35708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
-  Station: {fileID: 1040099123}
+  OrganFridge: {fileID: 1040099123}
 --- !u!1 &2139827008
 GameObject:
   m_ObjectHideFlags: 0
@@ -36021,25 +36021,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 388522414191996774, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
-      propertyPath: moveSpeed
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 388522414191996774, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
-      propertyPath: PlayerAnimator
-      value: 
-      objectReference: {fileID: 7505560728091719531}
     - target: {fileID: 2188424008671918511, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.11764706
       objectReference: {fileID: 0}
     - target: {fileID: 2188424008671918511, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.4117647
       objectReference: {fileID: 0}
     - target: {fileID: 2188424008671918511, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.8235294
       objectReference: {fileID: 0}
     - target: {fileID: 2188424008671918511, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
       propertyPath: m_SortingLayer
@@ -36112,38 +36104,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4161558668273334748, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7505560728091719531}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
---- !u!1 &7505560728091719530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4161558668273334748, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
-  m_PrefabInstance: {fileID: 7505560728091719529}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7505560728091719531
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7505560728091719530}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 175e5e07c00190d48a911eed75c64abd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8036173405148750654
 PrefabInstance:
   m_ObjectHideFlags: 0
