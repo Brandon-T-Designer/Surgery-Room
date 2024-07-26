@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager instance;
 
     //"Global" variables
     public bool AnyPopUPsOpen;
@@ -13,10 +14,13 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlots;
+    public Transform itemSlotsParentWhenInDrugCabinet;
+    public Transform itemSlotsParentWhenNotInDrugCabinet;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         menuActivated = false;
         //Debug.Log("MenuActivated = "+ menuActivated);    
     }

@@ -14,7 +14,7 @@ public class OpenPopup : MonoBehaviour
         AnyPopUPsOpen = false;
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -35,7 +35,7 @@ public class OpenPopup : MonoBehaviour
     }
     */
 
-    public void IfClicked() 
+    public virtual void IfClicked() 
     {
             popupWindow.SetActive(false);
             AnyPopUPsOpen = false;
