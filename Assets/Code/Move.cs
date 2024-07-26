@@ -25,11 +25,11 @@ public class Move : MonoBehaviour
     void MoveBall()
     {
         horizontal = Input.GetAxisRaw("Horizontal")*moveSpeed;
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
             transform.localScale = new Vector2(-.85f, .85f);
         }
-        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
             transform.localScale = new Vector2(.85f, .85f);
         }

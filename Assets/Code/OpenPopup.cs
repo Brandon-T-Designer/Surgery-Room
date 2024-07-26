@@ -3,7 +3,7 @@ using UnityEngine;
 public class OpenPopup : MonoBehaviour
 {
     //"Global" Variables
-    public bool AnyPopUPsOpen = false;
+    public bool IsThisPopUpOpen = false;
 
     //Game Objects
     public GameObject popupWindow;
@@ -11,7 +11,7 @@ public class OpenPopup : MonoBehaviour
     void Start()
     {
         popupWindow.SetActive(false);
-        AnyPopUPsOpen = false;
+        IsThisPopUpOpen = false;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -20,7 +20,7 @@ public class OpenPopup : MonoBehaviour
         {
             Time.timeScale = 0;
             popupWindow.SetActive(true);
-            AnyPopUPsOpen = true;
+            IsThisPopUpOpen = true;
         }
     }
 
@@ -30,15 +30,17 @@ public class OpenPopup : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             popupWindow.SetActive(false);
-            AnyPopUPsOpen = false;
+            IsThisPopUpOpen = false;
         }
     }
     */
 
     public void IfClicked() 
     {
+        Debug.Log("Activated!!!");
+
             popupWindow.SetActive(false);
-            AnyPopUPsOpen = false;
+            IsThisPopUpOpen = false;
             Time.timeScale = 1;
     }
 }

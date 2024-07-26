@@ -1,9 +1,9 @@
 using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
-{
+{   
     //"Global" Variables
-    public bool AnyPopUPsOpen = false;
+    public bool IsThisPopUpOpen = false;
     public ItemSlot[] itemSlots;
     //public InventoryManager inventoryManager;
 
@@ -23,39 +23,55 @@ public class ItemTracker : MonoBehaviour
     void Start()
     {
         popupWindow.SetActive(false);
-        AnyPopUPsOpen = false;
+        IsThisPopUpOpen = false;
     }
 
     //Yeah we know it works already
-    /* // Update is called once per frame
+     // Update is called once per frame
     void Update()
-    {       
+    {
         //Debug.Log(Have_Red);
         //Debug.Log(Have_Blue);
+        /*
         if ( (Have_Red && Have_Blue) == true)
         {
             //Debug.Log("Success!");
-        }     
-    }*/
+        } 
+        */
+
+        if (IsThisPopUpOpen == true) 
+        {
+            IsThisPopUpOpen =  GameObject.Find("SurgeryTable").GetComponent<OpenPopup>().IsThisPopUpOpen;
+            //Debug.Log("Popup State" + IsThisPopUpOpen);
+        }
+    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Checks if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player")
-        {
-            Have_Red = CheckForItems("Red Pills");
-            Have_Blue = CheckForItems("Blue Pills"); 
-        }
-        bool Procedure_A_Materials = Have_Red && Have_Blue;
+        //Procedure A
 
-        //Opens Popup if Player has necessary items for Procedure A
-        if ( collision.gameObject.tag == "Player" && ( (Procedure_A_Materials == true)||(SurgeryTableWasOpened) ) )
-        {
-            popupWindow.SetActive(true);
-            AnyPopUPsOpen = true;
-            SurgeryTableWasOpened = true;
-            Time.timeScale = 0;
-        }
+            //Checks if Player has necessary items for Procedure A
+            if (collision.gameObject.tag == "Player")
+            {
+                //Debug.Log("Collided!");
+                Have_Red = CheckForItems("Red Pills");
+                Have_Blue = CheckForItems("Blue Pills"); 
+            }
+            bool Procedure_A_Materials = Have_Red && Have_Blue;
+
+            //Opens Popup if Player has necessary items for Procedure A
+            if ( collision.gameObject.tag == "Player" && ( (Procedure_A_Materials == true)||(SurgeryTableWasOpened == true) ) )
+            {
+                //Debug.Log("Opened!");
+                popupWindow.SetActive(true);
+                IsThisPopUpOpen = true;
+                SurgeryTableWasOpened = true;
+
+                Time.timeScale = 0;
+            }
+
+        //Procedure B
+
     }
 
     /*
@@ -64,7 +80,7 @@ public class ItemTracker : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             popupWindow.SetActive(false);
-            AnyPopUPsOpen = false;
+            IsThisPopUpOpen = false;
         }
     }
     */
@@ -77,8 +93,14 @@ public class ItemTracker : MonoBehaviour
             {
                 if (itemSlots[i].itemName == TargetItem)
                 {
-                    //Removes Necessary Items from Inventory.
-                    RemoveItem(TargetItem);                   
+                    //Removes Necessary Items from Inventory ONLY if the Surgery Table has never been opened before.
+                    if (SurgeryTableWasOpened == false) 
+                    {
+                        //Remove the necessary items and set SurgeryTableWasOpened to true.
+                        RemoveItem(TargetItem);
+                    }
+                                      
+                    
                     return true;
                 }
             }  
@@ -89,7 +111,7 @@ public class ItemTracker : MonoBehaviour
     { 
         bool StopLoop = false;
         itemSlots = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().itemSlots;
-        for (int i = 0; (i < itemSlots.Length && !StopLoop) ; i++)
+        for (int i = 0; ( (i < itemSlots.Length) && (StopLoop == false) ) ; i++)
         {
             if (itemSlots[i].itemName == TargetItem)
             {
@@ -101,4 +123,5 @@ public class ItemTracker : MonoBehaviour
         }
         
     }
+    
 }
