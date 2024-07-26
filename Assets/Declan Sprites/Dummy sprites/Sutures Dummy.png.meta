@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sutures Dummy_0: 5272879909800320748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

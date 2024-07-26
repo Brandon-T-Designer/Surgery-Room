@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Electroceauterizer Dummy_0: 1888126449268768261
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

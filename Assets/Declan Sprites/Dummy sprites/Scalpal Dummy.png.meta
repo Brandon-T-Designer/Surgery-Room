@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scalpal Dummy_0: 4189926481295350782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
