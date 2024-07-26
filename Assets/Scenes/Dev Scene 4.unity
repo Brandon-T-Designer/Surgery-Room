@@ -31740,17 +31740,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420297020}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 300, y: 300, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 36518366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1350, y: -550}
-  m_SizeDelta: {x: 0.8, y: 0.8}
+  m_SizeDelta: {x: 0.3, y: 1.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420297022
 MonoBehaviour:
@@ -31766,7 +31766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Retractors
   quantity: 1
-  sprite: {fileID: -1082675552724260743, guid: 45ccacd1fa2ce7548abf62a296d523d4, type: 3}
+  sprite: {fileID: 9109760165415540626, guid: 7970127c5295ca247916e5b086d64a84, type: 3}
   itemDescription: 
   InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &1420297023
@@ -31789,7 +31789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1082675552724260743, guid: 45ccacd1fa2ce7548abf62a296d523d4, type: 3}
+  m_Sprite: {fileID: 9109760165415540626, guid: 7970127c5295ca247916e5b086d64a84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34331,7 +34331,7 @@ GameObject:
   - component: {fileID: 1910046183}
   - component: {fileID: 1910046182}
   m_Layer: 5
-  m_Name: Scissors
+  m_Name: Graspers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34344,17 +34344,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910046180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 300, z: 0}
+  m_LocalScale: {x: 300, y: 300, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 36518366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1050, y: -550}
-  m_SizeDelta: {x: 0.8, y: 0.8}
+  m_AnchoredPosition: {x: 1050, y: -450}
+  m_SizeDelta: {x: 1.8, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910046182
 MonoBehaviour:
@@ -34368,9 +34368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23605d0eab756934aa5eb3716e948eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Scissors
+  itemName: Graspers
   quantity: 1
-  sprite: {fileID: 8095582537769553538, guid: 26ade3b1e61a08845a79583ac5606c2d, type: 3}
+  sprite: {fileID: -7256822336231471803, guid: 2b523a798014653489102445c43bfbe5, type: 3}
   itemDescription: 
   InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &1910046183
@@ -34393,7 +34393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8095582537769553538, guid: 26ade3b1e61a08845a79583ac5606c2d, type: 3}
+  m_Sprite: {fileID: -7256822336231471803, guid: 2b523a798014653489102445c43bfbe5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
