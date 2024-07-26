@@ -10,6 +10,7 @@ public class BloodDrawMinigame : MonoBehaviour
 	public Transform needleMinYPositionTrs;
 	public Transform needleMaxYPositionTrs;
 	public BoxCollider2D targetBoxCollider;
+	public BoxCollider2D needleBoxCollider;
 	public float needleMoveSpeed;
 	public float needleMoveToTargetDuration;
 	public float needleMoveAwayFromTargetDuration;
@@ -21,9 +22,10 @@ public class BloodDrawMinigame : MonoBehaviour
 	void OnEnable ()
 	{
 		Time.timeScale = 0;
-		needleXDistanceToTarget = Mathf.Abs(needleTrs.localPosition.x - targetTrs.localPosition.x);
-		initNeedleXLocalPosition = needleTrs.localPosition.x;
+		if (initNeedleXLocalPosition == 0)
+			initNeedleXLocalPosition = needleTrs.localPosition.x;
 		needleTrs.localPosition = new Vector2(initNeedleXLocalPosition, Random.Range(needleMinYPositionTrs.localPosition.y, needleMaxYPositionTrs.localPosition.y));
+		needleXDistanceToTarget = Mathf.Abs(needleTrs.localPosition.x - targetTrs.localPosition.x);
 		needleMoveDirection = Vector2Int.up;
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;
@@ -31,6 +33,7 @@ public class BloodDrawMinigame : MonoBehaviour
 
 	void Update ()
 	{
+		Physics2D.SyncTransforms();
 		if (Mouse.current.leftButton.wasPressedThisFrame && needleMoveDirection.x == 0)
 		{
 			previousNeedleMoveYDirection = needleMoveDirection.y;
@@ -42,7 +45,8 @@ public class BloodDrawMinigame : MonoBehaviour
 			needleTrs.localPosition = new Vector2(Mathf.Lerp(needleTrs.localPosition.x, targetTrs.localPosition.x, needleXDistanceToTarget / needleMoveToTargetDuration * Time.unscaledDeltaTime * (1f / Mathf.Abs(needleTrs.localPosition.x - targetTrs.localPosition.x))), needleTrs.localPosition.y);
 			if (needleTrs.localPosition.x == targetTrs.localPosition.x)
 			{
-				if (needleTrs.position.y > targetBoxCollider.bounds.min.y && needleTrs.position.y < targetBoxCollider.bounds.max.y)
+				List<Collider2D> hitColliders = new List<Collider2D>();
+				if (needleBoxCollider.Overlap(hitColliders) > 0 && hitColliders.Contains(targetBoxCollider))
 				{
 					gameObject.SetActive(false);
 					Time.timeScale = 1;
