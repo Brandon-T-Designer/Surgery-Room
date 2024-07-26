@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
 
     //"Global" variables
-    public bool AnyPopUPsOpen;
+    public bool AnyPopUpsOpen;
 
 
     //Other Variables
@@ -25,22 +25,22 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
 
-        AnyPopUPsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUPsOpen;
+        AnyPopUpsOpen = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().AnyPopUpsOpen;
 
-        if (AnyPopUPsOpen)
+        if (AnyPopUpsOpen)
         {
             //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
 
-        if ( Input.GetButtonDown("Inventory") && menuActivated && !AnyPopUPsOpen) 
+        if ( Input.GetButtonDown("Inventory") && menuActivated && !AnyPopUpsOpen) 
         {
             //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
-        else if (Input.GetButtonDown("Inventory") && !menuActivated && !AnyPopUPsOpen) 
+        else if (Input.GetButtonDown("Inventory") && !menuActivated && !AnyPopUpsOpen) 
         {
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);

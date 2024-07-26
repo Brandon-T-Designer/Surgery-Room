@@ -3,7 +3,7 @@ using UnityEngine;
 public class GlobalVariableCommandCenter : MonoBehaviour
 {
     //"Global" Variables 
-    public bool AnyPopUPsOpen;
+    public bool AnyPopUpsOpen;
     public ItemSlot[] itemSlots;
     //public bool HasGameStarted;
 
@@ -11,7 +11,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AnyPopUPsOpen = false;
+        AnyPopUpsOpen = false;
     }
 
     // Update is called once per frame
@@ -19,13 +19,16 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     {
 
         //AnyPopUPsOpen 
-            bool AnyPopUPsOpen_OrganFridge = GameObject.Find("OrganFridge").GetComponent<OpenPopup>().AnyPopUPsOpen;
-            bool AnyPopUPsOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<OpenPopup>().AnyPopUPsOpen;
-            bool AnyPopUPsOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().AnyPopUPsOpen;
-            bool AnyPopUPsOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<ItemTracker>().AnyPopUPsOpen;
+            //bool IsThisPopUpOpen_StartButton = GameObject.Find("StartButton").GetComponent<WhenStartButtonPressed>().IsThisPopUpOpen;
+
+            bool IsThisPopUpOpen_OrganFridge = GameObject.Find("OrganFridge").GetComponent<OpenPopup>().IsThisPopUpOpen;
+            bool IsThisPopUpOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<OpenPopup>().IsThisPopUpOpen;
+            bool IsThisPopUpOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().IsThisPopUpOpen;
+            
+            bool IsThisPopUpOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<ItemTracker>().IsThisPopUpOpen;
 
             //Logicz
-            AnyPopUPsOpen = (AnyPopUPsOpen_OrganFridge || AnyPopUPsOpen_DrugCabinet || AnyPopUPsOpen_BloodStation || AnyPopUPsOpen_SurgeryTable);
+            AnyPopUpsOpen = (IsThisPopUpOpen_OrganFridge || IsThisPopUpOpen_DrugCabinet || IsThisPopUpOpen_BloodStation || IsThisPopUpOpen_SurgeryTable);
 
         //ItemSlot
             itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlots;

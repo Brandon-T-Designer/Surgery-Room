@@ -20,6 +20,7 @@ public class ClosePopUp : MonoBehaviour
 
     public void IfClicked() 
     {
+        Debug.Log("IfClicked was Activated");
         Station.GetComponent<OpenPopup>().IfClicked();
     }
 }

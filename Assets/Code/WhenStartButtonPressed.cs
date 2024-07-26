@@ -4,6 +4,7 @@ public class WhenStartButtonPressed : MonoBehaviour
 {
     //Other Variables
     public bool HasGameStarted;
+    public bool IsThisPopUpOpen = true;
     public GameObject GameStartBackground;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +26,7 @@ public class WhenStartButtonPressed : MonoBehaviour
     public void StartGame() 
     {
         HasGameStarted = true;
+        IsThisPopUpOpen = false;
     }
 }
     
