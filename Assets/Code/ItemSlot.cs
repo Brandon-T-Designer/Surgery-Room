@@ -15,6 +15,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public bool isFull;
     public string itemDescription;
     public Sprite emptySprite;
+    public Sprite ItemDescriptionBackgroundSprite;
 
     //======ITEM SLOT======//
     [SerializeField]
@@ -22,6 +23,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     //======ITEM DESCRIPTION SLOT======//
     public Image ItemDescriptionImage;
+    
     //public Image Background;
     public TMP_Text ItemDescriptionNameText;
     public TMP_Text ItemDescriptionText;
@@ -58,7 +60,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         this.itemName = "";
         this.quantity = 0;
-        this.itemSprite = emptySprite;
+        this.itemSprite = ItemDescriptionBackgroundSprite;
         this.itemDescription = "";
         isFull = false;
 
@@ -92,7 +94,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         if (ItemDescriptionImage.sprite == null)
         {
-            ItemDescriptionImage.sprite = emptySprite;
+            ItemDescriptionImage.sprite = ItemDescriptionBackgroundSprite;
             //ItemDescriptionImage.sprite = Background.sprite;
         }
 
@@ -117,8 +119,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
        itemImage.sprite = emptySprite;
        ItemDescriptionNameText.text = "";
        ItemDescriptionText.text = "";
-       ItemDescriptionImage.sprite = emptySprite;
-       //ItemDescriptionImage.sprite = Background.sprite;
+       
+        //ItemDescriptionImage.sprite = emptySprite;
+
+       //Added Stuff
+       ItemDescriptionImage.sprite = ItemDescriptionBackgroundSprite;
+       //
     }
 
     private void FillSlot()
