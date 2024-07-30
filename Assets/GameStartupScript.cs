@@ -1,14 +1,11 @@
 using UnityEngine;
-using static System.Collections.Specialized.BitVector32;
 
-public class WhenStartButtonPressed : MonoBehaviour
+public class GameStartupScript : MonoBehaviour
 {
-    public GameObject GameStartCanvas;
-
-    /*
-    //Other Variables
-    public bool HasGameStarted;
+    //"Global" variables
     public bool IsThisPopUpOpen = true;
+
+    //Other Variables
     public GameObject GameStartBackground;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,17 +17,20 @@ public class WhenStartButtonPressed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HasGameStarted == true)
+        /*
+        if (IsThisPopUpOpen == false)
         {
             GameStartBackground.SetActive(false);
             Time.timeScale = 1;
         }
-    } 
-    */
+        */
+    }
 
     public void StartGame()
     {
-        GameStartCanvas.GetComponent<GameStartupScript>().StartGame();
+        Debug.Log("StartGame was Activated!");
+        GameStartBackground.SetActive(false);
+        IsThisPopUpOpen = false;
+        Time.timeScale = 1;
     }
 }
-    

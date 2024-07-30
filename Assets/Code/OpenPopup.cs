@@ -47,7 +47,7 @@ public class OpenPopup : MonoBehaviour
 
     public virtual void IfClicked() 
     {
-        Debug.Log("Activated!!!");
+        //Debug.Log("Activated!!!");
 
             popupWindow.SetActive(false);
             IsThisPopUpOpen = false;
