@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Electrocauterizer_0: 4539504664973563058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Graspers Open_0: -7256822336231471803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

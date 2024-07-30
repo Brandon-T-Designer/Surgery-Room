@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Surgery Table pop up screen_0: 798200958040307059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
