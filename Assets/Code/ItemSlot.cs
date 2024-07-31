@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEditor.SceneManagement;
+// using UnityEditor.SceneManagement;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {

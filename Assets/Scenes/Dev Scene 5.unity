@@ -307,7 +307,9 @@ MonoBehaviour:
   itemName: Tamoxifen
   quantity: 1
   sprite: {fileID: 1535269739453665271, guid: 4510adf100caee74b8438fee5929ab8b, type: 3}
-  itemDescription: 
+  itemDescription: "An estrogen modulator (Antiestrogen) used to treat breast cancer
+    and to prevent individuals at high-risk developing. It functions by blocking
+    estrogen activity, helping stop and prevent tumor growth.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &127885326
 GameObject:
@@ -27515,7 +27517,8 @@ MonoBehaviour:
   itemName: Heart
   quantity: 1
   sprite: {fileID: 4606908045521496030, guid: 5f6de6ba1e537c741a7e1a36b1d701ea, type: 3}
-  itemDescription: 
+  itemDescription: "The heart pumps blood throughout the body, delivering oxygen
+    and nutrients to tissues and removing waste products.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!222 &378620244
 CanvasRenderer:
@@ -27703,7 +27706,8 @@ MonoBehaviour:
   itemName: Right kidney
   quantity: 1
   sprite: {fileID: -5804354909002616991, guid: 5f6753f20be777140b1af4fd9bf1e6d0, type: 3}
-  itemDescription: 
+  itemDescription: "The kidneys filter blood to remove waste products and excess
+    fluids, forming urine.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &411604194
 GameObject:
@@ -28003,7 +28007,9 @@ MonoBehaviour:
   itemName: Ibuprofen
   quantity: 1
   sprite: {fileID: 2178062936290423242, guid: 7d11beb8fb3e8e342ab0bd2f2442c33f, type: 3}
-  itemDescription: 
+  itemDescription: "A type of nonsteroidal anti-inflammatory drug (NSAID) used to
+    relieve moderate pain, swelling, stiffness, and joint Inflammation and pain,
+    particularly for arthritis symptoms.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &461892112
 GameObject:
@@ -28153,7 +28159,8 @@ MonoBehaviour:
   itemName: Metrondiazole
   quantity: 1
   sprite: {fileID: -9141162310546740470, guid: 6cf6ce141e31b844e93cbfcbf01d7a8b, type: 3}
-  itemDescription: 
+  itemDescription: "A type of antibiotic used to treat various infections by preventing
+    bacterial and parasitic growth. \r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &464859544
 GameObject:
@@ -29162,7 +29169,8 @@ MonoBehaviour:
   itemName: Left kidney
   quantity: 1
   sprite: {fileID: 4638623239011866397, guid: 5b1d4bdc8b454824bbb495d5b1c2264d, type: 3}
-  itemDescription: 
+  itemDescription: "The kidneys filter blood to remove waste products and excess
+    fluids, forming urine.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &673414666
 GameObject:
@@ -30340,7 +30348,8 @@ MonoBehaviour:
   itemName: Liver
   quantity: 1
   sprite: {fileID: 5979058639432430815, guid: 570d2457a5fc2ce479603be3c1a21636, type: 3}
-  itemDescription: 
+  itemDescription: "The liver processes nutrients from the digestive tract, detoxifies
+    chemicals, and metabolizes drugs. It also produces bile, which helps digest fats.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &1040099123
 GameObject:
@@ -31240,7 +31249,9 @@ MonoBehaviour:
   itemName: Mycophenolate
   quantity: 1
   sprite: {fileID: 6969827850418615223, guid: 63f50dfcd6e780b4baf2ce1474837911, type: 3}
-  itemDescription: 
+  itemDescription: "An immunosuppressive agent used alongside other medications to
+    lower a body's immunity, making it more likely to accept and receive an organ
+    transplant without complications.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!224 &1220209191 stripped
 RectTransform:
@@ -33477,7 +33488,10 @@ MonoBehaviour:
   itemName: Cyclosporine
   quantity: 1
   sprite: {fileID: 2094217577882993436, guid: 3c627510c84811a43b424c23c970aa96, type: 3}
-  itemDescription: 
+  itemDescription: "An immunosuppressive drug generally used alongside other drugs
+    for patients receiving a Heart, liver, or kidney organ transplant to prevent
+    organ rejection after the transplant. It is also used to treat arthritis, psoriasis,
+    and in an eyedrop form to treat chronic dry eye as well.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &1638131959
 GameObject:
@@ -34051,7 +34065,7 @@ GameObject:
   - component: {fileID: 1724487689}
   - component: {fileID: 1724487691}
   m_Layer: 5
-  m_Name: NAPROXEN
+  m_Name: CEFAZOLIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34152,7 +34166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6899779394958333945, guid: 5833bbb15c8534b48a28cbb58985236d, type: 3}
+  m_Sprite: {fileID: -5266292012603091137, guid: 4498e2e1149f426428093d40297f34e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34184,8 +34198,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Naproxen
   quantity: 1
-  sprite: {fileID: 6899779394958333945, guid: 5833bbb15c8534b48a28cbb58985236d, type: 3}
-  itemDescription: 
+  sprite: {fileID: -5266292012603091137, guid: 4498e2e1149f426428093d40297f34e9, type: 3}
+  itemDescription: "Part of the class of cephalosporin medicines, this antibiotic
+    is often used to treat or prevent serious bacterial infections by killing bacteria
+    or preventing their growth. It is often given before or after a surgery to prevent
+    infections and works on numerous body parts making it a versatile medication.\r"
   InventoryIsFullPopup: {fileID: 0}
 --- !u!1 &1729714457
 GameObject:
