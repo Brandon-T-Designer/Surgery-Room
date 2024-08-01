@@ -1,17 +1,22 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class GlobalVariableCommandCenter : MonoBehaviour
 {
     //"Global" Variables 
     public bool AnyPopUpsOpen;
-    public ItemSlot[] itemSlots;
-    //public bool HasGameStarted;
+    public ItemSlot[] itemSlots;   
+    public int ProcedureNumber = 0;
 
+    //To be developed further later
+    public bool SurgeryTableOccupied;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         AnyPopUpsOpen = false;
+        SurgeryTableOccupied = false;
     }
 
     // Update is called once per frame
@@ -19,38 +24,38 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     {
 
         //AnyPopUPsOpen 
-            Debug.Log("1");
             bool IsThisPopUpOpen_StartButton = GameObject.Find("GameStartCanvas").GetComponent<GameStartupScript>().IsThisPopUpOpen;
-            
-            Debug.Log("2");
             bool IsThisPopUpOpen_OrganFridge = GameObject.Find("OrganFridge").GetComponent<OpenPopup>().IsThisPopUpOpen;
-
-            Debug.Log("3");
             bool IsThisPopUpOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<OpenPopup>().IsThisPopUpOpen;
-
-            Debug.Log("4");
-            bool IsThisPopUpOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().IsThisPopUpOpen;
-            
-            Debug.Log("5");
+            bool IsThisPopUpOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().IsThisPopUpOpen;     
             bool IsThisPopUpOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<OpenPopupSurgeryTable>().IsThisPopUpOpen;
 
-            Debug.Log("6");
             //Logicz
-            AnyPopUpsOpen = ( IsThisPopUpOpen_StartButton || IsThisPopUpOpen_OrganFridge || IsThisPopUpOpen_DrugCabinet || IsThisPopUpOpen_BloodStation || IsThisPopUpOpen_SurgeryTable);
+            AnyPopUpsOpen = (IsThisPopUpOpen_StartButton || IsThisPopUpOpen_OrganFridge || IsThisPopUpOpen_DrugCabinet || IsThisPopUpOpen_BloodStation || IsThisPopUpOpen_SurgeryTable);
 
-            Debug.Log("7");
-            //ItemSlot
+        //ItemSlot
             itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlots;
 
-            Debug.Log("8");
-        //HasGameStarted 
-        //bool HasGameStarted_StartAndEndScripts = GameObject.Find("StartAndEndScripts").GetComponent<StartGame>().HasGameStarted;
-        //bool HasGameStarted_StartButton = GameObject.Find("StartButton").GetComponent<StartGame>().HasGameStarted;
+        //Procedure Number
 
-        //Logicz
-        //HasGameStarted = HasGameStarted_StartButton;
-        //GameOver
+            //See Function SetProcedureNumber
 
+        //SurgeryTableOccupied
 
+            //See Function SetSurgeryTableOccupied
     }
+
+    //Procedure Number
+    public void SetProcedureNumber(int SetProcedureNumber)
+    {
+        ProcedureNumber = SetProcedureNumber;
+        Debug.Log("ProcedureNumber is " + ProcedureNumber);
+    }
+
+    public void SetSurgeryTableOccupied(bool SetSurgeryTableOccupied)
+    {
+        SurgeryTableOccupied = SetSurgeryTableOccupied;
+        Debug.Log("SurgeryTableOccupied is " + SurgeryTableOccupied);
+    }
+
 }
