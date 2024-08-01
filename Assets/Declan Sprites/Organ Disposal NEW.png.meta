@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 97dd8306682c14f418c792cb143e2d4e
+guid: 825aa51f52d329a40936896674f15981
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8173706298590640104
-    second: NEW surgery table 1_0
+      213: 5765044259269133211
+    second: Organ Disposal NEW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NEW surgery table 1_0
+      name: Organ Disposal NEW_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 576
+        x: 31
+        y: 31
+        width: 322
+        height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 818c1267d69219e80800000000000000
-      internalID: -8173706298590640104
+      spriteID: b934424953d810050800000000000000
+      internalID: 5765044259269133211
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      NEW surgery table 1_0: -8173706298590640104
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
