@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class OpenPopupSurgeryTable : MonoBehaviour
@@ -5,21 +6,12 @@ public class OpenPopupSurgeryTable : MonoBehaviour
     //"Global" Variables
     public bool IsThisPopUpOpen = false;
     public ItemSlot[] itemSlots;
+    public int ProcedureNumber;
     //public InventoryManager inventoryManager;
 
     public bool SurgeryTableWasOpened = false;
     public GameObject popupWindow;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    //Inventory Item Status    
-    //"Red Pills"
-    bool Have_Red = false;
-
-    //"Blue Pills"
-    bool Have_Blue = false;
-
-    //Start Function Not Necessary 
     void Start()
     {
         //popupWindow.SetActive(false);
@@ -30,107 +22,96 @@ public class OpenPopupSurgeryTable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Have_Red);
-        //Debug.Log(Have_Blue);
-        /*
-        if ( (Have_Red && Have_Blue) == true)
-        {
-            //Debug.Log("Success!");
-        } 
-        */
-
-        //Old Montoring Code (Unnecessary)
-        /*
-        if (IsThisPopUpOpen == true)
-        {
-            IsThisPopUpOpen = GameObject.Find("SurgeryTable").GetComponent<OpenPopup>().IsThisPopUpOpen;
-            Debug.Log("Popup State" + IsThisPopUpOpen);
-        }
-        */
 
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Procedure A
+        //Get Procedure Number
+        
 
         //Checks if Player has necessary items for Procedure A
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Collided!");
+            ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
+            Debug.Log("Procedure Number Needed " + ProcedureNumber);
+
+            if (ProcedureNumber == 1)
+            {
+                //Liver Transplant
+                ProcedureCheck("Red Pills", "Cyclosporine", "Liver");
+            }
+            else if (ProcedureNumber == 2)
+            {
+                //Appendicitis
+                ProcedureCheck("Red Pills", "null", "null");
+            }
+            else if (ProcedureNumber == 3)
+            {
+                //Gallstone Disease
+                ProcedureCheck("Metrondiazole", "null", "null");
+            }
+            else
+            {
+                //ProcedureCheck("Red Pills", "Blue Pills", "null");
+            }
             
-            //Debug.Log("Collided!");
-            Have_Red = CheckForItems("Red Pills");
-            Have_Blue = CheckForItems("Blue Pills");
-            bool Procedure_A_Materials = Have_Red && Have_Blue;
-
-            //Removes Necessary Items from Inventory ONLY if the Surgery Table has never been opened before.
-            if ((Procedure_A_Materials == true) && (SurgeryTableWasOpened == false) )
-            {
-                RemoveItem("Red Pills");
-                RemoveItem("Blue Pills");
-            }
-
-            //Opens Popup if Player has necessary items for Procedure A
-            if (((Procedure_A_Materials == true) || (SurgeryTableWasOpened == true))) 
-            {
-                popupWindow.SetActive(true);
-                IsThisPopUpOpen = true;
-                SurgeryTableWasOpened = true;
-                Time.timeScale = 0;
-            }
-
         }
-        
-        //Debug.Log(Procedure_A_Materials);
+    }
 
-        /*
-        //Opens Popup if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player" && ((Procedure_A_Materials == true) || (SurgeryTableWasOpened == true)))
+    public void ProcedureCheck(string item_1, string item_2, string item_3)
+    {
+        //Debug.Log("Collided!");
+        bool Have_item_1 = CheckForItem(item_1);
+        bool Have_item_2 = CheckForItem(item_2);
+        bool Have_item_3 = CheckForItem(item_3);
+
+        Have_item_1 = NullChecker(item_1, Have_item_1);
+        Have_item_2 = NullChecker(item_2, Have_item_2);
+        Have_item_3 = NullChecker(item_3, Have_item_3);
+
+        bool Procedure_Materials = Have_item_1 && Have_item_2 && Have_item_3;
+
+        //Removes Necessary Items from Inventory ONLY if the Surgery Table has never been opened before.
+        if ((Procedure_Materials == true) && (SurgeryTableWasOpened == false))
         {
-            //Debug.Log(Procedure_A_Materials);
-            //Debug.Log("Opened!");
+            RemoveItem(item_1);
+            RemoveItem(item_2);
+            RemoveItem(item_3);
+        }
+
+        //Opens Popup if Player has necessary items for Procedure A
+        if (((Procedure_Materials == true) || (SurgeryTableWasOpened == true)))
+        {
             popupWindow.SetActive(true);
             IsThisPopUpOpen = true;
             SurgeryTableWasOpened = true;
             Time.timeScale = 0;
         }
-        */
-
-        //Procedure B
-
     }
 
-    /*
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            popupWindow.SetActive(false);
-            IsThisPopUpOpen = false;
-        }
-    }
-    */
-
-
-    private bool CheckForItems(string TargetItem)
+    private bool CheckForItem(string TargetItem)
     {
         itemSlots = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().itemSlots;
+
         for (int i = 0; i < itemSlots.Length; i++)
         {
             if (itemSlots[i].itemName == TargetItem)
             {
-                /*
-                //Removes Necessary Items from Inventory ONLY if the Surgery Table has never been opened before.
-                if (SurgeryTableWasOpened == false)
-                {
-                    //Remove the necessary items and set SurgeryTableWasOpened to true.
-                    RemoveItem(TargetItem);
-                }
-                */
                 return true;
             }
         }
         return false;
+    }
+
+    public bool NullChecker(string TestItem, bool TestBool)
+    {
+        if (TestItem == "null")
+        {
+            return true;
+        }
+        return TestBool;
     }
 
     private void RemoveItem(string TargetItem)
