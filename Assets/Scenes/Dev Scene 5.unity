@@ -31800,7 +31800,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1292212104}
-        m_TargetAssemblyTypeName: ClosePopUp, Assembly-CSharp
+        m_TargetAssemblyTypeName: ClosePopUpSurgeryTable, Assembly-CSharp
         m_MethodName: IfClicked
         m_Mode: 1
         m_Arguments:
@@ -31858,7 +31858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292212099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4ce8922cc674b4f8eaadfcc3720e1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 118f768cb67a6e34faec13e5b21433a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
@@ -32703,6 +32703,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8553853035661289860, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
   m_PrefabInstance: {fileID: 7505560728091719529}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1528346090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528346092}
+  - component: {fileID: 1528346091}
+  m_Layer: 0
+  m_Name: Body_Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1528346091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528346090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f334addd533b8704aa8dbc755c63cdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LiverTransplant: {fileID: 2232837587315432889, guid: 2fb06eff24b61e546baafcc1028ec71a, type: 3}
+  Appendicitis: {fileID: 2232837587315432889, guid: 2fb06eff24b61e546baafcc1028ec71a, type: 3}
+  GallstoneDisease: {fileID: 2232837587315432889, guid: 2fb06eff24b61e546baafcc1028ec71a, type: 3}
+  ProcedureNumber: 0
+  spawnRate: 0.6000000238418579
+  Game_Over: 0
+  Body_Spanwer_Location_x: 0
+  Body_Count: 0
+  Max_Body_Count: 5
+  All_Bodies: {fileID: 1671003136}
+  BodiesStoppedMoving: 0
+--- !u!4 &1528346092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528346090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16, y: 5.5, z: 1367.5903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1578596765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33667,6 +33722,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnyPopUPsOpen: 0
   Station: {fileID: 1930978656}
+--- !u!1 &1671003133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671003136}
+  - component: {fileID: 1671003135}
+  - component: {fileID: 1671003134}
+  m_Layer: 0
+  m_Name: All_Bodies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671003134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671003133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39cefccca6234e45ace120fce5107b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodiesStoppedMoving: 0
+  moveSpeed: 5
+  Final_Bodies_Pos: -10
+--- !u!114 &1671003135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671003133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f343d38618735145ac41740b00f15b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Procedure_Number: 0
+  Move_Body: []
+--- !u!4 &1671003136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671003133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16, y: 5.5, z: 1367.5903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1671527497
 GameObject:
   m_ObjectHideFlags: 0
@@ -34447,57 +34564,6 @@ MonoBehaviour:
   sprite: {fileID: -3601279134725540674, guid: e9752d4f19ffaba4e8eb312591b6d50c, type: 3}
   itemDescription: PLACEHOLDER
   InventoryIsFullPopup: {fileID: 0}
---- !u!1 &1772414405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772414407}
-  - component: {fileID: 1772414406}
-  m_Layer: 0
-  m_Name: Body_Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1772414406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772414405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f334addd533b8704aa8dbc755c63cdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 2232837587315432889, guid: 2fb06eff24b61e546baafcc1028ec71a, type: 3}
-  spawnRate: 0.6000000238418579
-  Game_Over: 0
-  Body_Spanwer_Location_x: 0
-  Body_Count: 0
-  Max_Body_Count: 1
-  All_Bodies: {fileID: 0}
---- !u!4 &1772414407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772414405}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5.5, z: 1367.5903}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842870450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34875,6 +34941,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnyPopUpsOpen: 0
   itemSlots: []
+  ProcedureNumber: 0
+  SurgeryTableOccupied: 0
 --- !u!224 &1949966613 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4687017966808671694, guid: b9396af600c4516f185090307b81a832, type: 3}
@@ -35829,6 +35897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsThisPopUpOpen: 0
   itemSlots: []
+  ProcedureNumber: 0
   SurgeryTableWasOpened: 0
   popupWindow: {fileID: 1718231596}
 --- !u!1001 &4479365314653942753
@@ -36259,7 +36328,6 @@ SceneRoots:
   - {fileID: 489187831}
   - {fileID: 2101282996}
   - {fileID: 1077271300}
-  - {fileID: 1772414407}
   - {fileID: 562367995}
   - {fileID: 7505560728091719529}
   - {fileID: 464859548}
@@ -36268,3 +36336,5 @@ SceneRoots:
   - {fileID: 1715986204}
   - {fileID: 647510633}
   - {fileID: 1578596765}
+  - {fileID: 1528346092}
+  - {fileID: 1671003136}
