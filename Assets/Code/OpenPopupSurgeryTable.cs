@@ -40,12 +40,12 @@ public class OpenPopupSurgeryTable : MonoBehaviour
             if (ProcedureNumber == 1)
             {
                 //Liver Transplant
-                ProcedureCheck("Red Pills", "Cyclosporine", "Liver");
+                ProcedureCheck("Cefazolin", "Cyclosporine", "Liver");
             }
             else if (ProcedureNumber == 2)
             {
                 //Appendicitis
-                ProcedureCheck("Red Pills", "null", "null");
+                ProcedureCheck("Cefazolin", "null", "null");
             }
             else if (ProcedureNumber == 3)
             {

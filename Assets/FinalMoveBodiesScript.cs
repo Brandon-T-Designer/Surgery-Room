@@ -3,6 +3,7 @@ using UnityEngine;
 public class FinalMoveBodiesScript : MonoBehaviour
 {
 
+    public bool AllBodiesHaveSpawned = false;
     public bool BodiesStoppedMoving = false;
     public float moveSpeed = 5;
     public double Final_Bodies_Pos = 1;
@@ -15,17 +16,21 @@ public class FinalMoveBodiesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BodiesStoppedMoving == true)
+        if (AllBodiesHaveSpawned == true)
         {
             if (transform.position.x < Final_Bodies_Pos)
             {
                 transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
             }
+            else
+            {
+                BodiesStoppedMoving = true;
+            }
         }    
     }
 
-    public void SetBodiesStoppedMoving( bool NewBodiesStoppedMoving) 
+    public void SetAllBodiesHaveSpawned( bool NewAllBodiesHaveSpawned) 
     {
-        BodiesStoppedMoving = NewBodiesStoppedMoving;
+        AllBodiesHaveSpawned = NewAllBodiesHaveSpawned;
     }
 }

@@ -51,8 +51,7 @@ public class Move_Body : MonoBehaviour
         }
         else 
         {
-            BodiesStoppedMoving = true;
-            GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().SetBodiesStoppedMoving(true);
+            GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().SetAllBodiesHaveSpawned(true);
         }
         
         /*
@@ -72,6 +71,7 @@ public class Move_Body : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
 
+        BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().BodiesStoppedMoving;
         //Update If Condtion
         if ((BodiesStoppedMoving == true) && (SurgeryTableOccupied == false))
         {
