@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Small Lavender Pill Bottle no text_0: -5266292012603091137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

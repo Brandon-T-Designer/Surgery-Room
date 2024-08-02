@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Purple Patient_0: 2589544949856078611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

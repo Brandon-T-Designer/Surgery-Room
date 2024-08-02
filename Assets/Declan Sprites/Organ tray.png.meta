@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Organ tray_0: -4648935971867958894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

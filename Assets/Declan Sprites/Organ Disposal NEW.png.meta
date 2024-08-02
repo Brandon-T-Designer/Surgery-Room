@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Organ Disposal NEW_0: 5765044259269133211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

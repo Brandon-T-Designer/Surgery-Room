@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blood Draw Arm Orange_0: -6506222026419617157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

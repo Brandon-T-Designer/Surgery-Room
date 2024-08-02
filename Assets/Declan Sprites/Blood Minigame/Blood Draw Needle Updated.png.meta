@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blood Draw Needle Updated_0: 5196425812835661577
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

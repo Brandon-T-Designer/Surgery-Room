@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Medicine Cabinet NEW_0: -4716202535078967756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
