@@ -27,11 +27,11 @@ public class Move : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal")*moveSpeed;
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
-            transform.localScale = new Vector2(-.85f, .85f);
+            transform.localScale = new Vector2(-.6f, .6f);
         }
         else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
-            transform.localScale = new Vector2(.85f, .85f);
+            transform.localScale = new Vector2(.6f, .6f);
         }
         PlayerAnimator.SetFloat("Horizontal", Mathf.Abs(horizontal));
               
