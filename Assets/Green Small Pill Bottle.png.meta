@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c627510c84811a43b424c23c970aa96
+guid: cc656a77a4f9eba438b0bb1aa1d3f7e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2094217577882993436
-    second: Cyclosporine - final pill bottle transparent_0
+      213: -4572460329042255003
+    second: Green Small Pill Bottle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cyclosporine - final pill bottle transparent_0
+      name: Green Small Pill Bottle_0
       rect:
         serializedVersion: 2
-        x: 711
-        y: 42
-        width: 1748
-        height: 3299
+        x: 81
+        y: 2
+        width: 203
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c13481c9ac7201d10800000000000000
-      internalID: 2094217577882993436
+      spriteID: 563eed18e8b5b80c0800000000000000
+      internalID: -4572460329042255003
       vertices: []
       indices: 
       edges: []
