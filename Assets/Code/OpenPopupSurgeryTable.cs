@@ -40,7 +40,7 @@ public class OpenPopupSurgeryTable : MonoBehaviour
             if (ProcedureNumber == 1)
             {
                 //Liver Transplant
-                ProcedureCheck("Red Pills", "Cyclosporine", "Liver");
+                ProcedureCheck("Red Pills", "null", "null");
             }
             else if (ProcedureNumber == 2)
             {
