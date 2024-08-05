@@ -50,7 +50,7 @@ public class OpenPopupSurgeryTable : MonoBehaviour
             else if (ProcedureNumber == 3)
             {
                 //Gallstone Disease
-                ProcedureCheck("Metrondiazole", "null", "null");
+                //ProcedureCheck("Metrondiazole", "null", "null");
             }
             else
             {
