@@ -26969,10 +26969,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 227706598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f080e9ee1f308b740916d5b53ba4e12f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ad8f9aed3ce1a84d9679e7e8775e525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsThisPopUpOpen: 0
+  itemSlots: []
+  ProcedureNumber: 0
+  SurgeryTableWasOpened: 0
   popupWindow: {fileID: 349107890}
 --- !u!1 &261639603
 GameObject:
@@ -33020,7 +33023,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1606496779}
-        m_TargetAssemblyTypeName: ClosePopUp, Assembly-CSharp
+        m_TargetAssemblyTypeName: ClosePopUpBloodStation, Assembly-CSharp
         m_MethodName: IfClicked
         m_Mode: 1
         m_Arguments:
@@ -33078,10 +33081,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606496774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4ce8922cc674b4f8eaadfcc3720e1a, type: 3}
+  m_Script: {fileID: 11500000, guid: e43757da863443a479ed47c60d2920f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnyPopUPsOpen: 0
   Station: {fileID: 227706598}
 --- !u!1 &1618611785
 GameObject:
