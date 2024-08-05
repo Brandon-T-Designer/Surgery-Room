@@ -17,6 +17,8 @@ public class Move_Body : MonoBehaviour
     public int ProcedureNumber;
     public bool SurgeryTableOccupied;
     public bool BodiesStoppedMoving = false;
+    public BoxCollider2D cutStartZoneBoxCollider;
+    public BoxCollider2D cutEndZoneBoxCollider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
