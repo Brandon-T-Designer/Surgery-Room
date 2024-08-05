@@ -158,6 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
       Screenshot 2024-07-03 141912_0: 7688952812449937102
   mipmapLimitGroupName: 
