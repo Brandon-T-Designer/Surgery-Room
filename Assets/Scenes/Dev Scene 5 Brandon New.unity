@@ -26969,10 +26969,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 227706598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f080e9ee1f308b740916d5b53ba4e12f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ad8f9aed3ce1a84d9679e7e8775e525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsThisPopUpOpen: 0
+  itemSlots: []
+  ProcedureNumber: 0
+  SurgeryTableWasOpened: 0
   popupWindow: {fileID: 349107890}
 --- !u!1 &261639603
 GameObject:
@@ -32204,7 +32207,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1316677629}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -32937,67 +32940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1578596765
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Name
-      value: Blood Draw Minigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
 --- !u!1 &1585542447
 GameObject:
   m_ObjectHideFlags: 0
@@ -33244,12 +33186,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1606496777}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1606496779}
-        m_TargetAssemblyTypeName: ClosePopUp, Assembly-CSharp
+        m_TargetAssemblyTypeName: ClosePopUpBloodStation, Assembly-CSharp
         m_MethodName: IfClicked
         m_Mode: 1
         m_Arguments:
@@ -33307,10 +33249,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606496774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4ce8922cc674b4f8eaadfcc3720e1a, type: 3}
+  m_Script: {fileID: 11500000, guid: e43757da863443a479ed47c60d2920f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnyPopUPsOpen: 0
   Station: {fileID: 227706598}
 --- !u!1 &1618611785
 GameObject:
@@ -33931,6 +33872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cefccca6234e45ace120fce5107b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllBodiesHaveSpawned: 0
   BodiesStoppedMoving: 0
   moveSpeed: 5
   Final_Bodies_Pos: -10
@@ -34674,7 +34616,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1745686675}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -36607,6 +36549,5 @@ SceneRoots:
   - {fileID: 1117365559}
   - {fileID: 1715986204}
   - {fileID: 647510633}
-  - {fileID: 1578596765}
   - {fileID: 1528346092}
   - {fileID: 1671003136}

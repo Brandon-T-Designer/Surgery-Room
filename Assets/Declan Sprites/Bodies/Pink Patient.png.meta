@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pink Patient_0: 666868190819114059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

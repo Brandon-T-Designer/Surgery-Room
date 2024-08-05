@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Green Patient_0: 2067150562633916512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

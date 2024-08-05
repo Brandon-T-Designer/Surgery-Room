@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Green Small Pill Bottle_0: -4572460329042255003
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
