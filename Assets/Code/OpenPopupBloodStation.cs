@@ -1,9 +1,7 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
-public class OpenPopupSurgeryTable : MonoBehaviour
+public class OpenPopupBloodStation : MonoBehaviour
 {
-    //"Global" Variables
     public bool IsThisPopUpOpen = false;
     public ItemSlot[] itemSlots;
     public int ProcedureNumber;
@@ -27,36 +25,19 @@ public class OpenPopupSurgeryTable : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Get Procedure Number
-        
 
         //Checks if Player has necessary items for Procedure A
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Collided!");
+            Debug.Log("Collided With Blood Station!");
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
-            Debug.Log("Procedure Number Needed " + ProcedureNumber);
+            Debug.Log("Procedure Number Needed: 3 ");
 
-            if (ProcedureNumber == 1)
+            if (ProcedureNumber == 3)
             {
                 //Liver Transplant
-                ProcedureCheck("Cefazolin", "Cyclosporine", "Liver");
+                ProcedureCheck("Metrondiazole", "null", "null");
             }
-            else if (ProcedureNumber == 2)
-            {
-                //Appendicitis
-                ProcedureCheck("Cefazolin", "null", "null");
-            }
-            else if (ProcedureNumber == 3)
-            {
-                //Gallstone Disease
-                //ProcedureCheck("Metrondiazole", "null", "null");
-            }
-            else
-            {
-                //ProcedureCheck("Red Pills", "Blue Pills", "null");
-            }
-            
         }
     }
 
@@ -128,7 +109,6 @@ public class OpenPopupSurgeryTable : MonoBehaviour
                 StopLoop = true;
             }
         }
-
     }
 
     public virtual void IfClicked()
@@ -152,3 +132,4 @@ public class OpenPopupSurgeryTable : MonoBehaviour
         */
     }
 }
+

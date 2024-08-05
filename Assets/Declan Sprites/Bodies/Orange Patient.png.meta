@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Orange Patient_0: 8652840306947456658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

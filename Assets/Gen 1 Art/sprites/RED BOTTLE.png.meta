@@ -183,6 +183,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
       RED BOTTLE_0: -8195103699693328005
       RED BOTTLE_1: 2411923963962560826
