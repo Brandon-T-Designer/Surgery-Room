@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c627510c84811a43b424c23c970aa96
+guid: ebedb71f883f9024dadc0e3d7da30302
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2094217577882993436
-    second: Cyclosporine - final pill bottle transparent_0
+      213: 1535269739453665271
+    second: Tamoxifen - final pill bottle transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cyclosporine - final pill bottle transparent_0
+      name: Tamoxifen - final pill bottle transparent_0
       rect:
         serializedVersion: 2
-        x: 711
-        y: 42
-        width: 1748
-        height: 3299
+        x: 710
+        y: 20
+        width: 1749
+        height: 3314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c13481c9ac7201d10800000000000000
-      internalID: 2094217577882993436
+      spriteID: 7ffca8e91bf5e4510800000000000000
+      internalID: 1535269739453665271
       vertices: []
       indices: 
       edges: []
@@ -146,7 +146,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cyclosporine - final pill bottle transparent_0: 2094217577882993436
+      Tamoxifen - final pill bottle transparent_0: 1535269739453665271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
