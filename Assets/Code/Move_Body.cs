@@ -4,6 +4,9 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Move_Body : MonoBehaviour
 {
+    //FUCK_GITHUB
+    int FUCK_GITHUB = 0;
+
     float moveSpeed; 
     //public float deadZone = 100;
 
