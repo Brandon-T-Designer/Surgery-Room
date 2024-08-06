@@ -4,7 +4,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Move_Body : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    float moveSpeed; 
     //public float deadZone = 100;
 
     public int Body_Count;
@@ -24,6 +24,7 @@ public class Move_Body : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        moveSpeed = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().moveSpeed;
         //ProcedureNumber = Random.Range(1, 4);
         //Debug.Log(ProcedureNumber);
         //Final_Body_Pos = 5;
@@ -35,8 +36,8 @@ public class Move_Body : MonoBehaviour
     void Update()
     {
         //Other Variables
-        Body_Count = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Body_Count;
-        Max_Body_Count = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Max_Body_Count;
+        Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Body_Count;
+        Max_Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Max_Body_Count;
 
         /*
         Body_Spanwer_Location_x = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Body_Spanwer_Location_x;
@@ -51,7 +52,7 @@ public class Move_Body : MonoBehaviour
         }
         else 
         {
-            GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().SetAllBodiesHaveSpawned(true);
+            GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().SetAllBodiesHaveSpawned(true);
         }
         /*
         if (transform.position.x < Final_Body_Pos)
@@ -71,7 +72,7 @@ public class Move_Body : MonoBehaviour
     {
         //"Global Variables"
         StationIsOccupied = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().StationIsOccupied;
-        BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().BodiesStoppedMoving;
+        BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().BodiesStoppedMoving;
 
         //Update If Condtion
         if ((BodiesStoppedMoving == true) && (StationIsOccupied == false))
