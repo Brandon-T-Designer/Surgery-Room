@@ -70,7 +70,7 @@ public class Body_Spawner : MonoBehaviour
             {
                 BodiesStoppedMoving = true;
             }
-        }
+        } //need this :PP 
     }
     void SpawnBody()
     {
