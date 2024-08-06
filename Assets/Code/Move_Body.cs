@@ -17,6 +17,7 @@ public class Move_Body : MonoBehaviour
     public int ProcedureNumber;
     public bool SurgeryTableOccupied;
     public bool BodiesStoppedMoving = false;
+    public GameObject cutPathIndicatorsParentGo;
     public BoxCollider2D cutStartZoneBoxCollider;
     public BoxCollider2D cutEndZoneBoxCollider;
 
@@ -77,6 +78,7 @@ public class Move_Body : MonoBehaviour
         //Update If Condtion
         if ((BodiesStoppedMoving == true) && (SurgeryTableOccupied == false))
         {
+            CutBodyMinigame.body = this;
             transform.position = GameObject.Find("SurgeryTable").transform.position;
             transform.rotation = Quaternion.Euler(0, 0, 90);
             transform.position = transform.position + Vector3.up;
