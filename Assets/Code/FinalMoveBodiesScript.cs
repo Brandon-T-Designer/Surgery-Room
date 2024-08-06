@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FinalMoveBodiesScript : MonoBehaviour
 {
-
+/*
     public bool AllBodiesHaveSpawned = false;
     public bool BodiesStoppedMoving = false;
     public float moveSpeed = 5;
@@ -33,4 +33,5 @@ public class FinalMoveBodiesScript : MonoBehaviour
     {
         AllBodiesHaveSpawned = NewAllBodiesHaveSpawned;
     }
+    */
 }
