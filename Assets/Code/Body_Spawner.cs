@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Body_Spawner : MonoBehaviour    
 {
-
+    //Test
     public GameObject LiverTransplant;
     public GameObject Appendicitis;
     public GameObject GallstoneDisease;
