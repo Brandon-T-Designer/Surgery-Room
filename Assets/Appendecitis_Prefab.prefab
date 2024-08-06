@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 3001131603302854003}
   - component: {fileID: 8220423037336164790}
   m_Layer: 0
-  m_Name: NecessaryItem#1
+  m_Name: Cefazolin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 710299758364687590}
   - component: {fileID: 2058350926403545622}
   m_Layer: 0
-  m_Name: CheckMark
+  m_Name: CefazolinCheckMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
