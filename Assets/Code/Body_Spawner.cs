@@ -57,8 +57,10 @@ public class Body_Spawner : MonoBehaviour
     }
     void SpawnBody()
     {
+        //Decided which Procedure the patient needs
         ProcedureNumber = Random.Range(1, 4);
 
+        //Creates the proper prefab associated with the procedure
         if (ProcedureNumber == 1)
         {
             //Liver Transplant

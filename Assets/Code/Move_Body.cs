@@ -5,7 +5,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Move_Body : MonoBehaviour
 {
     public float moveSpeed = 5;
-    public float deadZone = 100;
+    //public float deadZone = 100;
 
     public int Body_Count;
     public int Max_Body_Count;
@@ -13,10 +13,13 @@ public class Move_Body : MonoBehaviour
     //public double Body_Spanwer_Location_x;
     public GameObject TreatmentIcons;
 
+    //Check Mark System Control Variables
+    public bool StartChangingTheCheckMarks = false;
+
     //"Global" Variables
-    public int ProcedureNumber;
-    public bool SurgeryTableOccupied;
-    public bool BodiesStoppedMoving = false;
+    int ProcedureNumber;
+    bool StationIsOccupied;
+    bool BodiesStoppedMoving = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,9 +34,6 @@ public class Move_Body : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //"Global Variables"
-        SurgeryTableOccupied = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SurgeryTableOccupied;
-
         //Other Variables
         Body_Count = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Body_Count;
         Max_Body_Count = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Max_Body_Count;
@@ -53,28 +53,33 @@ public class Move_Body : MonoBehaviour
         {
             GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().SetAllBodiesHaveSpawned(true);
         }
-        
         /*
         if (transform.position.x < Final_Body_Pos)
         {
             transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
         }
-        */
-
+         
         if (transform.position.x > deadZone)
         {
             Destroy(gameObject);
             Debug.Log("Body Deleted");
         }
+        */
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-
+        //"Global Variables"
+        StationIsOccupied = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().StationIsOccupied;
         BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<FinalMoveBodiesScript>().BodiesStoppedMoving;
+
         //Update If Condtion
-        if ((BodiesStoppedMoving == true) && (SurgeryTableOccupied == false))
+        if ((BodiesStoppedMoving == true) && (StationIsOccupied == false))
         {
+
+            //Start Changing The Check Mark indicators Now.
+            StartChangingTheCheckMarks = true;
+
             //Check for Surgery Table Treatments
             if (ProcedureNumber == 1 || ProcedureNumber == 2)
             {
@@ -93,11 +98,13 @@ public class Move_Body : MonoBehaviour
                     transform.position = transform.position + Vector3.right;
                 }
             }
+
+            
             //Update Global Variable Command Center
             GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetProcedureNumber(ProcedureNumber);
 
             //Now Occupy The Surgery Table
-            GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetSurgeryTableOccupied(true);
+            GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetStationIsOccupied(true);
         }
     }
 

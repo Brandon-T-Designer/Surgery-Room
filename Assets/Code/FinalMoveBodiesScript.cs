@@ -29,7 +29,7 @@ public class FinalMoveBodiesScript : MonoBehaviour
         }    
     }
 
-    public void SetAllBodiesHaveSpawned( bool NewAllBodiesHaveSpawned) 
+    public void SetAllBodiesHaveSpawned(bool NewAllBodiesHaveSpawned) 
     {
         AllBodiesHaveSpawned = NewAllBodiesHaveSpawned;
     }
