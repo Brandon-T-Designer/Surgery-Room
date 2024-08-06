@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8214aa1483b4e9243913e5a07869d196
+guid: 84f764a16a012ee4f97151d79968348f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8617407045728647095
-    second: Dummy Button_0
+      213: 666868190819114059
+    second: Pink Patient_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +84,33 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -100,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dummy Button_0
+      name: Pink Patient_0
       rect:
         serializedVersion: 2
-        x: 260
-        y: 295
-        width: 440
-        height: 130
+        x: 46
+        y: 1
+        width: 297
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 948456ae2f1d86880800000000000000
-      internalID: -8617407045728647095
+      spriteID: b4cd7c91611314900800000000000000
+      internalID: 666868190819114059
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dummy Button_0: -8617407045728647095
+      Pink Patient_0: 666868190819114059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

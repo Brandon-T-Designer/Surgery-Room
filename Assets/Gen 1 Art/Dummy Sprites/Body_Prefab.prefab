@@ -104,5 +104,10 @@ MonoBehaviour:
   deadZone: 100
   Body_Count: 0
   Max_Body_Count: 5
-  Final_Body_Pos: 8
-  Body_Spanwer_Location_x: 0
+  TreatmentIcons: {fileID: 0}
+  ProcedureNumber: 0
+  SurgeryTableOccupied: 0
+  BodiesStoppedMoving: 0
+  cutPathIndicatorsParentGo: {fileID: 0}
+  cutStartZoneBoxCollider: {fileID: 0}
+  cutEndZoneBoxCollider: {fileID: 0}

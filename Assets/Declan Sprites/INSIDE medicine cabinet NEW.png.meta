@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ebedb71f883f9024dadc0e3d7da30302
+guid: f7e23e4266ff1cf4290180563cb6a000
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1535269739453665271
-    second: Tamoxifen - final pill bottle transparent_0
+      213: 3932439566003382041
+    second: INSIDE medicine cabinet NEW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +84,33 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -100,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tamoxifen - final pill bottle transparent_0
+      name: INSIDE medicine cabinet NEW_0
       rect:
         serializedVersion: 2
-        x: 710
-        y: 20
-        width: 1749
-        height: 3314
+        x: 0
+        y: 0
+        width: 8183
+        height: 4732
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ffca8e91bf5e4510800000000000000
-      internalID: 1535269739453665271
+      spriteID: 917a25843f4d29630800000000000000
+      internalID: 3932439566003382041
       vertices: []
       indices: 
       edges: []
@@ -132,9 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      INSIDE medicine cabinet NEW_0: 3932439566003382041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

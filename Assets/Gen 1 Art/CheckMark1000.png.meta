@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc656a77a4f9eba438b0bb1aa1d3f7e7
+guid: 8a9713ff90cef9044bc679076bc219ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4572460329042255003
-    second: Green Small Pill Bottle_0
+      213: 4151979504288373993
+    second: CheckMark1000_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green Small Pill Bottle_0
+      name: CheckMark1000_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2
-        width: 203
-        height: 382
+        x: 0
+        y: 0
+        width: 860
+        height: 935
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 563eed18e8b5b80c0800000000000000
-      internalID: -4572460329042255003
+      spriteID: 9ec9fcb6c5bce9930800000000000000
+      internalID: 4151979504288373993
       vertices: []
       indices: 
       edges: []
@@ -134,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CheckMark1000_0: 4151979504288373993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

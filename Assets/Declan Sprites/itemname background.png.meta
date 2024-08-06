@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b249a3078ac0aad48bf6dcb6d132fd07
+guid: f256e80970038c24cbbad3b8bd299e3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1203763054809863861
-    second: Green Small Pill Bottle 1_0
+      213: 1418389298975264343
+    second: itemname background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +84,33 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -100,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green Small Pill Bottle 1_0
+      name: itemname background_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2
-        width: 203
-        height: 382
+        x: 7
+        y: 7
+        width: 1586
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b65eabde10a4b010800000000000000
-      internalID: 1203763054809863861
+      spriteID: 75ec2ae6d812fa310800000000000000
+      internalID: 1418389298975264343
       vertices: []
       indices: 
       edges: []
@@ -134,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      itemname background_0: 1418389298975264343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -17,9 +17,6 @@ public class Move_Body : MonoBehaviour
     public int ProcedureNumber;
     public bool SurgeryTableOccupied;
     public bool BodiesStoppedMoving = false;
-    public GameObject cutPathIndicatorsParentGo;
-    public BoxCollider2D cutStartZoneBoxCollider;
-    public BoxCollider2D cutEndZoneBoxCollider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,19 +75,30 @@ public class Move_Body : MonoBehaviour
         //Update If Condtion
         if ((BodiesStoppedMoving == true) && (SurgeryTableOccupied == false))
         {
-            CutBodyMinigame.body = this;
-            transform.position = GameObject.Find("SurgeryTable").transform.position;
-            transform.rotation = Quaternion.Euler(0, 0, 90);
-            transform.position = transform.position + Vector3.up;
+            //Check for Surgery Table Treatments
+            if (ProcedureNumber == 1 || ProcedureNumber == 2)
+            {
+                CutBodyMinigame.body = this;
+                transform.position = GameObject.Find("SurgeryTable").transform.position;
+                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.position = transform.position + Vector3.up;
 
-            TreatmentIcons.GetComponent<CounterRotateCanvas>().CounterRotateTheCanvas();
-
+                TreatmentIcons.GetComponent<CounterRotateCanvas>().CounterRotateTheCanvas();
+            }
+            else 
+            {
+                //Check for Blood Station Treatments
+                if (ProcedureNumber == 3)
+                {
+                    transform.position = GameObject.Find("BloodStation").transform.position;
+                    transform.position = transform.position + Vector3.right;
+                }
+            }
             //Update Global Variable Command Center
             GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetProcedureNumber(ProcedureNumber);
 
             //Now Occupy The Surgery Table
             GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetSurgeryTableOccupied(true);
-
         }
     }
 

@@ -1,8 +1,9 @@
-using JetBrains.Annotations;
+//using JetBrains.Annotations;
 using UnityEngine;
 
 public class GlobalVariableCommandCenter : MonoBehaviour
 {
+    public static GlobalVariableCommandCenter instance;
     //"Global" Variables 
     public bool AnyPopUpsOpen;
     public ItemSlot[] itemSlots;   
@@ -15,6 +16,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         AnyPopUpsOpen = false;
         SurgeryTableOccupied = false;
     }
@@ -27,7 +29,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
             bool IsThisPopUpOpen_StartButton = GameObject.Find("GameStartCanvas").GetComponent<GameStartupScript>().IsThisPopUpOpen;
             bool IsThisPopUpOpen_OrganFridge = GameObject.Find("OrganFridge").GetComponent<OpenPopup>().IsThisPopUpOpen;
             bool IsThisPopUpOpen_DrugCabinet = GameObject.Find("DrugCabinet").GetComponent<OpenPopup>().IsThisPopUpOpen;
-            bool IsThisPopUpOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopup>().IsThisPopUpOpen;     
+            bool IsThisPopUpOpen_BloodStation = GameObject.Find("BloodStation").GetComponent<OpenPopupBloodStation>().IsThisPopUpOpen;     
             bool IsThisPopUpOpen_SurgeryTable = GameObject.Find("SurgeryTable").GetComponent<OpenPopupSurgeryTable>().IsThisPopUpOpen;
 
             //Logicz

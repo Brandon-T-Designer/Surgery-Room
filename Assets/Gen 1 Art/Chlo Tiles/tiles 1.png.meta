@@ -331,6 +331,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
       tiles 1_0: -669272584
       tiles 1_1: 481512075

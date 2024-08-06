@@ -37,6 +37,6 @@ public class Move : MonoBehaviour
               
         vertical = Input.GetAxisRaw("Vertical")*moveSpeed;
         PlayerAnimator.SetFloat("Vertical", Mathf.Abs(vertical));
-        myRigidbody2D.velocity = new Vector2(horizontal*moveSpeed, vertical * moveSpeed);
+        myRigidbody2D.linearVelocity = new Vector2(horizontal*moveSpeed, vertical * moveSpeed);
     }
 }

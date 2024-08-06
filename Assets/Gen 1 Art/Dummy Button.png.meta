@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 905cde42e40c3aa4d857aac0a36308d3
+guid: 8214aa1483b4e9243913e5a07869d196
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6969827850418615223
-    second: Mycophenolate - final pill bottle transparent_0
+      213: -8617407045728647095
+    second: Dummy Button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mycophenolate - final pill bottle transparent_0
+      name: Dummy Button_0
       rect:
         serializedVersion: 2
-        x: 705
-        y: 23
-        width: 1726
-        height: 3311
+        x: 260
+        y: 295
+        width: 440
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b373d1908dc9b060800000000000000
-      internalID: 6969827850418615223
+      spriteID: 948456ae2f1d86880800000000000000
+      internalID: -8617407045728647095
       vertices: []
       indices: 
       edges: []
@@ -134,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dummy Button_0: -8617407045728647095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
