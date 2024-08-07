@@ -51,8 +51,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 7158532932098594091}
   mustCauterizePanel: {fileID: 2319610302834685732}
   lineRenderer: {fileID: 3738527562606527102}
-  cutPointSeparation: 0.1
-  cutPointRadius: 0.1
+  cutPointSeparation: 0.05
+  cutPointRadius: 0.25
   cauterizeTimerText: {fileID: 7955360537358146024}
   procedureCanvasGos:
   - {fileID: 0}
@@ -192,8 +192,8 @@ Transform:
   m_GameObject: {fileID: 1868261001262353488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.365745, y: 0, z: 0}
-  m_LocalScale: {x: 0.7212632, y: 7.2126303, z: 0.017754175}
+  m_LocalPosition: {x: -2.6, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 7.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2226444213927858963}
@@ -1036,7 +1036,7 @@ RectTransform:
   m_GameObject: {fileID: 7158532932098594091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1897233206610891096}
@@ -1147,7 +1147,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1780270757
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &1550643767816959241
 MonoBehaviour:

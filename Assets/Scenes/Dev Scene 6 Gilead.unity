@@ -26752,7 +26752,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 170714952}
         m_TargetAssemblyTypeName: Grabbable, Assembly-CSharp-firstpass
         m_MethodName: Grab
@@ -28024,7 +28024,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 411604200}
         m_TargetAssemblyTypeName: Grabbable, Assembly-CSharp-firstpass
         m_MethodName: Grab
@@ -30198,8 +30198,12 @@ PrefabInstance:
       value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -117.00002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32747,8 +32751,12 @@ PrefabInstance:
       value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -117.00002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
       propertyPath: m_LocalPosition.y

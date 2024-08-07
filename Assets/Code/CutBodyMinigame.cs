@@ -21,6 +21,7 @@ public class CutBodyMinigame : MonoBehaviour
 	List<Collider2D> colliders = new List<Collider2D>();
 	List<Collider2D> collidersLeftToCauterize = new List<Collider2D>();
 	List<Vector3> cutPoints = new List<Vector3>();
+	List<Vector3> cutPointsLeftToCauterize = new List<Vector3>();
 	bool releasedLeftMouseButtonSinceStartCauterize;
 	Vector2 previousMousePosition;
 	float distanceToNextCutPoint;
@@ -30,7 +31,6 @@ public class CutBodyMinigame : MonoBehaviour
 	void OnEnable ()
 	{
 		Time.timeScale = 0;
-		cutPoints.Clear();
 		lineRenderer.startWidth = cutPointRadius;
 		lineRenderer.endWidth = cutPointRadius;
 		procedureCanvasGos[GlobalVariableCommandCenter.instance.ProcedureNumber].SetActive(true);
@@ -38,14 +38,15 @@ public class CutBodyMinigame : MonoBehaviour
 
 	void Update ()
 	{
+		Physics2D.SyncTransforms();
 		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 		if (mustCauterizePanel.activeSelf)
 		{
-			cauterizeTimer += Time.deltaTime;
+			cauterizeTimer -= Time.unscaledDeltaTime;
 			cauterizeTimerText.text = "Time left to cauterize: " + cauterizeTimer.ToString("F1");
 			if (cauterizeTimer <= 0)
 				GameOver ();
-			else if (Mouse.current.leftButton.wasReleasedThisFrame)
+			else if (Mouse.current.leftButton.wasReleasedThisFrame && !releasedLeftMouseButtonSinceStartCauterize)
 				releasedLeftMouseButtonSinceStartCauterize = true;
 			else if (releasedLeftMouseButtonSinceStartCauterize && Mouse.current.leftButton.isPressed && Grabbable.currentGrabbed != null && Grabbable.currentGrabbed.id == "Electrocauterizer")
 			{
@@ -56,78 +57,98 @@ public class CutBodyMinigame : MonoBehaviour
 					RaycastHit2D hit = hits[i];
 					hitColliders.Add(hit.collider);
 				}
-				if (!hitColliders.Contains(collidersLeftToCauterize[0]) && !hitColliders.Contains(collidersLeftToCauterize[collidersLeftToCauterize.Count - 1]))
+				bool hittingCollider = false;
+				for (int i = 0; i < colliders.Count; i ++)
 				{
-					bool isMouseOverSecondCutPoint = collidersLeftToCauterize[1].OverlapPoint(mousePosition);
-					if (!isMouseOverSecondCutPoint && !hitColliders.Contains(collidersLeftToCauterize[collidersLeftToCauterize.Count - 2]))
-						collidersLeftToCauterize = colliders;
-					else
+					Collider2D collider = colliders[i];
+					if (hitColliders.Contains(collider))
 					{
-						if (isMouseOverSecondCutPoint)
-							collidersLeftToCauterize.RemoveAt(0);
-						else
-							collidersLeftToCauterize.RemoveAt(collidersLeftToCauterize.Count - 1);
-						if (collidersLeftToCauterize.Count == 1)
+						hittingCollider = true;
+						break;
+					}
+				}
+				if (!hittingCollider)
+					ResetCauterize ();
+				else
+				{
+					for (int i = 0; i < hitColliders.Count; i ++)
+					{
+						Collider2D hitCollider = hitColliders[i];
+						if (colliders.Contains(hitCollider) && hitCollider is CircleCollider2D)
 						{
-							collidersLeftToCauterize.Clear();
-							mustCauterizePanel.SetActive(false);
-							cauterizeTimerText.gameObject.SetActive(false);
+							int indexOfHitCollider = collidersLeftToCauterize.IndexOf(hitCollider);
+							if (indexOfHitCollider != -1)
+							{
+								collidersLeftToCauterize.RemoveAt(indexOfHitCollider);
+								cutPointsLeftToCauterize.RemoveAt(indexOfHitCollider);
+								lineRenderer.positionCount = cutPointsLeftToCauterize.Count;
+								lineRenderer.SetPositions(cutPointsLeftToCauterize.ToArray());
+								if (cutPointsLeftToCauterize.Count == 0)
+									StopCauterize ();
+							}
 						}
 					}
 				}
 			}
+			else
+				ResetCauterize ();
 		}
 		else if (Grabbable.currentGrabbed != null && Grabbable.currentGrabbed == previousGrabbed && Grabbable.currentGrabbed.id == "Scalpel")
 		{
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 			{
-				if (!cutStartZoneBoxCollider.bounds.Contains(mousePosition))
+				if (!cutStartZoneBoxCollider.OverlapPoint(mousePosition))
+					StartCauterize ();
+			}
+			if (Mouse.current.leftButton.isPressed)
+			{
+				if (mousePosition.y < cutStartZoneBoxCollider.bounds.min.y || mousePosition.y > cutStartZoneBoxCollider.bounds.max.y)
 					StartCauterize ();
 				else
 				{
-					cutPoints.Clear();
-					cutPoints.Add(mousePosition);
-					CircleCollider2D circleCollider = new GameObject().AddComponent<CircleCollider2D>();
-					circleCollider.transform.position = mousePosition;
-					circleCollider.transform.localScale = Vector3.one * cutPointRadius;
-					colliders.Add(circleCollider);
-				}
-			}
-			else if (Mouse.current.leftButton.isPressed)
-			{
-				distanceToNextCutPoint -= (mousePosition - previousMousePosition).magnitude;
-				if (distanceToNextCutPoint <= 0)
-				{
-					while (distanceToNextCutPoint <= 0)
+					distanceToNextCutPoint -= (mousePosition - previousMousePosition).magnitude;
+					if (distanceToNextCutPoint <= 0)
 					{
-						Vector2 cutPoint = previousMousePosition + (mousePosition - previousMousePosition).normalized * cutPointSeparation;
-						if (cutPoints.Count > 1)
+						while (distanceToNextCutPoint <= 0)
 						{
-							BoxCollider2D boxCollider = new GameObject().AddComponent<BoxCollider2D>();
-							Vector2 previousCutPoint = cutPoints[cutPoints.Count - 1];
-							boxCollider.transform.position = (cutPoint + previousCutPoint) / 2;
-							boxCollider.transform.rotation = Quaternion.LookRotation(Vector3.forward, cutPoint - previousCutPoint);
-							boxCollider.transform.localScale = new Vector3(cutPointRadius, cutPointSeparation);
-							colliders.Add(boxCollider);
+							Vector2 previousCutPoint = previousMousePosition;
+							if (cutPoints.Count > 0)
+								previousCutPoint = cutPoints[cutPoints.Count - 1];
+							float distanceToPreviousCutPoint = (mousePosition - previousCutPoint).magnitude;
+							Vector2 cutPoint = previousCutPoint + Vector2.ClampMagnitude((mousePosition - previousMousePosition).normalized * cutPointSeparation, distanceToPreviousCutPoint);
+							if (cutPoints.Count > 0)
+							{
+								BoxCollider2D boxCollider = new GameObject().AddComponent<BoxCollider2D>();
+								boxCollider.transform.position = (cutPoint + previousCutPoint) / 2;
+								boxCollider.transform.rotation = Quaternion.LookRotation(Vector3.forward, cutPoint - previousCutPoint);
+								boxCollider.transform.localScale = new Vector3(cutPointRadius, Mathf.Min(cutPointSeparation, (cutPoint - previousCutPoint).magnitude));
+								colliders.Add(boxCollider);
+								cutPoints.Add(cutPoint);
+							}
+							CircleCollider2D circleCollider = new GameObject().AddComponent<CircleCollider2D>();
+							circleCollider.transform.position = cutPoint;
+							circleCollider.transform.localScale = Vector3.one * cutPointRadius;
+							colliders.Add(circleCollider);
+							cutPoints.Add(cutPoint);
+							distanceToNextCutPoint += cutPointSeparation;
 						}
-						CircleCollider2D circleCollider = new GameObject().AddComponent<CircleCollider2D>();
-						circleCollider.transform.position = cutPoint;
-						circleCollider.transform.localScale = Vector3.one * cutPointRadius;
-						colliders.Add(circleCollider);
-						cutPoints.Add(cutPoint);
-						distanceToNextCutPoint += cutPointSeparation;
+						ResetCauterize ();
 					}
-					lineRenderer.SetPositions(cutPoints.ToArray());
 				}
 			}
-			else if (Mouse.current.rightButton.wasPressedThisFrame)
+			else if (Mouse.current.leftButton.wasReleasedThisFrame)
 			{
-				if (cutEndZoneBoxCollider.bounds.Contains(mousePosition))
+				if (cutEndZoneBoxCollider.OverlapPoint(mousePosition))
 				{
 					Time.timeScale = 1;
 					Destroy(body.gameObject);
-					enabled = false;
+					gameObject.SetActive(false);
 					procedureCanvasGos[GlobalVariableCommandCenter.instance.ProcedureNumber].SetActive(false);
+					for (int i = 0; i < colliders.Count; i ++)
+					{
+						Collider2D collider = colliders[i];
+						Destroy(collider.gameObject);
+					}
 				}
 				else
 					StartCauterize ();
@@ -142,9 +163,48 @@ public class CutBodyMinigame : MonoBehaviour
 		mustCauterizePanel.SetActive(true);
 		cauterizeTimer = cauterizeDuration;
 		cauterizeTimerText.text = "Time left to cauterize: " + cauterizeTimer.ToString("F1");
-		cauterizeTimerText.gameObject.SetActive(false);
+		cauterizeTimerText.gameObject.SetActive(true);
 		releasedLeftMouseButtonSinceStartCauterize = false;
-		collidersLeftToCauterize = colliders;
+		ResetCauterize ();
+	}
+
+	void StopCauterize ()
+	{
+		mustCauterizePanel.SetActive(false);
+		cauterizeTimerText.gameObject.SetActive(false);
+		for (int i = 0; i < colliders.Count; i ++)
+		{
+			Collider2D collider = colliders[i];
+			Destroy(collider.gameObject);
+		}
+		colliders.Clear();
+		cutPoints.Clear();
+	}
+
+	void ResetCauterize ()
+	{
+		collidersLeftToCauterize = new List<Collider2D>(colliders);
+		cutPointsLeftToCauterize = new List<Vector3>(cutPoints);
+		for (int i = 0; i < collidersLeftToCauterize.Count; i ++)
+		{
+			Collider2D collider = collidersLeftToCauterize[i];
+			if (collider is BoxCollider2D)
+			{
+				collidersLeftToCauterize.RemoveAt(i);
+				cutPointsLeftToCauterize.RemoveAt(i);
+				i --;
+			}
+		}
+		if (cutPoints.Count == 1)
+		{
+			lineRenderer.positionCount = 2;
+			lineRenderer.SetPositions(new Vector3[] { cutPoints[0], cutPoints[0] + Vector3.right * cutPointSeparation });
+		}
+		else
+		{
+			lineRenderer.positionCount = cutPointsLeftToCauterize.Count;
+			lineRenderer.SetPositions(cutPointsLeftToCauterize.ToArray());
+		}
 	}
 
 	void GameOver ()

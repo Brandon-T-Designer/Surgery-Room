@@ -29,7 +29,8 @@ public class Grabbable : MonoBehaviour
 
 	void Update ()
 	{
-		trs.position = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+		Vector2 position = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+		trs.position = new Vector3(position.x, position.y, trs.position.z);
 		if (Mouse.current.rightButton.wasPressedThisFrame)
 			Drop ();
 	}
