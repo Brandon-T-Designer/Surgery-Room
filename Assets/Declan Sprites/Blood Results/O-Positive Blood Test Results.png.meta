@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      O-Positive Blood Test Results_0: 8223225962809983029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

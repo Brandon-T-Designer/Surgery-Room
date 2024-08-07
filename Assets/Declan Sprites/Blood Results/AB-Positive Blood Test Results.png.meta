@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AB-Positive Blood Test Results_0: 1263391057200004498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
