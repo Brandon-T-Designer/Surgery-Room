@@ -32,7 +32,7 @@ public class AddItemtoInventory : MonoBehaviour
         if (!inventoryManager.AddItemToInventory(itemName, quantity, sprite, itemDescription))
         {
             InventoryIsFullPopup.SetActive(true);
-
+            InventoryIsFullPopup.GetComponent<InventoryIsFullPopupManager>().StartCountdown();
         }
     }
 }
