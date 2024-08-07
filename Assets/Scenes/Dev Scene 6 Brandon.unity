@@ -33783,7 +33783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LiverTransplant: {fileID: 2232837587315432889, guid: 96034eadd340db842bc9a191386f1e51, type: 3}
-  Appendicitis: {fileID: 2232837587315432889, guid: 51026e757363587499156f03a26f0154, type: 3}
+  Appendicitis: {fileID: 2232837587315432889, guid: 6cf8d32fb36340e4cb77240a11505551, type: 3}
   GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
   ProcedureNumber: 0
   spawnRate: 0.6000000238418579
@@ -34708,6 +34708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1892057323}
+  - component: {fileID: 1892057324}
   m_Layer: 0
   m_Name: 'OrganFridgeFull '
   m_TagString: Untagged
@@ -34715,14 +34716,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1892057323
-Transform:
+--- !u!224 &1892057323
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892057322}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34732,6 +34732,19 @@ Transform:
   - {fileID: 565795195}
   m_Father: {fileID: 1117365559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1892057324
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892057322}
+  m_CullTransparentMesh: 1
 --- !u!1 &1930978656
 GameObject:
   m_ObjectHideFlags: 0
