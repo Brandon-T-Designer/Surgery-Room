@@ -32695,61 +32695,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8553853035661289860, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
   m_PrefabInstance: {fileID: 7505560728091719529}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1528346090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1528346092}
-  - component: {fileID: 1528346091}
-  m_Layer: 0
-  m_Name: Body_Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1528346091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528346090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f334addd533b8704aa8dbc755c63cdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LiverTransplant: {fileID: 2232837587315432889, guid: 96034eadd340db842bc9a191386f1e51, type: 3}
-  Appendicitis: {fileID: 2232837587315432889, guid: 51026e757363587499156f03a26f0154, type: 3}
-  GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
-  ProcedureNumber: 0
-  spawnRate: 0.6000000238418579
-  Game_Over: 0
-  Body_Spanwer_Location_x: 0
-  Body_Count: 0
-  Max_Body_Count: 5
-  All_Bodies: {fileID: 1671003136}
-  BodiesStoppedMoving: 0
---- !u!4 &1528346092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528346090}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5.5, z: 1367.5903}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1578596765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33802,7 +33747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671003136}
-  - component: {fileID: 1671003134}
+  - component: {fileID: 1671003137}
   m_Layer: 0
   m_Name: All_Bodies
   m_TagString: Untagged
@@ -33810,22 +33755,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1671003134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671003133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39cefccca6234e45ace120fce5107b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AllBodiesHaveSpawned: 0
-  BodiesStoppedMoving: 0
-  moveSpeed: 5
-  Final_Bodies_Pos: -10
 --- !u!4 &1671003136
 Transform:
   m_ObjectHideFlags: 0
@@ -33841,6 +33770,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1671003137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671003133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f334addd533b8704aa8dbc755c63cdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LiverTransplant: {fileID: 2232837587315432889, guid: 96034eadd340db842bc9a191386f1e51, type: 3}
+  Appendicitis: {fileID: 2232837587315432889, guid: 51026e757363587499156f03a26f0154, type: 3}
+  GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
+  ProcedureNumber: 0
+  spawnRate: 0.6000000238418579
+  Game_Over: 0
+  Body_Spanwer_Location_x: 0
+  Body_Count: 0
+  Max_Body_Count: 5
+  All_Bodies: {fileID: 1671003136}
+  AllBodiesHaveSpawned: 0
+  BodiesStoppedMoving: 0
+  moveSpeed: 5
+  Final_Bodies_Pos: -8
 --- !u!1 &1671527497
 GameObject:
   m_ObjectHideFlags: 0
@@ -36485,6 +36440,5 @@ SceneRoots:
   - {fileID: 1117365559}
   - {fileID: 1715986204}
   - {fileID: 647510633}
-  - {fileID: 1528346092}
   - {fileID: 1671003136}
   - {fileID: 248644927}
