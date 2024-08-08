@@ -156,7 +156,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 90
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
@@ -1113,7 +1113,7 @@ RectTransform:
   m_GameObject: {fileID: 8823158131227245624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.017754173, y: 0.017754173, z: 0.017754173}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2877295900319225657}
@@ -1124,8 +1124,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1178, y: 659}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &8438630174213991432
 Canvas:
   m_ObjectHideFlags: 0
