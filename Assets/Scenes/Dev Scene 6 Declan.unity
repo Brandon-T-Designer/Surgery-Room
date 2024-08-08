@@ -554,7 +554,6 @@ GameObject:
   - component: {fileID: 127885331}
   - component: {fileID: 127885330}
   - component: {fileID: 127885329}
-  - component: {fileID: 127885328}
   m_Layer: 5
   m_Name: Sutures
   m_TagString: Untagged
@@ -581,23 +580,6 @@ RectTransform:
   m_AnchoredPosition: {x: 900, y: -650}
   m_SizeDelta: {x: 0.8, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &127885328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127885326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23605d0eab756934aa5eb3716e948eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Sutures
-  quantity: 1
-  sprite: {fileID: 1252216641, guid: 4feb88b5ba3c68c48b756b22f268a7ae, type: 3}
-  itemDescription: 
-  InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &127885329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,7 +662,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 127885328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
         m_MethodName: ItemClicked
         m_Mode: 1
@@ -26889,7 +26871,6 @@ GameObject:
   - component: {fileID: 170714951}
   - component: {fileID: 170714950}
   - component: {fileID: 170714949}
-  - component: {fileID: 170714948}
   m_Layer: 5
   m_Name: Electroceauterizer
   m_TagString: Untagged
@@ -26916,23 +26897,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1500, y: -650}
   m_SizeDelta: {x: 0.8, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &170714948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170714946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23605d0eab756934aa5eb3716e948eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Electroceuterizer
-  quantity: 1
-  sprite: {fileID: 4539504664973563058, guid: 945b3d80fab1d6d4f96c6a4cb3274613, type: 3}
-  itemDescription: 
-  InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &170714949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27015,7 +26979,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 170714948}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
         m_MethodName: ItemClicked
         m_Mode: 1
@@ -28094,7 +28058,6 @@ GameObject:
   - component: {fileID: 411604199}
   - component: {fileID: 411604198}
   - component: {fileID: 411604197}
-  - component: {fileID: 411604196}
   m_Layer: 5
   m_Name: Scalpel
   m_TagString: Untagged
@@ -28109,35 +28072,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411604194}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 300, y: 300, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 36518366}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: -650}
+  m_AnchoredPosition: {x: 1397, y: -839}
   m_SizeDelta: {x: 1.5, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &411604196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411604194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23605d0eab756934aa5eb3716e948eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Scalpel
-  quantity: 1
-  sprite: {fileID: 3879225335136281747, guid: 366429025d1ef9f47b8c25d59eb9fae0, type: 3}
-  itemDescription: 
-  InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &411604197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28220,7 +28166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 411604196}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
         m_MethodName: ItemClicked
         m_Mode: 1
@@ -28751,7 +28697,6 @@ GameObject:
   - component: {fileID: 470760872}
   - component: {fileID: 470760871}
   - component: {fileID: 470760870}
-  - component: {fileID: 470760869}
   m_Layer: 5
   m_Name: Scissors
   m_TagString: Untagged
@@ -28778,23 +28723,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1300, y: -550}
   m_SizeDelta: {x: 0.9, y: 0.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &470760869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470760867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23605d0eab756934aa5eb3716e948eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Scissors
-  quantity: 1
-  sprite: {fileID: 6689946350199266671, guid: 7c51e02447bc97143a8f4704f0e9f32f, type: 3}
-  itemDescription: 
-  InventoryIsFullPopup: {fileID: 0}
 --- !u!114 &470760870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28877,7 +28805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 470760869}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
         m_MethodName: ItemClicked
         m_Mode: 1
@@ -30193,7 +30121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &689149466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30203,7 +30131,7 @@ RectTransform:
   m_GameObject: {fileID: 689149465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -30254,9 +30182,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2817082503562786928, guid: 8451375676d25634cb7c16b21f41668e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30424,7 +30352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &792478368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30434,7 +30362,7 @@ RectTransform:
   m_GameObject: {fileID: 792478367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -30485,9 +30413,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8162728306235256307, guid: 9856f11f0974eb04e8fb6fbad12b2228, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31683,7 +31611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1047111677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31693,7 +31621,7 @@ RectTransform:
   m_GameObject: {fileID: 1047111676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -31744,9 +31672,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1328475982848027946, guid: 1589a08af2795de42b284ce8b13c5dcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32138,7 +32066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1105049971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32148,7 +32076,7 @@ RectTransform:
   m_GameObject: {fileID: 1105049970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -32199,9 +32127,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4453059425645911803, guid: fda7ce729b4c65e42972e897b8953688, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33375,7 +33303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1398552441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34071,7 +33999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1605766918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34081,7 +34009,7 @@ RectTransform:
   m_GameObject: {fileID: 1605766917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -34132,9 +34060,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1228994715852947059, guid: d5e9b8f7d2c64984ba10cf5169a6db5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34915,7 +34843,7 @@ MonoBehaviour:
   Appendicitis: {fileID: 2232837587315432889, guid: 6cf8d32fb36340e4cb77240a11505551, type: 3}
   GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
   ProcedureNumber: 0
-  spawnRate: 0.6
+  spawnRate: 0.4
   Game_Over: 0
   Body_Spanwer_Location_x: 0
   Body_Count: 0
@@ -34923,7 +34851,7 @@ MonoBehaviour:
   All_Bodies: {fileID: 1671003136}
   AllBodiesHaveSpawned: 0
   BodiesStoppedMoving: 0
-  moveSpeed: 5
+  moveSpeed: 4
   Final_Bodies_Pos: -8
 --- !u!4 &1671003136
 Transform:
@@ -35590,7 +35518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1788931863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35600,7 +35528,7 @@ RectTransform:
   m_GameObject: {fileID: 1788931862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -35651,9 +35579,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4453059425645911803, guid: fda7ce729b4c65e42972e897b8953688, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35681,7 +35609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1830095264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35691,7 +35619,7 @@ RectTransform:
   m_GameObject: {fileID: 1830095263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -35742,9 +35670,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8223225962809983029, guid: 5a84976b450b9924d9bf115b25a17dd2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36138,7 +36066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1938570153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36148,7 +36076,7 @@ RectTransform:
   m_GameObject: {fileID: 1938570152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 250, y: 250, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398552441}
@@ -36199,9 +36127,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1780270757
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1761694494862481904, guid: 24bf3faf4b88cf54db898661a1425862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

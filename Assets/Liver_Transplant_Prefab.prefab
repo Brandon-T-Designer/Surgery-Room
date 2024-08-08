@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3943566145048463175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -331,14 +331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c4c33f06db99c479565c0802ab7abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  deadZone: 100
   Body_Count: 0
   Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
-  ProcedureNumber: 0
-  SurgeryTableOccupied: 0
-  BodiesStoppedMoving: 0
+  StartChangingTheCheckMarks: 0
 --- !u!1 &3319412179696606495
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4956936390109809991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -424,7 +420,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -748,7 +744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &710299758364687590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -817,7 +813,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
