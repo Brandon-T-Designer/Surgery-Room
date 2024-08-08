@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blood station background_0: -2843596909097105312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

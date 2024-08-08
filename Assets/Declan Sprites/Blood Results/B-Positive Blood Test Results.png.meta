@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      B-Positive Blood Test Results_0: -4453059425645911803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

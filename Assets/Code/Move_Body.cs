@@ -4,14 +4,12 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Move_Body : MonoBehaviour
 {
-    //FUCK_GITHUB
-    int FUCK_GITHUB = 0;
 
     float moveSpeed; 
     //public float deadZone = 100;
 
-    public int Body_Count;
-    public int Max_Body_Count;
+    int Body_Count;
+    int Max_Body_Count;
     //public double Final_Body_Pos = 5;
     //public double Body_Spanwer_Location_x;
     public GameObject TreatmentIcons;
