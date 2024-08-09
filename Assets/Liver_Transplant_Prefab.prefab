@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1386400039359442195}
   - component: {fileID: 8314052141253742747}
   m_Layer: 0
-  m_Name: NecessaryItem#3
+  m_Name: Liver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,12 +103,12 @@ GameObject:
   - component: {fileID: 3943566145048463175}
   - component: {fileID: 4425774794104470712}
   m_Layer: 0
-  m_Name: CheckMark
+  m_Name: LiverCheckMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3943566145048463175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ RectTransform:
   m_GameObject: {fileID: 1377864014258842752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.625, y: 0.625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1386400039359442195}
@@ -172,12 +172,12 @@ SpriteRenderer:
   m_SortingLayerID: -1096088717
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
+  m_Sprite: {fileID: 1243734373482010225, guid: 48f693955edb78f49a8f720e1d332d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -331,14 +331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c4c33f06db99c479565c0802ab7abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  deadZone: 100
   Body_Count: 0
   Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
-  ProcedureNumber: 0
-  SurgeryTableOccupied: 0
-  BodiesStoppedMoving: 0
+  StartChangingTheCheckMarks: 0
 --- !u!1 &3319412179696606495
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,12 +346,12 @@ GameObject:
   - component: {fileID: 4956936390109809991}
   - component: {fileID: 7733859652941646640}
   m_Layer: 0
-  m_Name: CheckMark
+  m_Name: CyclosporineCheckMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4956936390109809991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -365,7 +361,7 @@ RectTransform:
   m_GameObject: {fileID: 3319412179696606495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3442850800868655016}
@@ -419,12 +415,12 @@ SpriteRenderer:
   m_SortingLayerID: -1096088717
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
+  m_Sprite: {fileID: 1243734373482010225, guid: 48f693955edb78f49a8f720e1d332d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -559,7 +555,7 @@ GameObject:
   - component: {fileID: 3001131603302854003}
   - component: {fileID: 8220423037336164790}
   m_Layer: 0
-  m_Name: NecessaryItem#1
+  m_Name: Cefazolin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,7 +647,7 @@ GameObject:
   - component: {fileID: 3442850800868655016}
   - component: {fileID: 1454998826237006085}
   m_Layer: 0
-  m_Name: NecessaryItem#2
+  m_Name: Cyclosporine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,12 +739,12 @@ GameObject:
   - component: {fileID: 710299758364687590}
   - component: {fileID: 2058350926403545622}
   m_Layer: 0
-  m_Name: CheckMark
+  m_Name: CefazolinCheckMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &710299758364687590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -758,7 +754,7 @@ RectTransform:
   m_GameObject: {fileID: 6838183706402655628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3001131603302854003}
@@ -812,12 +808,12 @@ SpriteRenderer:
   m_SortingLayerID: -1096088717
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
+  m_Sprite: {fileID: 1243734373482010225, guid: 48f693955edb78f49a8f720e1d332d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.6, y: 9.35}
+  m_Size: {x: 2.47, y: 2.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

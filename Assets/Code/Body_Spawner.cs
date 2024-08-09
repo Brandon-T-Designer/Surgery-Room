@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Body_Spawner : MonoBehaviour    
 {
-
+    //Test
     public GameObject LiverTransplant;
     public GameObject Appendicitis;
     public GameObject GallstoneDisease;
@@ -11,8 +11,6 @@ public class Body_Spawner : MonoBehaviour
 
     private float timer = 0;
     public double spawnRate = 0.8;
-    
-
 
     public bool Game_Over = false;
     public double Body_Spanwer_Location_x;
@@ -21,7 +19,13 @@ public class Body_Spawner : MonoBehaviour
 
     private GameObject Clone;
     public Transform All_Bodies;
+    
+
+    //FinalMoveBodiesScript
+    public bool AllBodiesHaveSpawned = false;
     public bool BodiesStoppedMoving = false;
+    public float moveSpeed = 5;
+    public double Final_Bodies_Pos = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created  
     void Start()
@@ -53,12 +57,27 @@ public class Body_Spawner : MonoBehaviour
             
             }
             timer = 0;
-        }        
+        }
+
+        //Move all the Bodies once they have all spawned 
+        if (AllBodiesHaveSpawned == true)
+        {
+            if (transform.position.x < Final_Bodies_Pos)
+            {
+                transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
+            }
+            else
+            {
+                BodiesStoppedMoving = true;
+            }
+        } //need this :PP 
     }
     void SpawnBody()
     {
+        //Decided which Procedure the patient needs
         ProcedureNumber = Random.Range(1, 4);
 
+        //Creates the proper prefab associated with the procedure
         if (ProcedureNumber == 1)
         {
             //Liver Transplant
@@ -77,5 +96,10 @@ public class Body_Spawner : MonoBehaviour
 
         All_Bodies.transform.GetChild(Body_Count).GetComponent<Move_Body>().SetProcedureNumber(ProcedureNumber);
         //Clone.transform.parent = All_Bodies;
+    }
+
+    public void SetAllBodiesHaveSpawned(bool NewAllBodiesHaveSpawned)
+    {
+        AllBodiesHaveSpawned = NewAllBodiesHaveSpawned;
     }
 }

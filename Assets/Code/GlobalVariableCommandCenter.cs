@@ -10,7 +10,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     public int ProcedureNumber = 0;
 
     //To be developed further later
-    public bool SurgeryTableOccupied;
+    public bool StationIsOccupied;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -18,7 +18,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     {
         instance = this;
         AnyPopUpsOpen = false;
-        SurgeryTableOccupied = false;
+        StationIsOccupied = false;
     }
 
     // Update is called once per frame
@@ -42,9 +42,9 @@ public class GlobalVariableCommandCenter : MonoBehaviour
 
             //See Function SetProcedureNumber
 
-        //SurgeryTableOccupied
+        //StationIsOccupied
 
-            //See Function SetSurgeryTableOccupied
+            //See Function SetStationIsOccupied
     }
 
     //Procedure Number
@@ -54,10 +54,10 @@ public class GlobalVariableCommandCenter : MonoBehaviour
         Debug.Log("ProcedureNumber is " + ProcedureNumber);
     }
 
-    public void SetSurgeryTableOccupied(bool SetSurgeryTableOccupied)
+    public void SetStationIsOccupied(bool SetStationIsOccupied)
     {
-        SurgeryTableOccupied = SetSurgeryTableOccupied;
-        Debug.Log("SurgeryTableOccupied is " + SurgeryTableOccupied);
+        StationIsOccupied = SetStationIsOccupied;
+        Debug.Log("StationIsOccupied is " + StationIsOccupied);
     }
 
 }

@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using UnityEngine;
 
 public class OpenPopupSurgeryTable : MonoBehaviour
@@ -47,16 +48,6 @@ public class OpenPopupSurgeryTable : MonoBehaviour
                 //Appendicitis
                 ProcedureCheck("Cefazolin", "null", "null");
             }
-            else if (ProcedureNumber == 3)
-            {
-                //Gallstone Disease
-                //ProcedureCheck("Metrondiazole", "null", "null");
-            }
-            else
-            {
-                //ProcedureCheck("Red Pills", "Blue Pills", "null");
-            }
-            
         }
     }
 
@@ -130,6 +121,14 @@ public class OpenPopupSurgeryTable : MonoBehaviour
         }
 
     }
+
+    /*
+    public IEnumerator Decay(int duration)
+    {
+        yield return new WaitForSeconds(duration).waitforcompletion;
+        Debug.Log("patient has died!");
+    }
+    */
 
     public virtual void IfClicked()
     {
