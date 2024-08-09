@@ -99,7 +99,7 @@ public class Move_Body : MonoBehaviour
                 if (ProcedureNumber == 3)
                 {
                     transform.position = GameObject.Find("BloodStation").transform.position;
-                    transform.position = transform.position + Vector3.right;
+                    transform.position = transform.position + 3.3f*Vector3.right;
                 }
             }
 
