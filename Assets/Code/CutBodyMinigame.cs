@@ -218,6 +218,7 @@ public class CutBodyMinigame : MonoBehaviour
 		colliders.Clear();
 		correctCutPoints.Clear();
 		correctCutLineRenderer.positionCount = 0;
+		incorrectCutPoints.Clear();
 	}
 
 	void SetCutLineRendererPoints (bool isCorrect)

@@ -171,10 +171,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
-      propertyPath: cauterizeDuration
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
       propertyPath: 'procedureCanvasGos.Array.data[1]'
       value: 
       objectReference: {fileID: 1891536669}
