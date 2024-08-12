@@ -9,9 +9,6 @@ public class AppendicitisCheckMarkSystem : MonoBehaviour
     //public GameObject Appendicitis_Prefab;
     public GameObject CefazolinCheckMark;
 
-    //FUCK_GITHUB
-    int FUCK_GITHUB = 0;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

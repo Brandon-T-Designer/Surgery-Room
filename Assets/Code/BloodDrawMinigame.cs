@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 
 public class BloodDrawMinigame : MonoBehaviour
 {
@@ -18,9 +19,14 @@ public class BloodDrawMinigame : MonoBehaviour
 	float initNeedleXLocalPosition;
 	int previousNeedleMoveYDirection;
 
+	//Brandon Added Stuff
+	public GameObject BloodStationCanvas;
+	//public BloodStationAnimation canvas;
+	
+
 	void OnEnable ()
 	{
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
 		if (initNeedleXLocalPosition == 0)
 			initNeedleXLocalPosition = needleTrs.localPosition.x;
 		needleTrs.localPosition = new Vector2(initNeedleXLocalPosition, Random.Range(needleMinYPositionTrs.localPosition.y, needleMaxYPositionTrs.localPosition.y));
@@ -45,10 +51,13 @@ public class BloodDrawMinigame : MonoBehaviour
 			{
 				if (needleTrs.position.y > targetBoxCollider.bounds.min.y && needleTrs.position.y < targetBoxCollider.bounds.max.y)
 				{
-					gameObject.SetActive(false);
-					Time.timeScale = 1;
-				}
-				needleMoveDirection.x *= -1;
+                    gameObject.SetActive(false);
+                    //Time.timeScale = 1;
+                    //Brandon Add On
+                    BloodStationCanvas.GetComponent<BloodStationAnimation>().ActivateAnimations();
+
+                }
+                needleMoveDirection.x *= -1;
 			}
 		}
 		else if (needleMoveDirection.x > 0)

@@ -158,6 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
       A-Negative Blood Test Results_0: 1328475982848027946
   mipmapLimitGroupName: 
