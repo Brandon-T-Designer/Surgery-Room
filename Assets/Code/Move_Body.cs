@@ -18,6 +18,7 @@ public class Move_Body : MonoBehaviour
 
     //Check Mark System Control Variables
     public bool StartChangingTheCheckMarks = false;
+    public SerializableDictionary<string, GameObject> requiredItemsForCheckmarksDict;
 
     //"Global" Variables
     int ProcedureNumber;
@@ -27,6 +28,7 @@ public class Move_Body : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        requiredItemsForCheckmarksDict.Init ();
         moveSpeed = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().moveSpeed;
         //ProcedureNumber = Random.Range(1, 4);
         //Debug.Log(ProcedureNumber);

@@ -152,6 +152,11 @@ MonoBehaviour:
   Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Metroniazole
+    values:
+    - {fileID: 6838183706402655628}
 --- !u!1 &3908247419150582573
 GameObject:
   m_ObjectHideFlags: 0

@@ -335,6 +335,15 @@ MonoBehaviour:
   Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Cefazolin
+    - Cyclosporine
+    - Liver
+    values:
+    - {fileID: 6838183706402655628}
+    - {fileID: 3319412179696606495}
+    - {fileID: 1377864014258842752}
 --- !u!1 &3319412179696606495
 GameObject:
   m_ObjectHideFlags: 0

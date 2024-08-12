@@ -153,6 +153,11 @@ MonoBehaviour:
   Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Cefazolin
+    values:
+    - {fileID: 6838183706402655628}
 --- !u!114 &4756959528055900218
 MonoBehaviour:
   m_ObjectHideFlags: 0
