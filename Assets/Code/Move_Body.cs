@@ -46,7 +46,7 @@ public class Move_Body : MonoBehaviour
             transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
         }
 
-        if (transform.position.x > deadZone)
+        if (transform.position.x > deadZone && transform.position.y > 4)
         {
             Destroy(gameObject);
             GameObject.Find("GameLoseCanvas").GetComponent<GameLoseScript>().LoseTheGame();
