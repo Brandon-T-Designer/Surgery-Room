@@ -18,6 +18,7 @@ public class CutBodyMinigame : MonoBehaviour
 	public GameObject[] procedureCanvasGos;
     public BoxCollider2D cutStartZoneBoxCollider;
     public BoxCollider2D cutEndZoneBoxCollider;
+	public AudioSource ouchAudioSource;
 	public static Move_Body body;
 	List<LineRenderer> correctCutLineRenderers = new List<LineRenderer>();
 	List<LineRenderer> incorrectCutLineRenderers = new List<LineRenderer>();
@@ -200,6 +201,7 @@ public class CutBodyMinigame : MonoBehaviour
 
 	void StartCauterize ()
 	{
+		ouchAudioSource.Play();
 		mustCauterizePanel.SetActive(true);
 		cauterizeTimer = cauterizeDuration;
 		cauterizeTimerText.text = "Time left to cauterize: " + cauterizeTimer.ToString("F1");
