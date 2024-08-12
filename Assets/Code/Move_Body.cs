@@ -5,7 +5,8 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Move_Body : MonoBehaviour
 {
 
-    float moveSpeed; 
+    public GameObject MorgueDoors;
+    float moveSpeed;
     float deadZone = 0;
 
     int Body_Count;
@@ -46,11 +47,18 @@ public class Move_Body : MonoBehaviour
             transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
         }
 
-        if (transform.position.x > deadZone)
+        if (transform.position.x > deadZone && transform.position.y > 4)
         {
             Destroy(gameObject);
             GameObject.Find("GameLoseCanvas").GetComponent<GameLoseScript>().LoseTheGame();
             Debug.Log("Body Deleted");
+        }
+
+        
+        if (transform.position.x > deadZone-2 && transform.position.y > 4)
+        {
+            //Getting Morgue Doors to Open
+            //MorgueDoors.GetComponent<DoorAnimation>().StartAnimation();    
         }
         //End
 
