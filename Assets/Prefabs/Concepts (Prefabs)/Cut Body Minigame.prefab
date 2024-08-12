@@ -65,6 +65,9 @@ MonoBehaviour:
   cutStartZoneBoxCollider: {fileID: 2800759028771715324}
   cutEndZoneBoxCollider: {fileID: 4661161033503369709}
   ouchAudioSource: {fileID: 851145053625125628}
+  liverTransplantPatientCutOpenWithBadLiverGo: {fileID: 0}
+  liverTransplantPatientCutOpenWithoutLiverGo: {fileID: 0}
+  liverTransplantPatientCutOpenWithNewLiverGo: {fileID: 0}
 --- !u!82 &851145053625125628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -188,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 1868261001262353488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.6, y: -0, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 7.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -392,9 +395,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh no, you messed up the cut! Right click to drop the scalpel and then
-    left click on the cauterizer. Then, left click and drag over the cut to close
-    it.
+  m_text: Oh no, you messed up the cut! Left click on the cauterizer and then left
+    click again and drag over the cut to close it.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

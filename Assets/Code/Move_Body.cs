@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static System.Collections.Specialized.BitVector32;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using Transform = UnityEngine.Transform;
 
 public class Move_Body : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class Move_Body : MonoBehaviour
     //Check Mark System Control Variables
     public bool StartChangingTheCheckMarks = false;
     public SerializableDictionary<string, GameObject> requiredItemsForCheckmarksDict;
+    public Collider2D interactRangeCollider;
+    public Collider2D collider;
+    public Transform trs;
 
     //"Global" Variables
     int ProcedureNumber;
@@ -71,6 +76,19 @@ public class Move_Body : MonoBehaviour
             Debug.Log("Body Deleted");
         }
         */
+        if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+        {
+            for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
+            {
+                string requiredItem = requiredItemsForCheckmarksDict.keys[i];
+                if (requiredItem == Grabbable.currentGrabbed.id)
+                {
+                    ItemSlot itemSlot = Grabbable.currentGrabbed.GetComponentInParent<ItemSlot>();
+                    itemSlot.RemoveItemFromSlot (itemSlot.itemName, itemSlot.quantity, itemSlot.itemSprite, itemSlot.itemDescription);
+                    requiredItemsForCheckmarksDict.values[i].SetActive(true);
+                }
+            }
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

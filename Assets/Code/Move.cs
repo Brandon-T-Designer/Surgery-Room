@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public static Move instance;
+    public Transform trs;
     public float moveSpeed;
     float vertical, horizontal;
     Rigidbody2D myRigidbody2D;
@@ -13,6 +15,7 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 

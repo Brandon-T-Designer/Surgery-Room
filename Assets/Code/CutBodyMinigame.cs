@@ -19,6 +19,9 @@ public class CutBodyMinigame : MonoBehaviour
     public BoxCollider2D cutStartZoneBoxCollider;
     public BoxCollider2D cutEndZoneBoxCollider;
 	public AudioSource ouchAudioSource;
+	public GameObject liverTransplantPatientCutOpenWithBadLiverGo;
+	public GameObject liverTransplantPatientCutOpenWithoutLiverGo;
+	public GameObject liverTransplantPatientCutOpenWithNewLiverGo;
 	public static Move_Body body;
 	List<LineRenderer> correctCutLineRenderers = new List<LineRenderer>();
 	List<LineRenderer> incorrectCutLineRenderers = new List<LineRenderer>();
@@ -81,7 +84,8 @@ public class CutBodyMinigame : MonoBehaviour
 						Collider2D collider = colliders[i];
 						Destroy(collider.gameObject);
 					}
-					
+					if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
+						liverTransplantPatientCutOpenWithBadLiverGo.SetActive(true);
 				}
 				else
 					StartCauterize ();

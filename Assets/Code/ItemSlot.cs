@@ -32,6 +32,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public bool thisItemSelected = false; 
 
     private InventoryManager inventoryManager;
+    public Grabbable grabbable;
 
     private void Start()
     {
@@ -53,17 +54,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             FillSlot();
         }
-        Move_Body[] bodies = Body_Spawner.instance.GetComponentsInChildren<Move_Body>();
-        for (int i = 0; i < bodies.Length; i ++)
-        {
-            Move_Body body = bodies[i];
-            for (int i2 = 0; i2 < body.requiredItemsForCheckmarksDict.Count; i2 ++)
-            {
-                string requiredItem = body.requiredItemsForCheckmarksDict.keys[i2];
-                if (requiredItem == itemName)
-                    body.requiredItemsForCheckmarksDict.values[i2].SetActive(true);
-            }
-        }
+        grabbable.id = itemName;
     }
 
     //Added Stuff
@@ -76,26 +67,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         isFull = false;
 
         itemImage.sprite = emptySprite;
-        Move_Body[] bodies = Body_Spawner.instance.GetComponentsInChildren<Move_Body>();
-        for (int i = 0; i < bodies.Length; i ++)
-        {
-            Move_Body body = bodies[i];
-            for (int i2 = 0; i2 < body.requiredItemsForCheckmarksDict.Count; i2 ++)
-            {
-                string requiredItem = body.requiredItemsForCheckmarksDict.keys[i2];
-                bool hasRequiredItem = false;
-                for (int i3 = 0; i3 < InventoryManager.instance.itemSlots.Length; i3 ++)
-                {
-                    ItemSlot itemSlot = InventoryManager.instance.itemSlots[i3];
-                    if (requiredItem == itemSlot.itemName)
-                    {
-                        hasRequiredItem = true;
-                        break;
-                    }
-                }
-                body.requiredItemsForCheckmarksDict.values[i2].SetActive(hasRequiredItem);
-            }
-        }
+        grabbable.id = "";
+        grabbable.Drop ();
     }
     //Added Stuff End
 
