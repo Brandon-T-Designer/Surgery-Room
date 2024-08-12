@@ -7,21 +7,21 @@ using UnityEngine.EventSystems;
 
 public class DetectMouseHovering : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public bool isOver = false;
+    [SerializeField]
+    private string itemName; 
+    public TMP_Text itemNameText; 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse enter");
-        isOver = true;
+        itemNameText.text = itemName;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse exit");
-        isOver = false;
+        itemNameText.text = "";
     }
 
-    
+    /*
     void OnMouseOver()
     {
         //If your mouse hovers over the GameObject with the script attached, output this message
@@ -33,5 +33,6 @@ public class DetectMouseHovering : MonoBehaviour, IPointerEnterHandler, IPointer
         //The mouse is no longer hovering over the GameObject so output this message each frame
         Debug.Log("Mouse is no longer on GameObject.");
     }
+    */
     
 }
