@@ -6,7 +6,7 @@ public class Move_Body : MonoBehaviour
 {
 
     float moveSpeed; 
-    //public float deadZone = 100;
+    float deadZone = 0;
 
     int Body_Count;
     int Max_Body_Count;
@@ -20,12 +20,15 @@ public class Move_Body : MonoBehaviour
     //"Global" Variables
     int ProcedureNumber;
     bool StationIsOccupied;
-    bool BodiesStoppedMoving = false;
+    //bool BodiesStoppedMoving = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Deactivate
         moveSpeed = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().moveSpeed;
+        Max_Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Max_Body_Count;
+        deadZone = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().deadZone;
         //ProcedureNumber = Random.Range(1, 4);
         //Debug.Log(ProcedureNumber);
         //Final_Body_Pos = 5;
@@ -36,9 +39,20 @@ public class Move_Body : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Other Variables
-        Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Body_Count;
-        Max_Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Max_Body_Count;
+        //Deactivate
+
+        if (transform.position.x < deadZone)
+        {
+            transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
+        }
+
+        if (transform.position.x > deadZone)
+        {
+            Destroy(gameObject);
+            GameObject.Find("GameLoseCanvas").GetComponent<GameLoseScript>().LoseTheGame();
+            Debug.Log("Body Deleted");
+        }
+        //End
 
         /*
         Body_Spanwer_Location_x = GameObject.Find("Body_Spawner").GetComponent<Body_Spawner>().Body_Spanwer_Location_x;
@@ -47,6 +61,16 @@ public class Move_Body : MonoBehaviour
         double Stop_Body_Here =  (Final_Body_Pos - ((Spawn_Range/Max_Body_Count)*(Body_Count)));
         */
 
+        /*
+        if (transform.position.x < Final_Body_Pos)
+        {
+            transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
+        }
+        */
+
+        /*
+        Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Body_Count;
+        Debug.Log("Body_Count is" + Body_Count);
         if (Body_Count < Max_Body_Count)
         {
             transform.position = transform.position + (Vector3.right * moveSpeed)*Time.deltaTime;
@@ -54,32 +78,28 @@ public class Move_Body : MonoBehaviour
         else 
         {
             GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().SetAllBodiesHaveSpawned(true);
-        }
-        /*
-        if (transform.position.x < Final_Body_Pos)
-        {
-            transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
-        }
-         
-        if (transform.position.x > deadZone)
-        {
-            Destroy(gameObject);
-            Debug.Log("Body Deleted");
-        }
+            Debug.Log("Move_Body: NOT MOVING ANYMORE");
+        } 
         */
+
+
+
+
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //"Global Variables"
         StationIsOccupied = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().StationIsOccupied;
-        BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().BodiesStoppedMoving;
+        //BodiesStoppedMoving = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().BodiesStoppedMoving;
 
         //Update If Condtion
-        if ((BodiesStoppedMoving == true) && (StationIsOccupied == false))
+        if (/*(BodiesStoppedMoving == true) &&*/ (StationIsOccupied == false))
         {
 
             //Start Changing The Check Mark indicators Now.
+            moveSpeed = 0;
             StartChangingTheCheckMarks = true;
 
             //Check for Surgery Table Treatments

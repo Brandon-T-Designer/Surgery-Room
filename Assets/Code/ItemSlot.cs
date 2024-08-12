@@ -80,7 +80,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             OnRightClick();
         }
     }
-
     public void OnLeftClick()
     {
 

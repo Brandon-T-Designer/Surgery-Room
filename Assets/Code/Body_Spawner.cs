@@ -25,7 +25,8 @@ public class Body_Spawner : MonoBehaviour
     public bool AllBodiesHaveSpawned = false;
     public bool BodiesStoppedMoving = false;
     public float moveSpeed = 5;
-    public double Final_Bodies_Pos = 10;
+    public float deadZone = 2;
+    //public double Final_Bodies_Pos = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created  
     void Start()
@@ -58,19 +59,6 @@ public class Body_Spawner : MonoBehaviour
             }
             timer = 0;
         }
-
-        //Move all the Bodies once they have all spawned 
-        if (AllBodiesHaveSpawned == true)
-        {
-            if (transform.position.x < Final_Bodies_Pos)
-            {
-                transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
-            }
-            else
-            {
-                BodiesStoppedMoving = true;
-            }
-        } //need this :PP 
     }
     void SpawnBody()
     {
