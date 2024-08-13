@@ -45,11 +45,11 @@ TagManager:
   - name: BackGroundLayer
     uniqueID: 3247883811
     locked: 0
-  - name: Doctor
-    uniqueID: 1720908279
-    locked: 0
   - name: SpirteLayer
     uniqueID: 3198878579
+    locked: 0
+  - name: Doctor
+    uniqueID: 1720908279
     locked: 0
   - name: PopUpLayer
     uniqueID: 1780270757
