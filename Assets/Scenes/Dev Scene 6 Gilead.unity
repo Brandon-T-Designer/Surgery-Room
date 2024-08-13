@@ -196,6 +196,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5968290588564823790, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
   m_PrefabInstance: {fileID: 1962084}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &27397775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27397776}
+  m_Layer: 5
+  m_Name: Blood Vials Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &27397776
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27397775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.25, y: 2.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1399843735}
+  - {fileID: 2140137518}
+  - {fileID: 688264696}
+  m_Father: {fileID: 349107891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &36518365
 GameObject:
   m_ObjectHideFlags: 0
@@ -27997,7 +28035,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 785549566}
-  - {fileID: 1399843735}
+  - {fileID: 27397776}
   - {fileID: 340258107}
   - {fileID: 1119921767}
   - {fileID: 1014879282}
@@ -30568,6 +30606,88 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1001 &688264695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 27397776}
+    m_Modifications:
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_Name
+      value: Blood Vial (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1780270757
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+--- !u!4 &688264696 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+  m_PrefabInstance: {fileID: 688264695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &689149465
 GameObject:
   m_ObjectHideFlags: 0
@@ -34042,19 +34162,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 349107891}
+    m_TransformParent: {fileID: 27397776}
     m_Modifications:
     - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34100,9 +34216,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blood Vial
       objectReference: {fileID: 0}
-    - target: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1780270757
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34112,11 +34236,6 @@ PrefabInstance:
 --- !u!4 &1399843735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
-  m_PrefabInstance: {fileID: 1399843734}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1399843736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
   m_PrefabInstance: {fileID: 1399843734}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423565972
@@ -34458,7 +34577,7 @@ PrefabInstance:
     - target: {fileID: 186253472303876429, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
       propertyPath: bloodVialGo
       value: 
-      objectReference: {fileID: 1399843736}
+      objectReference: {fileID: 27397775}
     - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -38261,6 +38380,88 @@ MonoBehaviour:
   ProcedureNumber: 0
   SurgeryTableWasOpened: 0
   popupWindow: {fileID: 1718231596}
+--- !u!1001 &2140137517
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 27397776}
+    m_Modifications:
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_Name
+      value: Blood Vial (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164795413890526297, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1780270757
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+--- !u!4 &2140137518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+  m_PrefabInstance: {fileID: 2140137517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4479365314653942753
 PrefabInstance:
   m_ObjectHideFlags: 0
