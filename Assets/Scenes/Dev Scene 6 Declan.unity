@@ -36595,7 +36595,7 @@ MonoBehaviour:
   Appendicitis: {fileID: 2232837587315432889, guid: 6cf8d32fb36340e4cb77240a11505551, type: 3}
   GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
   ProcedureNumber: 0
-  spawnRate: 0.4
+  spawnRate: 3
   Game_Over: 0
   Body_Spanwer_Location_x: 0
   Body_Count: 0
