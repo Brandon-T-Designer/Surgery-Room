@@ -27997,6 +27997,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 785549566}
+  - {fileID: 1399843735}
   - {fileID: 340258107}
   - {fileID: 1119921767}
   - {fileID: 1014879282}
@@ -31001,6 +31002,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
   m_PrefabInstance: {fileID: 1578596765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &785549567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 186253472303876429, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
+  m_PrefabInstance: {fileID: 1578596765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9474485df340e1bd26c09d1c501c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &792478367
 GameObject:
   m_ObjectHideFlags: 0
@@ -34024,6 +34036,89 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1399843734
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 349107891}
+    m_Modifications:
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_Name
+      value: Blood Vial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+--- !u!4 &1399843735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2066699480947807461, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+  m_PrefabInstance: {fileID: 1399843734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1399843736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7921312473379121562, guid: 471cc48f9da5e0b4298cd374c2f6c619, type: 3}
+  m_PrefabInstance: {fileID: 1399843734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423565972
 GameObject:
   m_ObjectHideFlags: 0
@@ -34360,30 +34455,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 349107891}
     m_Modifications:
-    - target: {fileID: 265232239632255754, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 265232239632255754, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 265232239632255754, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 186253472303876429, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
+      propertyPath: bloodVialGo
+      value: 
+      objectReference: {fileID: 1399843736}
     - target: {fileID: 586263855062052217, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -34424,85 +34499,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2401976086180822144, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2401976086180822144, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5196425812835661577, guid: a5831ca5b52cd864fbcfa6872e6eaa0b, type: 3}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158210566521805952, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6219175243996517262, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6506222026419617157, guid: 33018f4796503694a9b2d1897eb6410f, type: 3}
-    - target: {fileID: 6219175243996517262, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6219175243996517262, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6219175243996517262, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
       propertyPath: m_Name
       value: Blood Draw Minigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867021579270991651, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Size.x
-      value: 0.2601652
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.24740106
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.085440725
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.19483134
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211521322117802621, guid: 01c93adba17cb044a91e405df14178b9, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34853,6 +34852,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1606496779}
         m_TargetAssemblyTypeName: ClosePopUpBloodStation, Assembly-CSharp
         m_MethodName: IfClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 785549567}
+        m_TargetAssemblyTypeName: BloodDrawMinigame, Assembly-CSharp
+        m_MethodName: OnLeftBloodStation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

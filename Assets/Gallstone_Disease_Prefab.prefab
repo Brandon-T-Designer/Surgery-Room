@@ -156,12 +156,13 @@ MonoBehaviour:
   StartChangingTheCheckMarks: 0
   requiredItemsForCheckmarksDict:
     keys:
-    - Metroniazole
+    - Metrondiazole
     values:
     - {fileID: 6838183706402655628}
   interactRangeCollider: {fileID: 8170293248715805628}
   collider: {fileID: -6405314282175185951}
   trs: {fileID: 3862837813775265543}
+  ProcedureNumber: 0
 --- !u!58 &8170293248715805628
 CircleCollider2D:
   m_ObjectHideFlags: 0

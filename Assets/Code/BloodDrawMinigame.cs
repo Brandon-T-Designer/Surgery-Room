@@ -10,6 +10,7 @@ public class BloodDrawMinigame : MonoBehaviour
 	public Transform needleMinYPositionTrs;
 	public Transform needleMaxYPositionTrs;
 	public BoxCollider2D targetBoxCollider;
+	public GameObject bloodVialGo;
 	public float needleMoveSpeed;
 	public float needleMoveToTargetDuration;
 	public float needleMoveAwayFromTargetDuration;
@@ -47,6 +48,7 @@ public class BloodDrawMinigame : MonoBehaviour
 				{
 					gameObject.SetActive(false);
 					Time.timeScale = 1;
+					bloodVialGo.SetActive(true);
 				}
 				needleMoveDirection.x *= -1;
 			}
@@ -65,5 +67,10 @@ public class BloodDrawMinigame : MonoBehaviour
 		else if (needleTrs.localPosition.y < needleMinYPositionTrs.localPosition.y)
 			needleMoveDirection.y = 1;
 		needleTrs.localPosition = new Vector2(needleTrs.localPosition.x, needleTrs.localPosition.y + needleMoveSpeed * needleMoveDirection.y * Time.unscaledDeltaTime);
+	}
+
+	public void OnLeftBloodStation ()
+	{
+		bloodVialGo.SetActive(false);
 	}
 }
