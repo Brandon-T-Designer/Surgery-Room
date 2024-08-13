@@ -8,7 +8,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     public ItemSlot[] itemSlots;   
     public int ProcedureNumber = 0;
     public bool StationIsOccupied;
-    public bool DidPlayerLose;
+    public int WhichBodyInTreatment;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -16,7 +16,6 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     {
         AnyPopUpsOpen = false;
         StationIsOccupied = false;
-        DidPlayerLose = false;
     }
 
     // Update is called once per frame
@@ -63,10 +62,11 @@ public class GlobalVariableCommandCenter : MonoBehaviour
         Debug.Log("StationIsOccupied is " + StationIsOccupied);
     }
 
-    public void SetDidPlayerLose(bool SetDidPlayerLose)
+    public void SetWhichBodyInTreatment(int SetWhichBodyInTreatment)
     {
-        DidPlayerLose = SetDidPlayerLose;
-        Debug.Log("DidPlayerLose is " + DidPlayerLose);
+        WhichBodyInTreatment = SetWhichBodyInTreatment;
+        Debug.Log("WhichBodyInTreatment is " + WhichBodyInTreatment);
     }
+
 
 }

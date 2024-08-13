@@ -1,11 +1,9 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 
-public class BloodStationAnimation : MonoBehaviour
+public class VialAnimation : MonoBehaviour
 {
-    public GameObject VialAnimation;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject Vial;
     public GameObject BloodType_1;
     public GameObject BloodType_2;
     public GameObject BloodType_3;
@@ -15,36 +13,12 @@ public class BloodStationAnimation : MonoBehaviour
     public GameObject BloodType_7;
     public GameObject BloodType_8;
 
-    //bool StartAnimation = false;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    
     public void ActivateAnimations()
     {
-        StartCoroutine(AnimateTheVial());
-    }
-    public IEnumerator AnimateTheVial()
-    {
-        VialAnimation.SetActive(true);
-        Debug.Log("Animation Started");
-        yield return new WaitForSecondsRealtime(3);
-        VialAnimation.SetActive(false);
-        Debug.Log("Animation Ended");
-
-        ShowTheResult();
+        Debug.Log("Hello");
     }
 
-    public void ShowTheResult() 
+    public void ShowTheResult()
     {
         int BloodType = Random.Range(1, 9);
         Debug.Log("BloodType is:" + BloodType);
@@ -82,5 +56,4 @@ public class BloodStationAnimation : MonoBehaviour
             BloodType_8.SetActive(true);
         }
     }
-   
 }
