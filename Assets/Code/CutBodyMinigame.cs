@@ -22,6 +22,7 @@ public class CutBodyMinigame : MonoBehaviour
 	public GameObject liverTransplantPatientCutOpenWithBadLiverGo;
 	public GameObject liverTransplantPatientCutOpenWithoutLiverGo;
 	public GameObject liverTransplantPatientCutOpenWithNewLiverGo;
+	public GameObject appendicitisPatientCutOpenWithBadAppendix;
 	public static Move_Body body;
 	List<LineRenderer> correctCutLineRenderers = new List<LineRenderer>();
 	List<LineRenderer> incorrectCutLineRenderers = new List<LineRenderer>();
@@ -86,6 +87,8 @@ public class CutBodyMinigame : MonoBehaviour
 					}
 					if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
 						liverTransplantPatientCutOpenWithBadLiverGo.SetActive(true);
+					else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 2)
+						appendicitisPatientCutOpenWithBadAppendix.SetActive(true);
 				}
 				else
 					StartCauterize ();
