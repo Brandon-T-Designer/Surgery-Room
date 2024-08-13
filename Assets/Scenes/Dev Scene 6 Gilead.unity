@@ -28242,6 +28242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body_Prefab (Cut Open WIth Appendicitis)
       objectReference: {fileID: 0}
+    - target: {fileID: 2232837587315432889, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3862837813775265543, guid: cbbefba9af8fde44ba5c3e0eb216c21c, type: 3}
       propertyPath: m_LocalScale.x
       value: 325
