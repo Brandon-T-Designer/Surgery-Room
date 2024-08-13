@@ -158,7 +158,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      win screen NEW_0: 7935830571146999917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
