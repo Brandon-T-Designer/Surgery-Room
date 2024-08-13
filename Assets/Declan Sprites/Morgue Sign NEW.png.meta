@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Morgue Sign NEW_0: 380421731729228830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
