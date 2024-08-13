@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 
 public class BloodDrawMinigame : MonoBehaviour
 {
@@ -11,22 +10,23 @@ public class BloodDrawMinigame : MonoBehaviour
 	public Transform needleMinYPositionTrs;
 	public Transform needleMaxYPositionTrs;
 	public BoxCollider2D targetBoxCollider;
+	public GameObject bloodVialsParentGo;
+	public GameObject[] bloodTypesGos;
 	public float needleMoveSpeed;
 	public float needleMoveToTargetDuration;
 	public float needleMoveAwayFromTargetDuration;
+	public CanvasGroup canvasGroup;
+	public static BloodDrawMinigame instance;
 	float needleXDistanceToTarget;
 	Vector2Int needleMoveDirection;
 	float initNeedleXLocalPosition;
 	int previousNeedleMoveYDirection;
-
-	//Brandon Added Stuff
-	public GameObject BloodStationCanvas;
-	//public BloodStationAnimation canvas;
-	
+	int currentBloodTypeIndex;
 
 	void OnEnable ()
 	{
-		//Time.timeScale = 0;
+		instance = this;
+		Time.timeScale = 0;
 		if (initNeedleXLocalPosition == 0)
 			initNeedleXLocalPosition = needleTrs.localPosition.x;
 		needleTrs.localPosition = new Vector2(initNeedleXLocalPosition, Random.Range(needleMinYPositionTrs.localPosition.y, needleMaxYPositionTrs.localPosition.y));
@@ -34,6 +34,7 @@ public class BloodDrawMinigame : MonoBehaviour
 		needleMoveDirection = Vector2Int.up;
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;
+		bloodVialsParentGo.SetActive(false);
 	}
 
 	void Update ()
@@ -51,13 +52,11 @@ public class BloodDrawMinigame : MonoBehaviour
 			{
 				if (needleTrs.position.y > targetBoxCollider.bounds.min.y && needleTrs.position.y < targetBoxCollider.bounds.max.y)
 				{
-                    gameObject.SetActive(false);
-                    //Time.timeScale = 1;
-                    //Brandon Add On
-                    BloodStationCanvas.GetComponent<BloodStationAnimation>().ActivateAnimations();
-
-                }
-                needleMoveDirection.x *= -1;
+					gameObject.SetActive(false);
+					Time.timeScale = 1;
+					bloodVialsParentGo.SetActive(true);
+				}
+				needleMoveDirection.x *= -1;
 			}
 		}
 		else if (needleMoveDirection.x > 0)
@@ -74,5 +73,15 @@ public class BloodDrawMinigame : MonoBehaviour
 		else if (needleTrs.localPosition.y < needleMinYPositionTrs.localPosition.y)
 			needleMoveDirection.y = 1;
 		needleTrs.localPosition = new Vector2(needleTrs.localPosition.x, needleTrs.localPosition.y + needleMoveSpeed * needleMoveDirection.y * Time.unscaledDeltaTime);
+	}
+
+	public void OnBloodVialsFilled ()
+	{
+		currentBloodTypeIndex = Random.Range(0,bloodTypesGos.Length);
+		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
+	}
+
+	public void OnBloodBagPicked (int bloodBagIndex)
+	{
 	}
 }
