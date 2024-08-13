@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GlobalVariableCommandCenter : MonoBehaviour
 {
-    public static GlobalVariableCommandCenter instance;
     //"Global" Variables 
     public bool AnyPopUpsOpen;
     public ItemSlot[] itemSlots;   
@@ -15,7 +14,6 @@ public class GlobalVariableCommandCenter : MonoBehaviour
 
     void Start()
     {
-        instance = this;
         AnyPopUpsOpen = false;
         StationIsOccupied = false;
     }
