@@ -24,9 +24,10 @@ public class Move_Body : MonoBehaviour
     public Collider2D interactRangeCollider;
     public Collider2D collider;
     public Transform trs;
+    public static Move_Body currentlyTreating;
 
     //"Global" Variables
-    int ProcedureNumber;
+    public int ProcedureNumber;
     bool StationIsOccupied;
     bool BodiesStoppedMoving = false;
 
@@ -130,6 +131,8 @@ public class Move_Body : MonoBehaviour
 
             //Now Occupy The Surgery Table
             GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetStationIsOccupied(true);
+            interactRangeCollider.enabled = true;
+            currentlyTreating = this;
         }
     }
 

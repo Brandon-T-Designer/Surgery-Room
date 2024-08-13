@@ -33,10 +33,20 @@ public class OpenPopupBloodStation : MonoBehaviour
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
             Debug.Log("Procedure Number Needed: 3 ");
 
-            if (ProcedureNumber == 3)
+            if (Move_Body.currentlyTreating.ProcedureNumber == 3)
             {
                 //Liver Transplant
-                ProcedureCheck("Metrondiazole", "null", "null");
+                // ProcedureCheck("Metrondiazole", "null", "null");
+                for (int i = 0; i < Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.Count; i ++)
+                {
+                    GameObject checkmarkGo = Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[i];
+                    if (!checkmarkGo.activeSelf)
+                        return;
+                }
+                popupWindow.SetActive(true);
+                IsThisPopUpOpen = true;
+                SurgeryTableWasOpened = true;
+                Time.timeScale = 0;
             }
         }
     }
