@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static System.Collections.Specialized.BitVector32;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using Transform = UnityEngine.Transform;
 
 public class Move_Body : MonoBehaviour
 {
+    //FUCK_GITHUB
+    int FUCK_GITHUB = 0;
 
     float moveSpeed;
     float deadZone = 0;
@@ -16,6 +20,11 @@ public class Move_Body : MonoBehaviour
 
     //Check Mark System Control Variables
     public bool StartChangingTheCheckMarks = false;
+    public SerializableDictionary<string, GameObject> requiredItemsForCheckmarksDict;
+    public Collider2D interactRangeCollider;
+    public Collider2D collider;
+    public Transform trs;
+    public static Move_Body currentlyTreating;
 
     //"Global" Variables
     int ProcedureNumber;
@@ -40,6 +49,7 @@ public class Move_Body : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        requiredItemsForCheckmarksDict.Init ();
         //Deactivate
         moveSpeed = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().moveSpeed;
         Max_Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Max_Body_Count;
@@ -99,8 +109,25 @@ public class Move_Body : MonoBehaviour
 
 
 
-
-
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            print("1: " + ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x));
+            print("2: " + (Grabbable.currentGrabbed != null));
+            print("3: " + collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
+        }
+        if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+        {
+            for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
+            {
+                string requiredItem = requiredItemsForCheckmarksDict.keys[i];
+                if (requiredItem == Grabbable.currentGrabbed.id)
+                {
+                    ItemSlot itemSlot = Grabbable.currentGrabbed.GetComponentInParent<ItemSlot>();
+                    itemSlot.RemoveItemFromSlot (itemSlot.itemName, itemSlot.quantity, itemSlot.itemSprite, itemSlot.itemDescription);
+                    requiredItemsForCheckmarksDict.values[i].SetActive(true);
+                }
+            }
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -142,6 +169,8 @@ public class Move_Body : MonoBehaviour
 
             //Now Occupy The Surgery Table
             GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().SetStationIsOccupied(true);
+            interactRangeCollider.enabled = true;
+            currentlyTreating = this;
         }
     }
 

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 5979058639432430815, guid: 570d2457a5fc2ce479603be3c1a21636, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3943566145048463175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 8686754917782534511}
   - component: {fileID: -6405314282175185951}
   - component: {fileID: 3190924574440906535}
+  - component: {fileID: 1606663757792315442}
   m_Layer: 0
   m_Name: Liver_Transplant_Brandon
   m_TagString: Untagged
@@ -260,7 +261,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 666868190819114059, guid: 84f764a16a012ee4f97151d79968348f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -331,9 +332,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c4c33f06db99c479565c0802ab7abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadZone: 0
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Cefazolin
+    - Cyclosporine
+    - Liver
+    values:
+    - {fileID: 6838183706402655628}
+    - {fileID: 3319412179696606495}
+    - {fileID: 1377864014258842752}
+  interactRangeCollider: {fileID: 1606663757792315442}
+  collider: {fileID: -6405314282175185951}
+  trs: {fileID: 3862837813775265543}
+  Table1: {fileID: 0}
+  Table2: {fileID: 0}
+  Table3: {fileID: 0}
+  Table4: {fileID: 0}
+  Table5: {fileID: 0}
+  Table1Occupied: 0
+  Table2Occupied: 0
+  Table3Occupied: 0
+  Table4Occupied: 0
+  Table5Occupied: 0
+--- !u!58 &1606663757792315442
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232837587315432889}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6
 --- !u!1 &3319412179696606495
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4956936390109809991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,7 +470,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -622,7 +680,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4974394476833638411, guid: 4c83d01488aa5bd48a644922fc67a582, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -714,7 +772,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2094217577882993436, guid: 3c627510c84811a43b424c23c970aa96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -743,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &710299758364687590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -805,7 +863,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

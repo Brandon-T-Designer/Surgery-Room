@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6405314282175185951}
   - component: {fileID: 3190924574440906535}
   - component: {fileID: 4756959528055900218}
+  - component: {fileID: 3538932171425062590}
   m_Layer: 0
   m_Name: Appendicitis_Brandon
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2067150562633916512, guid: f9ede5c331cfbc141bf1be7f2c54dc63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,10 +150,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c4c33f06db99c479565c0802ab7abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Body_Count: 0
-  Max_Body_Count: 5
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Cefazolin
+    values:
+    - {fileID: 6838183706402655628}
+  interactRangeCollider: {fileID: 3538932171425062590}
+  collider: {fileID: -6405314282175185951}
+  trs: {fileID: 3862837813775265543}
+  Table1: {fileID: 0}
+  Table2: {fileID: 0}
+  Table3: {fileID: 0}
+  Table4: {fileID: 0}
+  Table5: {fileID: 0}
+  Table1Occupied: 0
+  Table2Occupied: 0
+  Table3Occupied: 0
+  Table4Occupied: 0
+  Table5Occupied: 0
 --- !u!114 &4756959528055900218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,12 +177,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2232837587315432889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b51e05613a0f084fba6ed3a7462eba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CefazolinCheckMark: {fileID: 6838183706402655628}
+--- !u!58 &3538932171425062590
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232837587315432889}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6
 --- !u!1 &3908247419150582573
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +470,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4974394476833638411, guid: 4c83d01488aa5bd48a644922fc67a582, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -508,7 +561,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4151979504288373993, guid: 8a9713ff90cef9044bc679076bc219ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
