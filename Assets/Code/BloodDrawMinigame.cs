@@ -15,7 +15,6 @@ public class BloodDrawMinigame : MonoBehaviour
 	public float needleMoveSpeed;
 	public float needleMoveToTargetDuration;
 	public float needleMoveAwayFromTargetDuration;
-	public CanvasGroup canvasGroup;
 	public static BloodDrawMinigame instance;
 	float needleXDistanceToTarget;
 	Vector2Int needleMoveDirection;
@@ -79,9 +78,5 @@ public class BloodDrawMinigame : MonoBehaviour
 	{
 		currentBloodTypeIndex = Random.Range(0,bloodTypesGos.Length);
 		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
-	}
-
-	public void OnBloodBagPicked (int bloodBagIndex)
-	{
 	}
 }

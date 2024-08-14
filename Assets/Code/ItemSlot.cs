@@ -54,6 +54,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             FillSlot();
         }
+        grabbable.id = itemName;
     }
 
     //Added Stuff
@@ -66,6 +67,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         isFull = false;
 
         itemImage.sprite = emptySprite;
+        grabbable.id = "";
     }
     //Added Stuff End
 

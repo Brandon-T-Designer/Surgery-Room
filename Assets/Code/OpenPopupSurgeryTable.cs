@@ -38,15 +38,30 @@ public class OpenPopupSurgeryTable : MonoBehaviour
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
             Debug.Log("Procedure Number Needed " + ProcedureNumber);
 
-            if (ProcedureNumber == 1)
+            // if (ProcedureNumber == 1)
+            // {
+            //     //Liver Transplant
+            //     ProcedureCheck("Cefazolin", "Cyclosporine", "Liver");
+            // }
+            // else if (ProcedureNumber == 2)
+            // {
+            //     //Appendicitis
+            //     ProcedureCheck("Cefazolin", "null", "null");
+            // }
+            if (ProcedureNumber == 1 || ProcedureNumber == 2)
             {
-                //Liver Transplant
-                ProcedureCheck("Cefazolin", "Cyclosporine", "Liver");
-            }
-            else if (ProcedureNumber == 2)
-            {
-                //Appendicitis
-                ProcedureCheck("Cefazolin", "null", "null");
+
+                // ProcedureCheck("Metrondiazole", "null", "null");
+                for (int i = 0; i < Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.Count; i ++)
+                {
+                    GameObject checkmarkGo = Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[i];
+                    if (!checkmarkGo.activeSelf)
+                        return;
+                }
+                popupWindow.SetActive(true);
+                IsThisPopUpOpen = true;
+                SurgeryTableWasOpened = true;
+                Time.timeScale = 0;
             }
         }
     }
