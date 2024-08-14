@@ -30,6 +30,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public GameObject selectedShader;
     public bool thisItemSelected = false; 
+    public Grabbable grabbable;
 
     private InventoryManager inventoryManager;
 

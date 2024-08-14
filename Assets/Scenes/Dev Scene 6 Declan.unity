@@ -27142,6 +27142,7 @@ GameObject:
   - component: {fileID: 170714950}
   - component: {fileID: 170714949}
   - component: {fileID: 170714952}
+  - component: {fileID: 170714953}
   m_Layer: 5
   m_Name: Electroceauterizer
   m_TagString: Untagged
@@ -27250,9 +27251,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
-        m_MethodName: ItemClicked
+      - m_Target: {fileID: 170714953}
+        m_TargetAssemblyTypeName: Grabbable, Assembly-CSharp
+        m_MethodName: Grab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27276,6 +27277,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Electroceauterizer
   itemNameText: {fileID: 901047179}
+--- !u!114 &170714953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170714946}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62120da5a83ae0b9ca31d56fe9f65fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trs: {fileID: 170714947}
+  id: Electrocauterizer
+  image: {fileID: 170714949}
+  canvas: {fileID: 1718231600}
+  defaultPosition: {x: 0, y: 0}
 --- !u!1 &227706598
 GameObject:
   m_ObjectHideFlags: 0
@@ -27461,7 +27479,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!50 &227706603
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -27472,8 +27490,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -28451,6 +28469,7 @@ GameObject:
   - component: {fileID: 411604198}
   - component: {fileID: 411604197}
   - component: {fileID: 411604200}
+  - component: {fileID: 411604201}
   m_Layer: 5
   m_Name: Scalpel
   m_TagString: Untagged
@@ -28559,9 +28578,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AddItemtoInventory, Assembly-CSharp
-        m_MethodName: ItemClicked
+      - m_Target: {fileID: 170714953}
+        m_TargetAssemblyTypeName: Grabbable, Assembly-CSharp
+        m_MethodName: Grab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28585,6 +28604,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Scalpel
   itemNameText: {fileID: 901047179}
+--- !u!114 &411604201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411604194}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62120da5a83ae0b9ca31d56fe9f65fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trs: {fileID: 411604195}
+  id: Scalpel
+  image: {fileID: 411604197}
+  canvas: {fileID: 1718231600}
+  defaultPosition: {x: 0, y: 0}
 --- !u!1 &416493688
 GameObject:
   m_ObjectHideFlags: 0
@@ -29178,8 +29214,8 @@ MonoBehaviour:
   - {fileID: 1602303035}
   - {fileID: 906709559}
   - {fileID: 281822707}
-  itemSlotsParentWhenInDrugCabinet: {fileID: 1054524473}
-  itemSlotsParentWhenNotInDrugCabinet: {fileID: 2024991144}
+  itemSlotsParentWhenOpen: {fileID: 2024991144}
+  itemSlotsParentWhenClosed: {fileID: 1054524473}
 --- !u!1 &470760867
 GameObject:
   m_ObjectHideFlags: 0
@@ -32712,7 +32748,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!50 &1040099126
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -32723,8 +32759,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -32910,7 +32946,7 @@ GameObject:
   - component: {fileID: 1054524475}
   - component: {fileID: 1054524474}
   m_Layer: 5
-  m_Name: Item Slots Parent When In Drug Cabinet
+  m_Name: Item Slots Parent When Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34896,7 +34932,7 @@ GameObject:
   m_IsActive: 1
 --- !u!50 &1451504457
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34907,8 +34943,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -36526,7 +36562,7 @@ MonoBehaviour:
   AllBodiesHaveSpawned: 0
   BodiesStoppedMoving: 0
   moveSpeed: 1
-  deadZone: 6.3
+  deadZone: 2
 --- !u!4 &1671003136
 Transform:
   m_ObjectHideFlags: 0
@@ -36654,6 +36690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024991144}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: BackgroundSprite
       value: 
@@ -37371,6 +37411,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024991144}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: BackgroundSprite
       value: 
@@ -37771,7 +37815,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!50 &1930978659
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -37782,8 +37826,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -38004,7 +38048,7 @@ MonoBehaviour:
   itemSlots: []
   ProcedureNumber: 0
   StationIsOccupied: 0
-  DidPlayerLose: 0
+  WhichBodyInTreatment: 0
 --- !u!224 &1949966613 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4687017966808671694, guid: b9396af600c4516f185090307b81a832, type: 3}
@@ -38018,6 +38062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024991144}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: Background
       value: 
@@ -38143,6 +38191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024991144}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: BackgroundSprite
       value: 
@@ -38958,7 +39010,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!50 &2139827011
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38969,8 +39021,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 2.6622
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -39063,6 +39115,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024991144}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2698526605935346695, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: m_Color.b
       value: 1

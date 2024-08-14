@@ -29601,8 +29601,8 @@ MonoBehaviour:
   - {fileID: 1602303035}
   - {fileID: 906709559}
   - {fileID: 281822707}
-  itemSlotsParentWhenInDrugCabinet: {fileID: 0}
-  itemSlotsParentWhenNotInDrugCabinet: {fileID: 0}
+  itemSlotsParentWhenOpen: {fileID: 2024991144}
+  itemSlotsParentWhenClosed: {fileID: 1054524473}
 --- !u!1 &470760867
 GameObject:
   m_ObjectHideFlags: 0
@@ -36625,6 +36625,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054524473}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: copyToItemSlot
       value: 
@@ -37531,6 +37535,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054524473}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: copyToItemSlot
       value: 
@@ -38059,6 +38067,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054524473}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: Background
       value: 
@@ -38196,6 +38208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054524473}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2824870616011261060, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: copyToItemSlot
       value: 
@@ -38901,9 +38917,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2102370561}
-  - component: {fileID: 2102370562}
+  - component: {fileID: 2102370566}
   - component: {fileID: 2102370563}
   - component: {fileID: 2102370564}
+  - component: {fileID: 2102370565}
   m_Layer: 5
   m_Name: Liver
   m_TagString: Untagged
@@ -38930,61 +38947,6 @@ RectTransform:
   m_AnchoredPosition: {x: -700.00006, y: -400}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &2102370562
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102370560}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1780270757
-  m_SortingLayer: 4
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 5979058639432430815, guid: 9720ea6252d80cf4eb0c56d3bf538998, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.12, y: 1.92}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!114 &2102370563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39055,9 +39017,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trs: {fileID: 2102370561}
   id: Liver
-  image: {fileID: 0}
-  canvas: {fileID: 0}
+  image: {fileID: 2102370566}
+  canvas: {fileID: 1718231600}
   defaultPosition: {x: 0, y: 0}
+--- !u!222 &2102370565
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102370560}
+  m_CullTransparentMesh: 1
+--- !u!114 &2102370566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102370560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 5979058639432430815, guid: 570d2457a5fc2ce479603be3c1a21636, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2131410596
 GameObject:
   m_ObjectHideFlags: 0
@@ -39467,6 +39467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054524473}
     m_Modifications:
+    - target: {fileID: 2265820188006353407, guid: 73af547670d64634d9c584e521e545f1, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 464859547}
     - target: {fileID: 2698526605935346695, guid: 73af547670d64634d9c584e521e545f1, type: 3}
       propertyPath: m_Color.b
       value: 1
