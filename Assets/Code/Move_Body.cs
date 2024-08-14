@@ -109,7 +109,12 @@ public class Move_Body : MonoBehaviour
 
 
 
-
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            print("1: " + ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x));
+            print("2: " + (Grabbable.currentGrabbed != null));
+            print("3: " + collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
+        }
         if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
         {
             for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
