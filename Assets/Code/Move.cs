@@ -9,10 +9,13 @@ public class Move : MonoBehaviour
     Rigidbody2D myRigidbody2D;
     public Animator PlayerAnimator;
     public bool movingRight;
+    public Transform trs;
+    public static Move instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 

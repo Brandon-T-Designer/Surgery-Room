@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8686754917782534511}
   - component: {fileID: -6405314282175185951}
   - component: {fileID: 3190924574440906535}
+  - component: {fileID: 1023795546190529291}
   m_Layer: 0
   m_Name: Gallstone_Disease_Brandon
   m_TagString: Untagged
@@ -150,6 +151,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreatmentIcons: {fileID: 3908247419150582573}
   StartChangingTheCheckMarks: 0
+  requiredItemsForCheckmarksDict:
+    keys:
+    - Metronidazole
+    values:
+    - {fileID: 6838183706402655628}
+  interactRangeCollider: {fileID: 1023795546190529291}
+  collider: {fileID: -6405314282175185951}
+  trs: {fileID: 3862837813775265543}
   Table1: {fileID: 0}
   Table2: {fileID: 0}
   Table3: {fileID: 0}
@@ -160,6 +169,42 @@ MonoBehaviour:
   Table3Occupied: 0
   Table4Occupied: 0
   Table5Occupied: 0
+--- !u!58 &1023795546190529291
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232837587315432889}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6
 --- !u!1 &3908247419150582573
 GameObject:
   m_ObjectHideFlags: 0
