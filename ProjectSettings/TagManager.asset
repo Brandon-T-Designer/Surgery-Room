@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Collision_Detection
+  - Patient
   layers:
   - Default
   - TransparentFX
