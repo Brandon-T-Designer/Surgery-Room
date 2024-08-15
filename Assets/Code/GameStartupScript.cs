@@ -7,7 +7,6 @@ public class GameStartupScript : MonoBehaviour
 
     //Other Variables
     public GameObject GameStartBackground;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
