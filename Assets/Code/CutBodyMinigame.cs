@@ -10,6 +10,7 @@ public class CutBodyMinigame : MonoBehaviour
 	public float cauterizeDuration;
 	public GameObject mustCauterizePanel;
 	public GameObject mustCutPanel;
+	public GameObject liverGo;
 	public LineRenderer correctCutLineRenderer;
 	public LineRenderer incorrectCutLineRenderer;
 	public float cutPointSeparation;
@@ -209,6 +210,8 @@ public class CutBodyMinigame : MonoBehaviour
 		Grabbable.currentGrabbed.Drop ();
 		mustCutPanel.SetActive(false);
 		isDoneWithCutting = true;
+		if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
+			liverGo.SetActive(true);
 	}
 
 	public void OnSurgeryTableLeft ()
