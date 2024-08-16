@@ -59,6 +59,8 @@ public class CutBodyMinigame : MonoBehaviour
 		incorrectCutLineRenderer.startWidth = cutPointRadius;
 		incorrectCutLineRenderer.endWidth = cutPointRadius;
 		procedureCanvasGos[GlobalVariableCommandCenter.instance.ProcedureNumber].SetActive(true);
+		if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
+			liverGo.SetActive(true);
 	}
 
 	void Update ()
@@ -210,8 +212,6 @@ public class CutBodyMinigame : MonoBehaviour
 		Grabbable.currentGrabbed.Drop ();
 		mustCutPanel.SetActive(false);
 		isDoneWithCutting = true;
-		if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
-			liverGo.SetActive(true);
 	}
 
 	public void OnSurgeryTableLeft ()

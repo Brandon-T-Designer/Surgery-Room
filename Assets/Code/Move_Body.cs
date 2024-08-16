@@ -54,6 +54,7 @@ public class Move_Body : MonoBehaviour
         moveSpeed = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().moveSpeed;
         Max_Body_Count = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().Max_Body_Count;
         deadZone = GameObject.Find("All_Bodies").GetComponent<Body_Spawner>().deadZone;
+        BloodDrawMinigame.instance = FindObjectOfType<BloodDrawMinigame>(true);
         //ProcedureNumber = Random.Range(1, 4);
         //Debug.Log(ProcedureNumber);
         //Final_Body_Pos = 5;
@@ -117,6 +118,8 @@ public class Move_Body : MonoBehaviour
         }
         if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
         {
+            if (ProcedureNumber == 3 && BloodDrawMinigame.instance.bloodBagNames.IndexOf(Grabbable.currentGrabbed.id) == BloodDrawMinigame.instance.currentBloodTypeIndex)
+                CompleteProcedure ();
             for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
             {
                 string requiredItem = requiredItemsForCheckmarksDict.keys[i];
