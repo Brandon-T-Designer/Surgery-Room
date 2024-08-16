@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 132894867}
   - component: {fileID: 132894866}
   - component: {fileID: 132894865}
+  - component: {fileID: 132894868}
   m_Layer: 5
   m_Name: Liver Transplant Patient (Cut Open With Bad Liver)
   m_TagString: Untagged
@@ -1119,6 +1120,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132894863}
   m_CullTransparentMesh: 1
+--- !u!95 &132894868
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132894863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 670417a0b2b9dfc4983ff6bddfd2b643, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &148428183
 GameObject:
   m_ObjectHideFlags: 0
@@ -27642,7 +27665,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -5579660657798265309, guid: 7853a46ebaa84fb4e93d505f3e17e1ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27825,7 +27848,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -7946649357088757371, guid: b7b1939ed4803c845802225d0ea32f97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -28136,7 +28159,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 6
   m_Sprite: {fileID: 7448044035789705793, guid: 133f2d07c3983574ab2d0edd2f0b205f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31406,7 +31429,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 7888144861738505397, guid: 5e82f8ac9601b4d4fa4bbade1057f150, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -33179,7 +33202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6432920131676379274, guid: a6b348ef7359cff42a00702f286f8574, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -33976,7 +33999,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 380421731729228830, guid: ccea03ef94c4bc942abd7656d4cbc868, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -34654,6 +34677,8 @@ GameObject:
   - component: {fileID: 638237308}
   - component: {fileID: 638237307}
   - component: {fileID: 638237306}
+  - component: {fileID: 638237309}
+  - component: {fileID: 638237310}
   m_Layer: 0
   m_Name: MorgueDoors
   m_TagString: Untagged
@@ -34691,11 +34716,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.000000029802322, y: -1.9999998}
+  m_Offset: {x: 0.00000035762787, y: -1.9999998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34705,7 +34730,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.99999994, y: 4.9999995}
+  m_Size: {x: 4.999999, y: 4.9999995}
   m_EdgeRadius: 0
 --- !u!50 &638237307
 Rigidbody2D:
@@ -34722,7 +34747,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -34752,9 +34777,44 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.000001, y: 0.00000071525574}
+  m_AnchoredPosition: {x: 7.4, y: 5.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &638237309
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638237305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c70765c1078987a4ebda7cf24d9603d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &638237310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638237305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0676bb0b0d14f9478b980b3199e0acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyCount: 0
 --- !u!224 &641577862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6487584890204475598, guid: 73af547670d64634d9c584e521e545f1, type: 3}
@@ -35953,7 +36013,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2134263343, guid: ca5e49e282431584c80fab31d61abf23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -38199,7 +38259,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8452357495373299345, guid: 292dfddb3cf22ae419964e1b1ba29632, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -43974,7 +44034,7 @@ MonoBehaviour:
   Appendicitis: {fileID: 2232837587315432889, guid: 6cf8d32fb36340e4cb77240a11505551, type: 3}
   GallstoneDisease: {fileID: 2232837587315432889, guid: 7380c02b16c2e704c8813a3858b38125, type: 3}
   ProcedureNumber: 0
-  spawnRate: 6
+  spawnRate: 3
   Game_Over: 0
   Body_Spanwer_Location_x: 0
   Body_Count: 0
@@ -43982,8 +44042,8 @@ MonoBehaviour:
   All_Bodies: {fileID: 1671003136}
   AllBodiesHaveSpawned: 0
   BodiesStoppedMoving: 0
-  moveSpeed: 0.5
-  deadZone: 6.3
+  moveSpeed: 2
+  deadZone: 100
 --- !u!4 &1671003136
 Transform:
   m_ObjectHideFlags: 0
@@ -46035,7 +46095,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4716202535078967756, guid: c4707a136671b7d4b8db9d4d62557d0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -47571,7 +47631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101282996}
   m_Layer: 0
-  m_Name: ScrpitCommandCenter
+  m_Name: ScriptCommandCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47890,7 +47950,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1096088717
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -3120111821918886831, guid: b804ac2b0900e8b45804c344c65e50c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -48178,7 +48238,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4161558668273334748, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 7505560728091719531}
   m_SourcePrefab: {fileID: 100100000, guid: 5fafcada31ab09e668fb277103b46a9e, type: 3}
 --- !u!1 &7505560728091719530 stripped
