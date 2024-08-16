@@ -6,6 +6,7 @@ public class BloodVial : MonoBehaviour
 {
 	public void OnFilled ()
 	{
-        BloodDrawMinigame.instance.OnBloodVialsFilled ();
+		if (enabled)
+        	BloodDrawMinigame.instance.OnBloodVialsFilled ();
 	}
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2066699480947807461}
   - component: {fileID: 9164795413890526297}
   - component: {fileID: 4896207008062038322}
+  - component: {fileID: 4474083254262141600}
   m_Layer: 0
   m_Name: Blood Vial
   m_TagString: Untagged
@@ -110,3 +111,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4474083254262141600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921312473379121562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60331ea0bed650e783c2d2a943e7ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

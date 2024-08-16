@@ -12,15 +12,19 @@ public class BloodDrawMinigame : MonoBehaviour
 	public BoxCollider2D targetBoxCollider;
 	public GameObject bloodVialsParentGo;
 	public GameObject[] bloodTypesGos;
+	public GameObject bloodBagsParentGo;
 	public float needleMoveSpeed;
 	public float needleMoveToTargetDuration;
 	public float needleMoveAwayFromTargetDuration;
+	[HideInInspector]
+	public int currentBloodTypeIndex;
+	[HideInInspector]
+	public List<string> bloodBagNames = new List<string>();
 	public static BloodDrawMinigame instance;
 	float needleXDistanceToTarget;
 	Vector2Int needleMoveDirection;
 	float initNeedleXLocalPosition;
 	int previousNeedleMoveYDirection;
-	int currentBloodTypeIndex;
 
 	void OnEnable ()
 	{
@@ -34,6 +38,12 @@ public class BloodDrawMinigame : MonoBehaviour
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;
 		bloodVialsParentGo.SetActive(false);
+		AddItemtoInventory[] addItemToInventorys = bloodBagsParentGo.GetComponentsInChildren<AddItemtoInventory>();
+		for (int i = 0; i < addItemToInventorys.Length; i ++)
+		{
+			AddItemtoInventory addItemToInventory = addItemToInventorys[i];
+			bloodBagNames.Add(addItemToInventory.itemName);
+		}
 	}
 
 	void Update ()
@@ -78,5 +88,6 @@ public class BloodDrawMinigame : MonoBehaviour
 	{
 		currentBloodTypeIndex = Random.Range(0,bloodTypesGos.Length);
 		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
+		bloodBagsParentGo.SetActive(true);
 	}
 }
