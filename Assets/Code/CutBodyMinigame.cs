@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class CutBodyMinigame : MonoBehaviour
 {
 	public float cauterizeDuration;
+	public GameObject cutPath;
 	public GameObject mustCauterizePanel;
 	public GameObject mustCutPanel;
 	public GameObject liverGo;
@@ -61,6 +62,8 @@ public class CutBodyMinigame : MonoBehaviour
 		procedureCanvasGos[GlobalVariableCommandCenter.instance.ProcedureNumber].SetActive(true);
 		if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
 			liverGo.SetActive(true);
+		cutPath.SetActive(true);
+		InventoryManager.instance.gameObject.SetActive(false);
 	}
 
 	void Update ()
@@ -174,6 +177,7 @@ public class CutBodyMinigame : MonoBehaviour
 				}
 				else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 2 && Grabbable.currentGrabbed.id == "Bad Appendix")
 				{
+					appendicitisPatientCutOpenWithBadAppendixGo.SetActive(false);
 					appendicitisPatientCutOpenWithoutAppendixGo.SetActive(true);
 					Destroy(Grabbable.currentGrabbed.gameObject);
 				}
@@ -198,6 +202,7 @@ public class CutBodyMinigame : MonoBehaviour
 			{
 				liverTransplantPatientCutOpenWithNewLiverGo.SetActive(true);
 				liverTransplantPatientSewnUpGo.SetActive(true);
+				Grabbable.currentGrabbed.Drop ();
 			}
 		}
 	}
@@ -209,6 +214,8 @@ public class CutBodyMinigame : MonoBehaviour
 			Collider2D collider = colliders[i];
 			Destroy(collider.gameObject);
 		}
+		correctCutLineRenderer.positionCount = 0;
+		cutPath.SetActive(false);
 		Grabbable.currentGrabbed.Drop ();
 		mustCutPanel.SetActive(false);
 		isDoneWithCutting = true;
@@ -224,6 +231,7 @@ public class CutBodyMinigame : MonoBehaviour
 		appendicitisPatientCutOpenWithBadAppendixGo.SetActive(false);
 		appendicitisPatientCutOpenWithoutAppendixGo.SetActive(false);
 		appendicitisPatientSewnUpGo.SetActive(false);
+		InventoryManager.instance.gameObject.SetActive(true);
 	}
 
 	void Cut (bool isCorrect)

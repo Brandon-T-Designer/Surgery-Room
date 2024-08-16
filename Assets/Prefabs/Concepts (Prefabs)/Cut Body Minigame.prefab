@@ -50,8 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cauterizeDuration: 10
+  cutPath: {fileID: 1868261001262353488}
   mustCauterizePanel: {fileID: 2319610302834685732}
   mustCutPanel: {fileID: 8897580240362806281}
+  liverGo: {fileID: 0}
   correctCutLineRenderer: {fileID: 2059313036721527643}
   incorrectCutLineRenderer: {fileID: 8784638306478819797}
   cutPointSeparation: 0.05
@@ -71,11 +73,9 @@ MonoBehaviour:
   liverTransplantPatientSewnUpGo: {fileID: 0}
   appendicitisPatientCutOpenWithBadAppendixGo: {fileID: 0}
   appendicitisPatientCutOpenWithoutAppendixGo: {fileID: 0}
-  appendicitisPatientCutOpenWithNewAppendixGo: {fileID: 0}
   appendicitisPatientSewnUpGo: {fileID: 0}
   organDisposaleCollider: {fileID: 0}
   liverPlacementCollider: {fileID: 0}
-  appendixPlacementCollider: {fileID: 0}
   openStomachCollider: {fileID: 0}
 --- !u!82 &851145053625125628
 AudioSource:

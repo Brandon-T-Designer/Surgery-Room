@@ -47,6 +47,7 @@ public class OpenPopupBloodStation : MonoBehaviour
                 IsThisPopUpOpen = true;
                 SurgeryTableWasOpened = true;
                 Time.timeScale = 0;
+                InventoryManager.instance.gameObject.SetActive(false);
             }
         }
     }
@@ -128,6 +129,7 @@ public class OpenPopupBloodStation : MonoBehaviour
         popupWindow.SetActive(false);
         IsThisPopUpOpen = false;
         Time.timeScale = 1;
+        InventoryManager.instance.gameObject.SetActive(true);
     }
 }
 
