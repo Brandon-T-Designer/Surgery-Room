@@ -25,7 +25,10 @@ public class AddItemtoInventory : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        if (GameObject.Find("InventoryCanvas") != null)
+            inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        else
+            inventoryManager = InventoryManager.instance;
     }
 
     public void ItemClicked()

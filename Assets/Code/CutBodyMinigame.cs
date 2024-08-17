@@ -200,7 +200,7 @@ public class CutBodyMinigame : MonoBehaviour
 			}
 			else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1 && Grabbable.currentGrabbed.id == "Sutures" && openStomachCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
 			{
-				liverTransplantPatientCutOpenWithNewLiverGo.SetActive(true);
+				liverTransplantPatientCutOpenWithNewLiverGo.SetActive(false);
 				liverTransplantPatientSewnUpGo.SetActive(true);
 				Grabbable.currentGrabbed.Drop ();
 			}

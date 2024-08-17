@@ -62,7 +62,6 @@ public class BloodDrawMinigame : MonoBehaviour
 				if (needleTrs.position.y > targetBoxCollider.bounds.min.y && needleTrs.position.y < targetBoxCollider.bounds.max.y)
 				{
 					gameObject.SetActive(false);
-					Time.timeScale = 1;
 					bloodVialsParentGo.SetActive(true);
 				}
 				needleMoveDirection.x *= -1;
