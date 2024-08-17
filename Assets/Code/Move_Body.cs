@@ -114,7 +114,11 @@ public class Move_Body : MonoBehaviour
         {
             print("YAY" + Grabbable.currentGrabbed.id);
             if (ProcedureNumber == 3 && BloodDrawMinigame.instance.bloodBagNames.IndexOf(Grabbable.currentGrabbed.id) == BloodDrawMinigame.instance.currentBloodTypeIndex)
+            {
                 CompleteProcedure ();
+                ItemSlot itemSlot = Grabbable.currentGrabbed.GetComponentInParent<ItemSlot>();
+                itemSlot.RemoveItemFromSlot (itemSlot.itemName, itemSlot.quantity, itemSlot.itemSprite, itemSlot.itemDescription);
+            }
             for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
             {
                 string requiredItem = requiredItemsForCheckmarksDict.keys[i];
