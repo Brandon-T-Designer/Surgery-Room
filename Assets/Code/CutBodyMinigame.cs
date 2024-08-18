@@ -232,6 +232,8 @@ public class CutBodyMinigame : MonoBehaviour
 		appendicitisPatientCutOpenWithoutAppendixGo.SetActive(false);
 		appendicitisPatientSewnUpGo.SetActive(false);
 		InventoryManager.instance.gameObject.SetActive(true);
+		if (liverTransplantPatientSewnUpGo.activeSelf || appendicitisPatientSewnUpGo.activeSelf)
+			Move_Body.currentlyTreating.CompleteProcedure ();
 	}
 
 	void Cut (bool isCorrect)

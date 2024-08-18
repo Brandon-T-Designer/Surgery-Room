@@ -38,11 +38,17 @@ public class BloodDrawMinigame : MonoBehaviour
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;
 		bloodVialsParentGo.SetActive(false);
+		bloodBagsParentGo.SetActive(false);
 		AddItemtoInventory[] addItemToInventorys = bloodBagsParentGo.GetComponentsInChildren<AddItemtoInventory>();
 		for (int i = 0; i < addItemToInventorys.Length; i ++)
 		{
 			AddItemtoInventory addItemToInventory = addItemToInventorys[i];
 			bloodBagNames.Add(addItemToInventory.itemName);
+		}
+		for (int i = 0; i < bloodTypesGos.Length; i ++)
+		{
+			GameObject bloodTypeGo = bloodTypesGos[i];
+			bloodTypeGo.SetActive(false);
 		}
 	}
 
