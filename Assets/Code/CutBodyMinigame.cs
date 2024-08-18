@@ -64,6 +64,7 @@ public class CutBodyMinigame : MonoBehaviour
 			liverGo.SetActive(true);
 		cutPath.SetActive(true);
 		InventoryManager.instance.gameObject.SetActive(false);
+		mustCutPanel.SetActive(true);
 	}
 
 	void Update ()

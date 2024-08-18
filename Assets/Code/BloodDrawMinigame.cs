@@ -94,5 +94,6 @@ public class BloodDrawMinigame : MonoBehaviour
 		currentBloodTypeIndex = Random.Range(0,bloodTypesGos.Length);
 		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
 		bloodBagsParentGo.SetActive(true);
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(true);
 	}
 }

@@ -42371,10 +42371,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 585561785}
     - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
-      propertyPath: appendixPlacementCollider
-      value: 
-      objectReference: {fileID: 1590920420}
-    - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
       propertyPath: appendicitisPatientSewnUpGo
       value: 
       objectReference: {fileID: 2015439482}
@@ -42394,10 +42390,6 @@ PrefabInstance:
       propertyPath: appendicitisPatientCutOpenWithBadAppendixGo
       value: 
       objectReference: {fileID: 1967613552}
-    - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
-      propertyPath: appendicitisPatientCutOpenWithNewAppendixGo
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6761003653910809310, guid: 8299dfc11777f4e278ef6a601adbfc92, type: 3}
       propertyPath: appendicitisPatientCutOpenWithoutAppendixGo
       value: 

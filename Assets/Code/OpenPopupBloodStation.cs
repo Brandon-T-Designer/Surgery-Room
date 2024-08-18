@@ -40,7 +40,7 @@ public class OpenPopupBloodStation : MonoBehaviour
                 for (int i = 0; i < Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.Count; i ++)
                 {
                     GameObject checkmarkGo = Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[i];
-                    if (!checkmarkGo.activeSelf)
+                    if (!checkmarkGo.activeSelf && checkmarkGo.transform.gameObject.activeSelf)
                         return;
                 }
                 popupWindow.SetActive(true);

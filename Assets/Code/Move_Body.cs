@@ -112,12 +112,12 @@ public class Move_Body : MonoBehaviour
 
         if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
         {
-            print("YAY" + Grabbable.currentGrabbed.id);
             if (ProcedureNumber == 3 && BloodDrawMinigame.instance.bloodBagNames.IndexOf(Grabbable.currentGrabbed.id) == BloodDrawMinigame.instance.currentBloodTypeIndex)
             {
                 CompleteProcedure ();
                 ItemSlot itemSlot = Grabbable.currentGrabbed.GetComponentInParent<ItemSlot>();
                 itemSlot.RemoveItemFromSlot (itemSlot.itemName, itemSlot.quantity, itemSlot.itemSprite, itemSlot.itemDescription);
+                requiredItemsForCheckmarksDict.values[1].SetActive(true);
             }
             for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
             {
