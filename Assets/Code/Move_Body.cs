@@ -33,18 +33,18 @@ public class Move_Body : MonoBehaviour
     //bool BodiesStoppedMoving = false;
 
     //PostOpTables
-    // public GameObject Table1;
-    // public GameObject Table2;
-    // public GameObject Table3;
-    // public GameObject Table4;
-    // public GameObject Table5;
+    public GameObject Table1;
+    public GameObject Table2;
+    public GameObject Table3;
+    public GameObject Table4;
+    public GameObject Table5;
 
     //PostOpVariables
-    // public bool Table1Occupied = false;
-    // public bool Table2Occupied = false;
-    // public bool Table3Occupied = false;
-    // public bool Table4Occupied = false;
-    // public bool Table5Occupied = false;
+    public bool Table1Occupied = false;
+    public bool Table2Occupied = false;
+    public bool Table3Occupied = false;
+    public bool Table4Occupied = false;
+    public bool Table5Occupied = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -110,6 +110,12 @@ public class Move_Body : MonoBehaviour
 
 
 
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            print("1: " + ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x));
+            print("2: " + (Grabbable.currentGrabbed != null));
+            print("3: " + collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
+        }
         if ((Move.instance.trs.position - trs.position).sqrMagnitude < interactRangeCollider.bounds.extents.x * interactRangeCollider.bounds.extents.x && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame && collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
         {
             if (ProcedureNumber == 3 && BloodDrawMinigame.instance.bloodBagNames.IndexOf(Grabbable.currentGrabbed.id) == BloodDrawMinigame.instance.currentBloodTypeIndex)
@@ -117,7 +123,6 @@ public class Move_Body : MonoBehaviour
                 CompleteProcedure ();
                 ItemSlot itemSlot = Grabbable.currentGrabbed.GetComponentInParent<ItemSlot>();
                 itemSlot.RemoveItemFromSlot (itemSlot.itemName, itemSlot.quantity, itemSlot.itemSprite, itemSlot.itemDescription);
-                requiredItemsForCheckmarksDict.values[1].SetActive(true);
             }
             for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
             {
