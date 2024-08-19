@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
     void MoveBall()
     {
         horizontal = Input.GetAxisRaw("Horizontal")*moveSpeed;
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             transform.localScale = new Vector2(-.6f, .6f);
         }
@@ -36,9 +36,23 @@ public class Move : MonoBehaviour
         {
             transform.localScale = new Vector2(.6f, .6f);
         }
-        PlayerAnimator.SetFloat("Horizontal", Mathf.Abs(horizontal));
-              
+        
+        PlayerAnimator.SetFloat("Horizontal", Mathf.Abs(horizontal));         
         vertical = Input.GetAxisRaw("Vertical")*moveSpeed;
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        {
+            PlayerAnimator.SetBool("PlayerUp", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+        {
+            PlayerAnimator.SetBool("PlayerUp", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        {
+            PlayerAnimator.SetBool("PlayerUp", false);
+        }
+        
         PlayerAnimator.SetFloat("Vertical", Mathf.Abs(vertical));
         myRigidbody2D.velocity = new Vector2(horizontal*moveSpeed, vertical * moveSpeed);
     }

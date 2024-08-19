@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4161558668273334748
+--- !u!1 &8493677628338757689
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8553853035661289860}
-  - component: {fileID: 4332215242637406025}
-  - component: {fileID: 2188424008671918511}
-  - component: {fileID: 388522414191996774}
-  - component: {fileID: 1650838000575315200}
-  - component: {fileID: 214261657228822385}
+  - component: {fileID: 6424902482866576932}
+  - component: {fileID: 8559490088988974506}
+  - component: {fileID: 6026498056087265507}
+  - component: {fileID: 6704180267220273448}
+  - component: {fileID: 674367979178856746}
+  - component: {fileID: 3143148497034770677}
   m_Layer: 0
-  m_Name: Doctor
+  m_Name: DoctorAnimationFinal
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8553853035661289860
+--- !u!4 &6424902482866576932
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 2, z: 0}
+  m_LocalPosition: {x: -15.25, y: 1.67, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &4332215242637406025
+--- !u!50 &8559490088988974506
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,13 +63,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!212 &2188424008671918511
+--- !u!212 &6026498056087265507
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -118,29 +118,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &388522414191996774
+--- !u!114 &6704180267220273448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a11ffd2561af4a44bf5f919c2659611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
-  PlayerAnimator: {fileID: 214261657228822385}
+  PlayerAnimator: {fileID: 3143148497034770677}
   movingRight: 0
-  trs: {fileID: 8553853035661289860}
---- !u!61 &1650838000575315200
+  trs: {fileID: 6424902482866576932}
+--- !u!61 &674367979178856746
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -180,14 +180,14 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4, y: 3.76}
   m_EdgeRadius: 0
---- !u!95 &214261657228822385
+--- !u!95 &3143148497034770677
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161558668273334748}
+  m_GameObject: {fileID: 8493677628338757689}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 175e5e07c00190d48a911eed75c64abd, type: 2}
