@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
@@ -51,6 +52,7 @@ public class BloodDrawMinigame : MonoBehaviour
 			GameObject bloodTypeGo = bloodTypesGos[i];
 			bloodTypeGo.SetActive(false);
 		}
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(false);
 	}
 
 	void Update ()
@@ -97,5 +99,11 @@ public class BloodDrawMinigame : MonoBehaviour
 		bloodBagsParentGo.SetActive(true);
 		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(true);
 		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].SetActive(false);
+		Button[] bloodBagButtons = bloodBagsParentGo.GetComponentsInChildren<Button>();
+		for (int i = 0; i < bloodBagButtons.Length; i ++)
+		{
+			Button bloodBagButton = bloodBagButtons[i];
+			bloodBagButton.interactable = true;
+		}
 	}
 }

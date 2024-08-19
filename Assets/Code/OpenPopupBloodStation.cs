@@ -27,7 +27,7 @@ public class OpenPopupBloodStation : MonoBehaviour
     {
 
         //Checks if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && Move_Body.currentlyTreating != null)
         {
             Debug.Log("Collided With Blood Station!");
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
@@ -44,6 +44,7 @@ public class OpenPopupBloodStation : MonoBehaviour
                         return;
                 }
                 popupWindow.SetActive(true);
+                BloodDrawMinigame.instance.gameObject.SetActive(true);
                 IsThisPopUpOpen = true;
                 SurgeryTableWasOpened = true;
                 Time.timeScale = 0;

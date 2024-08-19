@@ -32,7 +32,7 @@ public class OpenPopupSurgeryTable : MonoBehaviour
         
 
         //Checks if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && Move_Body.currentlyTreating != null)
         {
             Debug.Log("Collided!");
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
@@ -62,6 +62,13 @@ public class OpenPopupSurgeryTable : MonoBehaviour
                 IsThisPopUpOpen = true;
                 SurgeryTableWasOpened = true;
                 Time.timeScale = 0;
+                Canvas.ForceUpdateCanvases();
+                Grabbable[] grabbables = popupWindow.GetComponentsInChildren<Grabbable>(true);
+                for (int i = 0; i < grabbables.Length; i ++)
+                {
+                    Grabbable grabbable = grabbables[i];
+                    grabbable.defaultPosition  = grabbable.trs.position;
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     public int WhichBodyInTreatment;
     public Transform[] tables;
     public bool[] tablesOccupied;
+    public GameObject winCanvasGo;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -73,5 +74,8 @@ public class GlobalVariableCommandCenter : MonoBehaviour
         Debug.Log("WhichBodyInTreatment is " + WhichBodyInTreatment);
     }
 
-
+    public void Quit ()
+    {
+        Application.Quit();
+    }
 }

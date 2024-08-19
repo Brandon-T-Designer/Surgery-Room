@@ -187,13 +187,20 @@ public class Move_Body : MonoBehaviour
 
         HasThisBodyBeenTreated = true;
         StationIsOccupied = false;
+        GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().StationIsOccupied = false;
         //Debug.Log(HasThisBodyBeenTreated);
 
         //RotateCanvasBack
-        transform.rotation = Quaternion.Euler(0, 0, 90);
+        transform.rotation = Quaternion.Euler(0, 0, 270);
         TreatmentIcons.GetComponent<CounterRotateCanvas>().CounterRotateTheCanvas();
 
         MoveToPostOp();
+        currentlyTreating = null;
+        for (int i = 0; i < requiredItemsForCheckmarksDict.Count; i ++)
+        {
+            GameObject checkmarkGo = requiredItemsForCheckmarksDict.values[i];
+            checkmarkGo.transform.parent.gameObject.SetActive(false);
+        }
     }
 
 
@@ -205,7 +212,9 @@ public class Move_Body : MonoBehaviour
             if (!GlobalVariableCommandCenter.instance.tablesOccupied[i])
             {
                 GlobalVariableCommandCenter.instance.tablesOccupied[i] = true;
-                trs.position = table.position;
+                trs.position = table.position + Vector3.up / 2;
+                if (i == GlobalVariableCommandCenter.instance.tablesOccupied.Length - 1)
+                    GlobalVariableCommandCenter.instance.winCanvasGo.SetActive(true);
                 return;
             }
         }
