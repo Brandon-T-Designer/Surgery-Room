@@ -1205,8 +1205,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Instructions
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_sharedMaterial: {fileID: 7237356376431727503, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1230,8 +1230,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7319,8 +7319,8 @@ Tilemap:
   - first: {x: 5, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 20
-      m_TileSpriteIndex: 28
+      m_TileIndex: 32
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7329,8 +7329,8 @@ Tilemap:
   - first: {x: 6, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 29
+      m_TileIndex: 32
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8239,8 +8239,8 @@ Tilemap:
   - first: {x: 5, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8249,8 +8249,8 @@ Tilemap:
   - first: {x: 6, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9159,8 +9159,8 @@ Tilemap:
   - first: {x: 5, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9169,8 +9169,8 @@ Tilemap:
   - first: {x: 6, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10079,8 +10079,8 @@ Tilemap:
   - first: {x: 5, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10089,8 +10089,8 @@ Tilemap:
   - first: {x: 6, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10999,8 +10999,8 @@ Tilemap:
   - first: {x: 5, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11009,8 +11009,8 @@ Tilemap:
   - first: {x: 6, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11919,8 +11919,8 @@ Tilemap:
   - first: {x: 5, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11929,8 +11929,8 @@ Tilemap:
   - first: {x: 6, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12839,8 +12839,8 @@ Tilemap:
   - first: {x: 5, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12849,8 +12849,8 @@ Tilemap:
   - first: {x: 6, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13759,8 +13759,8 @@ Tilemap:
   - first: {x: 5, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
+      m_TileIndex: 29
+      m_TileSpriteIndex: 23
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13769,8 +13769,8 @@ Tilemap:
   - first: {x: 6, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 27
+      m_TileIndex: 30
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27172,15 +27172,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0a55fe2b614f0824b9c8c22575af6016, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 082fac569c1a4be48b2f6bae92f5aa62, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d829a07981093a446a5227715ddc18b3, type: 2}
-  - m_RefCount: 271
+  - m_RefCount: 283
     m_Data: {fileID: 11400000, guid: 076ac455c5d1c2b4e824753f9eb417ce, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: b2e436a1bf99a0b4fb752ef2120b56e7, type: 2}
@@ -27196,15 +27196,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f0d232a5f039c6a4f8c24f0b37e45207, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 805a5d35c4bc09041bfe711c1c2c5bd9, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0ef5b252a0fbb844bbcb6444153b0774, type: 2}
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 04f30b82cd4fac34590e90834c5da9dc, type: 2}
-  - m_RefCount: 17
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 344b046cc348b0b45861041133878b7c, type: 2}
-  - m_RefCount: 24
+  - m_RefCount: 26
     m_Data: {fileID: 11400000, guid: 8bf1dcf43692814498d2a8db33c80894, type: 2}
-  - m_RefCount: 17
+  - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: 5453d161d28b50343b6cf7e175a7a183, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -27249,11 +27249,11 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 271
+  - m_RefCount: 283
     m_Data: {fileID: 1764007995, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1156252648, guid: 89cebef511cc74d4eb7b2885c0f2ca61, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 1123950324, guid: 89cebef511cc74d4eb7b2885c0f2ca61, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 168607481, guid: 89cebef511cc74d4eb7b2885c0f2ca61, type: 3}
@@ -27261,19 +27261,19 @@ Tilemap:
     m_Data: {fileID: -174884681, guid: 89cebef511cc74d4eb7b2885c0f2ca61, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 649440726, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: -669272584, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 3
-    m_Data: {fileID: -83313613, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
   - m_RefCount: 2
+    m_Data: {fileID: -83313613, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -1445799153, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data: {fileID: 481512075, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 17
+  - m_RefCount: 10
     m_Data: {fileID: 2115711917, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 24
+  - m_RefCount: 26
     m_Data: {fileID: 192879215, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
-  - m_RefCount: 17
+  - m_RefCount: 11
     m_Data: {fileID: -279010195, guid: 700c53435ec880148a0a125c104d2c88, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 2576
@@ -27921,8 +27921,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28284,8 +28284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28421,8 +28421,8 @@ MonoBehaviour:
   m_text: "Remember to keep an eye on the conveyor belt for more patients while you\u2019re
     doing procedures! If a patient isn\u2019t tended to in time, they will die\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28635,8 +28635,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30004,8 +30004,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30432,8 +30432,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Some patients also require blood testing done at our blood station.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30715,8 +30715,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31321,8 +31321,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33327,8 +33327,8 @@ MonoBehaviour:
     the blood drawing needle \u2013 if you miss you may try again but don\u2019t
     hurt your patient!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33463,8 +33463,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33815,8 +33815,8 @@ MonoBehaviour:
   m_text: To handle procedures, you must collect different medications found in the
     medicine cabinet here and organs found in our organ fridge.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34196,8 +34196,8 @@ MonoBehaviour:
   m_text: To treat a patient, approach them and drag and drop the item onto the patient.
     You can also right click an inventory item to discard it entirely.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34806,8 +34806,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Others will require surgery performed at the surgery table.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35367,8 +35367,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35868,8 +35868,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36005,8 +36005,8 @@ MonoBehaviour:
   m_text: "We don\u2019t want to fire you on your first day on the job, so manage
     your time efficiently to tend \nto all the patients\u2019 needs!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36342,8 +36342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -38258,8 +38258,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -38770,8 +38770,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_sharedMaterial: {fileID: 7237356376431727503, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -38999,8 +38999,8 @@ MonoBehaviour:
     organ in the organ waste, add any needed replacement organs and sew the patient
     closed.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -39784,8 +39784,8 @@ MonoBehaviour:
   m_text: "Left-click on items to add them to your inventory. You can access your
     inventory by pressing the \u201Ci\u201D key."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40414,8 +40414,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Icons above each patient indicate their needs.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40934,8 +40934,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -41048,7 +41048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 0}
+  m_AnchoredPosition: {x: -500, y: -85}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362570655
@@ -41071,7 +41071,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8617407045728647095, guid: 8214aa1483b4e9243913e5a07869d196, type: 3}
+  m_Sprite: {fileID: -6978163217262636695, guid: 3d645e48e802de44cb83a57b5ab0fab8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41389,8 +41389,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You're Fired!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -41465,6 +41465,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412597519}
+  m_CullTransparentMesh: 1
+--- !u!1 &1417138166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417138167}
+  - component: {fileID: 1417138169}
+  - component: {fileID: 1417138168}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1417138167
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417138166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1618611786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -596, y: 351}
+  m_SizeDelta: {x: 500, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1417138168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417138166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Operation Inccorporation
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fb55cb45e9c939d4ab166703fc0ec452, type: 2}
+  m_sharedMaterial: {fileID: 7237356376431727503, guid: fb55cb45e9c939d4ab166703fc0ec452, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 80
+  m_fontSizeBase: 80
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -23.294975, z: -527.91736, w: -23.257576}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1417138169
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417138166}
   m_CullTransparentMesh: 1
 --- !u!1 &1423565972
 GameObject:
@@ -42373,8 +42509,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Weclome to your first day at Opperation Incorporation!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42929,8 +43065,8 @@ MonoBehaviour:
   m_text: I am your robot assistant. I will be helping you save lives. Here's what
     you need to know...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -43365,6 +43501,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1417138167}
   - {fileID: 2056393022}
   - {fileID: 1362570654}
   m_Father: {fileID: 1077271300}
@@ -43394,7 +43531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 918198423461755763, guid: 8b1c32bd8d70a0149bfffcadeba4ddd4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45109,8 +45246,8 @@ MonoBehaviour:
   m_text: First, keep an eye on the conveyor belt. Patients are delivered here and
     can be moved to their corresponding treatment station by approaching them.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -45700,8 +45837,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -45906,8 +46043,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -46689,8 +46826,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47431,8 +47568,8 @@ MonoBehaviour:
   m_text: Once you have everything you need, you can begin a procedure by approaching
     the patient on the surgery table or blood station.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47658,8 +47795,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
-  m_sharedMaterial: {fileID: 9175816110613432971, guid: ad13c35592d3e51488f4f162c7467905, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47914,7 +48051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -500, y: 127}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056393023
@@ -47937,7 +48074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8617407045728647095, guid: 8214aa1483b4e9243913e5a07869d196, type: 3}
+  m_Sprite: {fileID: -2230229002620744338, guid: f48933e6867a1704799f01465e5c6b85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
