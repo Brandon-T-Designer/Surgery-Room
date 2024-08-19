@@ -27,7 +27,7 @@ public class OpenPopupBloodStation : MonoBehaviour
     {
 
         //Checks if Player has necessary items for Procedure A
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && Move_Body.currentlyTreating != null)
         {
             Debug.Log("Collided With Blood Station!");
             ProcedureNumber = GameObject.Find("GlobalVariables").GetComponent<GlobalVariableCommandCenter>().ProcedureNumber;
@@ -40,13 +40,15 @@ public class OpenPopupBloodStation : MonoBehaviour
                 for (int i = 0; i < Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.Count; i ++)
                 {
                     GameObject checkmarkGo = Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[i];
-                    if (!checkmarkGo.activeSelf)
+                    if (!checkmarkGo.activeSelf && checkmarkGo.transform.parent.gameObject.activeSelf)
                         return;
                 }
                 popupWindow.SetActive(true);
+                BloodDrawMinigame.instance.gameObject.SetActive(true);
                 IsThisPopUpOpen = true;
                 SurgeryTableWasOpened = true;
                 Time.timeScale = 0;
+                InventoryManager.instance.gameObject.SetActive(false);
             }
         }
     }
@@ -128,6 +130,7 @@ public class OpenPopupBloodStation : MonoBehaviour
         popupWindow.SetActive(false);
         IsThisPopUpOpen = false;
         Time.timeScale = 1;
+        InventoryManager.instance.gameObject.SetActive(true);
     }
 }
 

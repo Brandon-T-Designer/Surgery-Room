@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.InputSystem;
 
 public class Grabbable : MonoBehaviour
@@ -32,12 +31,6 @@ public class Grabbable : MonoBehaviour
 		image.raycastTarget = true;
 		trs.position = defaultPosition;
 		enabled = false;
-		StartCoroutine(DropRoutine ());
-	}
-
-	IEnumerator DropRoutine ()
-	{
-		yield return new WaitForFixedUpdate();
 		currentGrabbed = null;
 	}
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
@@ -38,12 +39,20 @@ public class BloodDrawMinigame : MonoBehaviour
 		if (Random.value < .5f)
 			needleMoveDirection.y *= -1;
 		bloodVialsParentGo.SetActive(false);
+		bloodBagsParentGo.SetActive(false);
+		bloodBagNames.Clear();
 		AddItemtoInventory[] addItemToInventorys = bloodBagsParentGo.GetComponentsInChildren<AddItemtoInventory>();
 		for (int i = 0; i < addItemToInventorys.Length; i ++)
 		{
 			AddItemtoInventory addItemToInventory = addItemToInventorys[i];
 			bloodBagNames.Add(addItemToInventory.itemName);
 		}
+		for (int i = 0; i < bloodTypesGos.Length; i ++)
+		{
+			GameObject bloodTypeGo = bloodTypesGos[i];
+			bloodTypeGo.SetActive(false);
+		}
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(false);
 	}
 
 	void Update ()
@@ -62,7 +71,6 @@ public class BloodDrawMinigame : MonoBehaviour
 				if (needleTrs.position.y > targetBoxCollider.bounds.min.y && needleTrs.position.y < targetBoxCollider.bounds.max.y)
 				{
 					gameObject.SetActive(false);
-					Time.timeScale = 1;
 					bloodVialsParentGo.SetActive(true);
 				}
 				needleMoveDirection.x *= -1;
@@ -89,5 +97,13 @@ public class BloodDrawMinigame : MonoBehaviour
 		currentBloodTypeIndex = Random.Range(0,bloodTypesGos.Length);
 		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
 		bloodBagsParentGo.SetActive(true);
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(true);
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].SetActive(false);
+		Button[] bloodBagButtons = bloodBagsParentGo.GetComponentsInChildren<Button>();
+		for (int i = 0; i < bloodBagButtons.Length; i ++)
+		{
+			Button bloodBagButton = bloodBagButtons[i];
+			bloodBagButton.interactable = true;
+		}
 	}
 }
