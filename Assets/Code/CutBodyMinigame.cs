@@ -173,6 +173,7 @@ public class CutBodyMinigame : MonoBehaviour
 				disposedBadOrgan = true;
 				if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1 && Grabbable.currentGrabbed.id == "Bad Liver")
 				{
+					liverTransplantPatientCutOpenWithBadLiverGo.SetActive(false);
 					liverTransplantPatientCutOpenWithoutLiverGo.SetActive(true);
 					Destroy(Grabbable.currentGrabbed.gameObject);
 				}
