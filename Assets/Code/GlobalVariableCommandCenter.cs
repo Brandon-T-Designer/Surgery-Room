@@ -10,6 +10,8 @@ public class GlobalVariableCommandCenter : MonoBehaviour
     public int ProcedureNumber = 0;
     public bool StationIsOccupied;
     public int WhichBodyInTreatment;
+    public Transform[] tables;
+    public bool[] tablesOccupied;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -37,7 +39,8 @@ public class GlobalVariableCommandCenter : MonoBehaviour
             AnyPopUpsOpen = (IsThisPopUpOpen_GameStartCanvas || IsThisPopUpOpen_GameLoseCanvas || IsThisPopUpOpen_OrganFridge || IsThisPopUpOpen_DrugCabinet || IsThisPopUpOpen_BloodStation || IsThisPopUpOpen_SurgeryTable);
 
         //ItemSlot
-            itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlots;
+            // itemSlots = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().itemSlots;
+            itemSlots = InventoryManager.instance.itemSlots;
 
         //Procedure Number
 

@@ -39,6 +39,7 @@ public class BloodDrawMinigame : MonoBehaviour
 			needleMoveDirection.y *= -1;
 		bloodVialsParentGo.SetActive(false);
 		bloodBagsParentGo.SetActive(false);
+		bloodBagNames.Clear();
 		AddItemtoInventory[] addItemToInventorys = bloodBagsParentGo.GetComponentsInChildren<AddItemtoInventory>();
 		for (int i = 0; i < addItemToInventorys.Length; i ++)
 		{
@@ -95,5 +96,6 @@ public class BloodDrawMinigame : MonoBehaviour
 		bloodTypesGos[currentBloodTypeIndex].SetActive(true);
 		bloodBagsParentGo.SetActive(true);
 		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].transform.parent.gameObject.SetActive(true);
+		Move_Body.currentlyTreating.requiredItemsForCheckmarksDict.values[1].SetActive(false);
 	}
 }

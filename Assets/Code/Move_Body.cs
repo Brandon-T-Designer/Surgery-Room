@@ -33,18 +33,18 @@ public class Move_Body : MonoBehaviour
     //bool BodiesStoppedMoving = false;
 
     //PostOpTables
-    public GameObject Table1;
-    public GameObject Table2;
-    public GameObject Table3;
-    public GameObject Table4;
-    public GameObject Table5;
+    // public GameObject Table1;
+    // public GameObject Table2;
+    // public GameObject Table3;
+    // public GameObject Table4;
+    // public GameObject Table5;
 
     //PostOpVariables
-    public bool Table1Occupied = false;
-    public bool Table2Occupied = false;
-    public bool Table3Occupied = false;
-    public bool Table4Occupied = false;
-    public bool Table5Occupied = false;
+    // public bool Table1Occupied = false;
+    // public bool Table2Occupied = false;
+    // public bool Table3Occupied = false;
+    // public bool Table4Occupied = false;
+    // public bool Table5Occupied = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -199,30 +199,40 @@ public class Move_Body : MonoBehaviour
 
     public void MoveToPostOp()
     {
-        if (Table1Occupied == false)
+        for (int i = 0; i < GlobalVariableCommandCenter.instance.tables.Length; i ++)
         {
-            transform.position = Table1.transform.position;
+            Transform table = GlobalVariableCommandCenter.instance.tables[i];
+            if (!GlobalVariableCommandCenter.instance.tablesOccupied[i])
+            {
+                GlobalVariableCommandCenter.instance.tablesOccupied[i] = true;
+                trs.position = table.position;
+                return;
+            }
         }
-        else if (Table2Occupied == false)
-        {
-            transform.position = Table2.transform.position;
-        }
-        else if (Table3Occupied == false)
-        {
-            transform.position = Table2.transform.position;
-        }
-        else if (Table4Occupied == false)
-        {
-            transform.position = Table4.transform.position;
-        }
-        else if (Table5Occupied == false)
-        {
-            transform.position = Table5.transform.position;
-        }
-        else
-        {
-            //ActivateWinScreen
-        }
+        // if (Table1Occupied == false)
+        // {
+        //     transform.position = Table1.transform.position;
+        // }
+        // else if (Table2Occupied == false)
+        // {
+        //     transform.position = Table2.transform.position;
+        // }
+        // else if (Table3Occupied == false)
+        // {
+        //     transform.position = Table2.transform.position;
+        // }
+        // else if (Table4Occupied == false)
+        // {
+        //     transform.position = Table4.transform.position;
+        // }
+        // else if (Table5Occupied == false)
+        // {
+        //     transform.position = Table5.transform.position;
+        // }
+        // else
+        // {
+        //     //ActivateWinScreen
+        // }
 
     }
 }

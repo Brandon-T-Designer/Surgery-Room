@@ -161,16 +161,6 @@ MonoBehaviour:
   interactRangeCollider: {fileID: 1023795546190529291}
   collider: {fileID: -6405314282175185951}
   trs: {fileID: 3862837813775265543}
-  Table1: {fileID: 0}
-  Table2: {fileID: 0}
-  Table3: {fileID: 0}
-  Table4: {fileID: 0}
-  Table5: {fileID: 0}
-  Table1Occupied: 0
-  Table2Occupied: 0
-  Table3Occupied: 0
-  Table4Occupied: 0
-  Table5Occupied: 0
 --- !u!58 &1023795546190529291
 CircleCollider2D:
   m_ObjectHideFlags: 0
