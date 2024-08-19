@@ -8,8 +8,9 @@ using UnityEngine.SceneManagement;
 public class CutBodyMinigame : MonoBehaviour
 {
 	public float cauterizeDuration;
-	public GameObject gameOverScreen;
 	public GameObject mustCauterizePanel;
+	public GameObject mustCutPanel;
+	public GameObject liverGo;
 	public LineRenderer correctCutLineRenderer;
 	public LineRenderer incorrectCutLineRenderer;
 	public float cutPointSeparation;
@@ -22,7 +23,13 @@ public class CutBodyMinigame : MonoBehaviour
 	public GameObject liverTransplantPatientCutOpenWithBadLiverGo;
 	public GameObject liverTransplantPatientCutOpenWithoutLiverGo;
 	public GameObject liverTransplantPatientCutOpenWithNewLiverGo;
-	public GameObject appendicitisPatientCutOpenWithBadAppendix;
+	public GameObject liverTransplantPatientSewnUpGo;
+	public GameObject appendicitisPatientCutOpenWithBadAppendixGo;
+	public GameObject appendicitisPatientCutOpenWithoutAppendixGo;
+	public GameObject appendicitisPatientSewnUpGo;
+	public Collider2D organDisposaleCollider;
+	public Collider2D liverPlacementCollider;
+	public Collider2D openStomachCollider;
 	public static Move_Body body;
 	List<LineRenderer> correctCutLineRenderers = new List<LineRenderer>();
 	List<LineRenderer> incorrectCutLineRenderers = new List<LineRenderer>();
@@ -35,23 +42,32 @@ public class CutBodyMinigame : MonoBehaviour
 	float distanceToNextCutPoint;
 	bool startedCutFromEndZone;
 	Grabbable previousGrabbed;
+	bool isDoneWithCutting;
+	bool disposedBadOrgan;
 	Vector2 mousePosition;
 	float cauterizeTimer;
+	bool placedNewOrgan;
 
 	void OnEnable ()
 	{
 		Time.timeScale = 0;
+		placedNewOrgan = false;
+		disposedBadOrgan = false;
+		isDoneWithCutting = false;
 		correctCutLineRenderer.startWidth = cutPointRadius;
 		correctCutLineRenderer.endWidth = cutPointRadius;
 		incorrectCutLineRenderer.startWidth = cutPointRadius;
 		incorrectCutLineRenderer.endWidth = cutPointRadius;
 		procedureCanvasGos[GlobalVariableCommandCenter.instance.ProcedureNumber].SetActive(true);
+		if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
+			liverGo.SetActive(true);
 	}
 
 	void Update ()
 	{
 		Physics2D.SyncTransforms();
 		mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+		HandleSurgery ();
 		if (Grabbable.currentGrabbed != null && Grabbable.currentGrabbed == previousGrabbed && Grabbable.currentGrabbed.id == "Scalpel")
 		{
 			if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -78,11 +94,11 @@ public class CutBodyMinigame : MonoBehaviour
 			{
 				if ((!startedCutFromEndZone && cutEndZoneBoxCollider.OverlapPoint(mousePosition)) || (startedCutFromEndZone && cutStartZoneBoxCollider.OverlapPoint(mousePosition)))
 				{
-					OnDoneWithSurgery ();
+					OnDoneWithCutting ();
 					if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1)
 						liverTransplantPatientCutOpenWithBadLiverGo.SetActive(true);
 					else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 2)
-						appendicitisPatientCutOpenWithBadAppendix.SetActive(true);
+						appendicitisPatientCutOpenWithBadAppendixGo.SetActive(true);
 				}
 				else
 					StartCauterize ();
@@ -143,23 +159,71 @@ public class CutBodyMinigame : MonoBehaviour
 		previousGrabbed = Grabbable.currentGrabbed;
 	}
 
-	void OnDoneWithSurgery ()
+	void HandleSurgery ()
 	{
-		Time.timeScale = 1;
-		gameObject.SetActive(false);
+		if (isDoneWithCutting && Grabbable.currentGrabbed != null && Mouse.current.leftButton.wasReleasedThisFrame)
+		{
+			if (!disposedBadOrgan && organDisposaleCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+			{
+				Destroy(Grabbable.currentGrabbed.gameObject);
+				disposedBadOrgan = true;
+				if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1 && Grabbable.currentGrabbed.id == "Bad Liver")
+				{
+					liverTransplantPatientCutOpenWithoutLiverGo.SetActive(true);
+					Destroy(Grabbable.currentGrabbed.gameObject);
+				}
+				else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 2 && Grabbable.currentGrabbed.id == "Bad Appendix")
+				{
+					appendicitisPatientCutOpenWithoutAppendixGo.SetActive(true);
+					Destroy(Grabbable.currentGrabbed.gameObject);
+				}
+			}
+			else if (!placedNewOrgan)
+			{
+				if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1 && Grabbable.currentGrabbed.id == "Liver" && liverPlacementCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+				{
+					liverTransplantPatientCutOpenWithoutLiverGo.SetActive(false);
+					liverTransplantPatientCutOpenWithNewLiverGo.SetActive(true);
+					placedNewOrgan = true;
+					Destroy(Grabbable.currentGrabbed.gameObject);
+				}
+				else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 2 && Grabbable.currentGrabbed.id == "Sutures" && openStomachCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+				{
+					appendicitisPatientCutOpenWithoutAppendixGo.SetActive(false);
+					appendicitisPatientSewnUpGo.SetActive(true);
+					Grabbable.currentGrabbed.Drop ();
+				}
+			}
+			else if (GlobalVariableCommandCenter.instance.ProcedureNumber == 1 && Grabbable.currentGrabbed.id == "Sutures" && openStomachCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())))
+			{
+				liverTransplantPatientCutOpenWithNewLiverGo.SetActive(true);
+				liverTransplantPatientSewnUpGo.SetActive(true);
+			}
+		}
+	}
+
+	void OnDoneWithCutting ()
+	{
 		for (int i = 0; i < colliders.Count; i ++)
 		{
 			Collider2D collider = colliders[i];
 			Destroy(collider.gameObject);
 		}
 		Grabbable.currentGrabbed.Drop ();
+		mustCutPanel.SetActive(false);
+		isDoneWithCutting = true;
 	}
 
 	public void OnSurgeryTableLeft ()
 	{
-		OnDoneWithSurgery ();
+		OnDoneWithCutting ();
 		liverTransplantPatientCutOpenWithBadLiverGo.SetActive(false);
-		appendicitisPatientCutOpenWithBadAppendix.SetActive(false);
+		liverTransplantPatientCutOpenWithoutLiverGo.SetActive(false);
+		liverTransplantPatientCutOpenWithNewLiverGo.SetActive(false);
+		liverTransplantPatientSewnUpGo.SetActive(false);
+		appendicitisPatientCutOpenWithBadAppendixGo.SetActive(false);
+		appendicitisPatientCutOpenWithoutAppendixGo.SetActive(false);
+		appendicitisPatientSewnUpGo.SetActive(false);
 	}
 
 	void Cut (bool isCorrect)
@@ -223,6 +287,7 @@ public class CutBodyMinigame : MonoBehaviour
 	{
 		ouchAudioSource.Play();
 		mustCauterizePanel.SetActive(true);
+		mustCutPanel.SetActive(false);
 		cauterizeTimer = cauterizeDuration;
 		cauterizeTimerText.text = "Time left to cauterize: " + cauterizeTimer.ToString("F1");
 		cauterizeTimerText.gameObject.SetActive(true);
@@ -231,6 +296,7 @@ public class CutBodyMinigame : MonoBehaviour
 	void StopCauterize ()
 	{
 		mustCauterizePanel.SetActive(false);
+		mustCutPanel.SetActive(true);
 		cauterizeTimerText.gameObject.SetActive(false);
 		for (int i = 0; i < colliders.Count; i ++)
 		{
@@ -266,7 +332,7 @@ public class CutBodyMinigame : MonoBehaviour
 
 	void GameOver ()
 	{
-		gameOverScreen.SetActive(true);
+		GameLoseScript.instance.LoseTheGame ();
 		mustCauterizePanel.SetActive(false);
 		cauterizeTimerText.gameObject.SetActive(false);
 		enabled = false;

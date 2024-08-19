@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 328449c465ad8d71f899e38a7068ea78
+guid: d7d8685ef300dfb8f8fd679fbcfe279a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5460745861393367592
-    second: Green Patient Removed Appendix_0
+      213: 3775223271738030045
+    second: AB Negative Blood Bag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green Patient Removed Appendix_0
+      name: AB Negative Blood Bag_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 1
-        width: 297
-        height: 368
+        x: 124
+        y: 22
+        width: 208
+        height: 302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ddb6f242988734b0800000000000000
-      internalID: -5460745861393367592
+      spriteID: dd7bbbb4099446430800000000000000
+      internalID: 3775223271738030045
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Green Patient Removed Appendix_0: -5460745861393367592
+      AB Negative Blood Bag_0: 3775223271738030045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

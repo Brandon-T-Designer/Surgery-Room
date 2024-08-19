@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameLoseScript : MonoBehaviour
 {
+    public static GameLoseScript instance;
     //"Global" variables
     public bool IsThisPopUpOpen = false;
 
@@ -13,7 +14,7 @@ public class GameLoseScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame

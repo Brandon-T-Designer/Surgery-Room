@@ -128,18 +128,6 @@ public class OpenPopupBloodStation : MonoBehaviour
         popupWindow.SetActive(false);
         IsThisPopUpOpen = false;
         Time.timeScale = 1;
-
-        //Gilead Code
-        /*
-        InventoryManager.instance.itemSlotsParentWhenInDrugCabinet.gameObject.SetActive(false);
-        for (int i = 0; i < InventoryManager.instance.itemSlotsParentWhenInDrugCabinet.childCount; i++)
-        {
-            Transform itemSlotTrs = InventoryManager.instance.itemSlotsParentWhenInDrugCabinet.GetChild(i);
-            itemSlotTrs.SetParent(InventoryManager.instance.itemSlotsParentWhenNotInDrugCabinet);
-            itemSlotTrs.localScale = Vector3.one;
-            i--;
-        }
-        */
     }
 }
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73441eacb64d4bdfab8ca196a75649c8
+guid: 1ca66c891ec92680da7000558be453d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8465642228331127749
-    second: Green Patient Before and After Surgery_0
+      213: -6375205797767046729
+    second: Pink Patient Removed Liver_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,7 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green Patient Before and After Surgery_0
+      name: Pink Patient Removed Liver_0
       rect:
         serializedVersion: 2
         x: 46
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3cd6c80f3ff38a80800000000000000
-      internalID: -8465642228331127749
+      spriteID: 7b9951eaa18b687a0800000000000000
+      internalID: -6375205797767046729
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      Green Patient Before and After Surgery_0: -8465642228331127749
+      Pink Patient Removed Liver_0: -6375205797767046729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
