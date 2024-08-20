@@ -138,10 +138,10 @@ TextureImporter:
       name: ambulance sprite sheet_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 148
-        width: 239
-        height: 134
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: ambulance sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 464
-        y: 148
-        width: 239
-        height: 134
+        x: 384
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: ambulance sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 848
-        y: 148
-        width: 239
-        height: 134
+        x: 768
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: ambulance sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 148
-        width: 239
-        height: 134
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,14 +226,18 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f290e68fa40ee724d872ea66a4381a01
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ambulance sprite sheet_0: -2795222207090040753
+      ambulance sprite sheet_1: 494280857677886059
+      ambulance sprite sheet_2: 9154769017698655063
+      ambulance sprite sheet_3: 1158953458542109477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -307,7 +307,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dr Walking Up_0: -1946773851236783217
+      Dr Walking Up_1: 932987584283432127
+      Dr Walking Up_2: -4073429356277326775
+      Dr Walking Up_3: -3906523498926071331
+      Dr Walking Up_4: -3606940987320181361
+      Dr Walking Up_5: -5402333375375862502
+      Dr Walking Up_6: 3386817148728306089
+      Dr Walking Up_7: 5441740084251837596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
