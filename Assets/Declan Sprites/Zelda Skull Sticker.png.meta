@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3d645e48e802de44cb83a57b5ab0fab8
+guid: fbbe026528c71f24bb5ae7cbc3466400
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6978163217262636695
-    second: Instructions Button_0
+      213: -3488366983051346142
+    second: Zelda Skull Sticker_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Instructions Button_0
+      name: Zelda Skull Sticker_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 352
-        width: 509
-        height: 119
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9611d5a9685982f90800000000000000
-      internalID: -6978163217262636695
+      spriteID: 22ff50906b4d69fc0800000000000000
+      internalID: -3488366983051346142
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Instructions Button_0: -6978163217262636695
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
