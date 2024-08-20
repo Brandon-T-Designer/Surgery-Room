@@ -38605,7 +38605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Operation Inccorporation
+  m_text: Operation Incorporation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb55cb45e9c939d4ab166703fc0ec452, type: 2}
   m_sharedMaterial: {fileID: 7237356376431727503, guid: fb55cb45e9c939d4ab166703fc0ec452, type: 2}
