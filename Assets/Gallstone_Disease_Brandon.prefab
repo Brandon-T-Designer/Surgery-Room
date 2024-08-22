@@ -161,6 +161,16 @@ MonoBehaviour:
   interactRangeCollider: {fileID: 1023795546190529291}
   collider: {fileID: -6405314282175185951}
   trs: {fileID: 3862837813775265543}
+  Table1: {fileID: 0}
+  Table2: {fileID: 0}
+  Table3: {fileID: 0}
+  Table4: {fileID: 0}
+  Table5: {fileID: 0}
+  Table1Occupied: 0
+  Table2Occupied: 0
+  Table3Occupied: 0
+  Table4Occupied: 0
+  Table5Occupied: 0
 --- !u!58 &1023795546190529291
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -659,7 +669,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6838183706402655628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
