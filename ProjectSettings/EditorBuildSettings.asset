@@ -11,8 +11,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scene 2.unity
     guid: d52ace5dec5275a42936013537d9904d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dev Scene 5 Declan.unity
     guid: 4a3438e25ef05434fa44b5e870d8e841
+  - enabled: 1
+    path: Assets/Scenes/Dev Scene 8 Declan.unity
+    guid: 01b2da17efd07c346ba0b572ca9ae8e3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
